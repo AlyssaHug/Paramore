@@ -1,0 +1,43 @@
+html {
+    background-color: #222526;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+body {
+    width: 76vw;
+    background-color: #bfbfbf;
+}
+.caption {
+    font-family: var(--font-body);
+}
+.band {
+    background-color: #bfbfbf;
+}
+.bandHayley {
+    width: 38%;
+    position: absolute;
+    z-index: 3;
+    left: 30vw;
+    top: 16vh;
+}
+.bandTaylor {
+    width: 34%;
+    position: absolute;
+    z-index: 2;
+    left: 9vw;
+    top: 7vh;
+}
+.bandZac {
+    width: 43%;
+    position: absolute;
+    z-index: 1;
+    left: 52vw;
+    top: 12vh;
+}
+.spacer {
+    margin-top: 100%;
+}
+.header {
+    font-family: "Benniter Trial Version";
+}
