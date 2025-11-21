@@ -1,0 +1,16 @@
+html {
+    background: linear-gradient(rgba(34, 37, 38, 0.9), rgba(34, 37, 38, 0.75)),
+        url("/paperbg/paper2.jpg");
+    background-color: #222526;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 0.85;
+    text-align: left; /* or any color you like */
+}

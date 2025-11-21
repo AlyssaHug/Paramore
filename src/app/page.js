@@ -9,6 +9,9 @@ export default function Home() {
                 <Link href='/Band'>
                     <button>Go to Band Page</button>
                 </Link>
+                 <Link href='/History'>
+                    <button>Go to History Page</button>
+                </Link>
             </main>
         </div>
     );
