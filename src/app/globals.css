@@ -1,16 +1,3 @@
-@font-face {
-    font-family: "Benniter Trial Version";
-    src: local("Benniter Trial Version"),
-        url("/fonts/BenniterTrialVersion.woff2") format("woff2"),
-        url("/fonts/BenniterTrialVersion.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Noto sans";
-    src: local("Noto sans"), url("/fonts/NotoSans.woff2") format("woff2"),
-        url("/fonts/NotoSans.woff") format("woff");
-}
-
 :root {
     --background: #ffffff;
     --foreground: #171717;
