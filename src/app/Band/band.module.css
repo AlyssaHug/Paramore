@@ -33,17 +33,17 @@
     top: 16vh;
 }
 .bandTaylor {
-    width: 34%;
+    width: 35%;
     position: absolute;
     z-index: 2;
-    left: 9vw;
-    top: 7vh;
+    left: 8vw;
+    top: 6vh;
 }
 .bandZac {
     width: 41%;
     position: absolute;
     z-index: 1;
-    left: 53vw;
+    left: 52vw;
     top: 16vh;
 }
 .spacer {
