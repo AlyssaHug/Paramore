@@ -1,10 +1,10 @@
-html {
+.content {
     background-color: #222526;
     display: flex;
     justify-content: center;
-    overflow: hidden;
 }
-body {
+.body {
+    overflow: hidden;
     width: 76vw;
     background-color: #bfbfbf;
     font-family: var(--font-display);
@@ -14,11 +14,13 @@ body {
     padding-right: 12px;
 }
 .title {
-    font-size: 64px;
+    margin-top: 20px;
+    font-size: 72px;
     margin-bottom: 0;
 }
 .caption {
     margin-top: 0;
+    font-size: 20px;
 }
 .band {
     background-color: #bfbfbf;
@@ -38,19 +40,95 @@ body {
     top: 7vh;
 }
 .bandZac {
-    width: 43%;
+    width: 41%;
     position: absolute;
     z-index: 1;
-    left: 52vw;
-    top: 12vh;
+    left: 53vw;
+    top: 16vh;
 }
 .spacer {
     margin-top: 100%;
+    visibility: hidden;
 }
 
 /*=== People Hover/Click ===*/
-.hayley,
-.taylor,
-.zac {
-    cursor: pointer;
+.hayley img,
+.taylor img,
+.zac img {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.hayley img:nth-child(1),
+.taylor img:nth-child(1),
+.zac img:nth-child(1) {
+    opacity: 1;
+}
+
+.hayley:hover img:nth-child(2),
+.taylor:hover img:nth-child(2),
+.zac:hover img:nth-child(2) {
+    animation: flip1 1s infinite steps(1);
+}
+.hayley:hover img:nth-child(3),
+.taylor:hover img:nth-child(3),
+.zac:hover img:nth-child(3) {
+    animation: flip2 1s infinite steps(1);
+}
+.hayley:hover img:nth-child(4),
+.taylor:hover img:nth-child(4),
+.zac:hover img:nth-child(4) {
+    animation: flip3 1s infinite steps(1);
+}
+
+@keyframes flip1 {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flip2 {
+    0% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    63% {
+        opacity: 1;
+    }
+    64% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flip3 {
+    0% {
+        opacity: 0;
+    }
+    63% {
+        opacity: 0;
+    }
+    64% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }

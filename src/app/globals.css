@@ -4,3 +4,7 @@
     --font-display: "Benniter Trial Version";
     --font-body: "Noto sans";
 }
+html,
+body {
+    margin: 0;
+}
