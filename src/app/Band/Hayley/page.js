@@ -19,9 +19,16 @@ export default function Page() {
                     src='/Band/Hayley/Mic.png'
                     alt='microphone graphic'
                 />
+                <p className={styles.spacer}>Hayley</p>
             </div>
-            <p className={styles.spacer}>Hayley</p>
-            <div className={styles.right}></div>
+            <div className={styles.right}>
+                <img
+                    className={styles.perform}
+                    src='/Band/Hayley/Perform.png'
+                    alt='Hayley singing on stage opening for Taylor Swift'
+                />
+                <p className={styles.desc}>lorem ipsum</p>
+            </div>
         </div>
     );
 }

@@ -1,15 +1,17 @@
+/*=== Left Side styles ===*/
 .content {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: #bfbfbf;
     font-family: var(--font-display);
+    background-color: #bfbfbf;
 }
+
 .close {
     width: 30%;
     position: absolute;
-    left: -1rem;
+    left: 1rem;
     z-index: 3;
     top: 3rem;
 }
@@ -21,11 +23,11 @@
     width: 54%;
     position: absolute;
     z-index: 1;
-    left: -8rem;
+    left: -6rem;
     top: -7rem;
 }
 .header {
-    margin-left: 20rem;
+    margin-left: 24rem;
     text-align: left;
 }
 .title {
@@ -36,4 +38,28 @@
     margin-top: -8px;
     font-size: 36px;
     margin-left: 0.4rem;
+}
+/*=== Right side styles ===*/
+.right {
+    background-color: #222526;
+    position: absolute;
+    height: 100vh;
+    width: 40%;
+    right: 0;
+    top: 0;
+    background-image: url("/Band/texture.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.perform {
+    width: 70%;
+    margin: 2rem;
+}
+.desc {
+    color: #e0e0e0;
+    font-family: var(--font-body);
+    font-size: 14px;
 }
