@@ -1,59 +1,91 @@
-import styles from "../History/history.module.css";
-import classNames from "classnames";
+"use client";
 
-function Page() {
+import { useState } from "react";
+import TimelineItem from "./timeline";
+import styles from "./history.module.css";
+
+const TIMELINE_DATA = [
+    {
+        id: "1",
+        year: "2002",
+        title: "The Start",
+        description:
+            "In 2002, at age 13, vocalist Hayley Williams moved from her hometown Meridian, Mississippi, to Franklin, Tennessee",
+        details: [
+            "Hayley moves to Franklin, TN after her parents' divorce",
+            "Meets brothers Josh & Zac Farro at school",
+            "Starts writing songs together immediately",
+        ],
+    },
+    {
+        id: "2",
+        year: "2003",
+        title: "Forming the Band",
+        description:
+            "The original plan of the label was to turn her into a pop singer. But Williams resisted, saying she wanted alternative rock music with a band.",
+        details: [
+            "Hayley signs with Atlantic Records as a solo artist",
+            "Refuses to be a pop star — insists on forming a band",
+            "Begins jamming with Josh, Zac, and Jeremy Davis",
+        ],
+    },
+    {
+        id: "3",
+        year: "2004",
+        title: "Official Formation",
+        description:
+            "The band was officially formed by Josh Farro (lead guitar), Zac Farro (drums), Jeremy Davis (bass), and Hayley Williams (lead vocals).",
+        details: [
+            "Official lineup: Hayley, Josh, Zac, Jeremy",
+            "Jason Bynum joins as rhythm guitarist",
+            "Band name becomes Paramore (play on 'paramour')",
+        ],
+    },
+    {
+        id: "4",
+        year: "2006",
+        title: "All We Know Is Falling",
+        description:
+            "The release of their debut album All We Know Is Falling — the start of something great.",
+        details: [
+            "Debut album released July 26, 2005 on Fueled by Ramen",
+            "Features 'Pressure', 'Emergency', 'Here We Go Again'",
+            "Iconic teal/orange color scheme begins",
+            "First major tours with bands like Simple Plan",
+        ],
+    },
+];
+
+export default function HistoryPage() {
+    const [expandedId, setExpandedId] = useState(null);
+    const handleClick = (id) => setExpandedId(expandedId === id ? null : id);
+
     return (
-        <>
-            <div className="header">
+        <div className={styles.pageLayout}>
+            <div className={styles.titleColumn}>
                 <h1 className={styles.title}>
-                    P<br />A<br />R<br />A<br />M<br />O<br />R<br />E
+                    P<br className={styles.titlebreak}/>a<br className={styles.titlebreak}/>r<br className={styles.titlebreak}/>a<br />m<br className={styles.titlebreak}/>o<br className={styles.titlebreak}/>r<br className={styles.titlebreak}/>e
                 </h1>
             </div>
-            <div className="info">
-                <div className="days">
-                    <div className="2002">
-                        <img></img>
-                        <h2 className="date">2002</h2>
-                        <h3 classname="desc">The Start</h3>
-                        <p>
-                            In 2002, at age 13, vocalist Hayley Williams moved
-                            from her hometown Meridian, Mississippi, to
-                            Franklin, Tennessee
-                        </p>
-                    </div>
-                    <div className="2003">
-                        <img></img>
-                        <h2 className="date">2003</h2>
-                        <h3 classname="desc">Forming the Band</h3>
-                        <p>
-                            The original plan of the label was to turn her into
-                            a pop singer. But Williams resisted, saying she
-                            wanted to alternative rock music with a band.
-                        </p>
-                    </div>
-                    <div className="2004">
-                        <img></img>
-                        <h2 className="date">2004</h2>
-                        <h3 classname="desc">Official Formation</h3>
-                        <p>
-                            The band was officially formed by Josh Farro, the
-                            lead guitarist, Zac Farro, the drums, Davis, the
-                            bass guitar, and Williams, the lead vocals.
-                        </p>
-                    </div>
-                    <div className="2005">
-                        <img></img>
-                        <h2 className="date">2005</h2>
-                        <h3 classname="desc">The Start of something great</h3>
-                        <p>
-                            The release of their first album, All We Know is
-                            Falling.
-                        </p>
+
+            <div className={styles.timelineColumn}>
+                <div className={styles.timelineWrapper}>
+                    <div className={styles.centerLine} />
+                    <div className={styles.timelineItems}>
+                        {TIMELINE_DATA.map((entry, index) => (
+                            <TimelineItem
+                                key={entry.id}
+                                entry={entry}
+                                isExpanded={expandedId === entry.id}
+                                onClick={() => handleClick(entry.id)}
+                                onClose={() => setExpandedId(null)}
+                                isEven={index % 2 === 0}
+                                index={index}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
-
-export default Page;
