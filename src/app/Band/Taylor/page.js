@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../Zac/zac.module.css";
+import styles from "../Taylor/taylor.module.css";
 import Next from "@/app/components/NextBtn/NextBtn";
 import BandMemberNext from "@/app/components/BandBtn/BandBtn";
 
@@ -57,21 +57,21 @@ export default function Page() {
                     </div>
                     <img
                         className={styles.close}
-                        src='/Band/Hayley/Close-up.png'
+                        src='/Band/Taylor/Close-up.png'
                         alt='Hayley Williams'
                     />
                     <img
-                        className={styles.mic}
-                        src='/Band/Hayley/Mic.png'
-                        alt='microphone graphic'
+                        className={styles.guitar}
+                        src='/Band/Taylor/Guitar.png'
+                        alt='Guitar graphic'
                     />
                     <p className={styles.spacer}>Taylor</p>
                 </div>
                 <div className={styles.right}>
                     <img
                         className={styles.perform}
-                        src='/Band/Hayley/Perform.png'
-                        alt='Hayley singing on stage opening for Taylor Swift'
+                        src='/Band/Taylor/Perform.webp'
+                        alt='Taylor York playing the guitar during a performace.'
                     />
                     <p className={styles.desc}>lorem ipsum</p>
                 </div>
