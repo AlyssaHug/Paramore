@@ -1,21 +1,15 @@
-/* ============================================= */
-/*  TimelineItem.module.css — FINAL VERSION      */
-/* ============================================= */
-
-/* Row — shifted hard left (adjust margin-left for more/less scoot) */
+/* Row  */
 .row {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 4rem;
+    grid-template-columns: 500px 120px 500px;
+
+    gap: 0;
     align-items: center;
-    max-width: 1500px;
-    margin: 0 auto 14rem auto; /* ← perfectly centered */
-    padding: 0 3rem;
+    margin: 0 auto 14rem auto;
     position: relative;
-    margin-left: 90px;
 }
 
-/* Responsive scoot safety */
+/* Responsive */
 @media (min-width: 2200px) {
     .row {
         margin-left: -34%;
@@ -55,23 +49,25 @@
     }
 }
 
-/* Left & Right sides — push content toward center */
+/* Left & Right sides */
 .side {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Needed for ::after torn paper */
+    position: relative;
 }
 .side:first-child {
     justify-content: flex-end;
+    position: relative;
+    left: -45px;
 }
 .side:last-child {
     justify-content: flex-start;
 }
 
-/* Opposite-side year (the magic) */
+/* Opposite-side year */
 .oppositeYear {
-    font-size: 7.5rem;
+    font-size: 200px;
     font-weight: 900;
     font-family: "Crispy Cream", cursive;
     color: white;
@@ -117,12 +113,12 @@
     border-radius: 3px;
 }
 
-/* Hover → orange bars */
+/* Hover  */
 .paramoreBarsHover .bar {
     background: gray;
 }
 
-/* Smaller pulse ring */
+/* pulse ring */
 .pulseRing {
     position: absolute;
     inset: -10px;
@@ -147,38 +143,13 @@
 .card {
     max-width: 500px;
     padding: 3.2rem;
-    background: #1a1d1e; /* fully opaque dark background */
+    background: #1a1d1e;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     position: relative;
-    z-index: 10; /* above torn paper */
+    z-index: 10;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-}
-
-.cardHover {
-    transform: translateY(-18px) scale(1.05);
-    z-index: 15; /* Lifts above everything except logo */
-}
-
-/* Torn paper appears BEHIND the card but IN FRONT of the dark background */
-.side:has(> .card)::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 620px;
-    height: 480px;
-    max-width: 96vw;
-    background-image: url("/history/paper-edge.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
-    pointer-events: none;
-    margin-top: -20px; /* fine-tune if needed */ /* natural tilt */
-    /* much taller */
 }
 
 @media (max-width: 1024px) {
@@ -243,7 +214,7 @@
     }
 }
 
-/* ==================== MODAL ==================== */
+/* MODAL  */
 .backdrop {
     position: fixed;
     inset: 0;
@@ -302,13 +273,6 @@
     text-align: center;
 }
 
-.modalYear {
-    font-size: 14rem;
-    font-weight: 900;
-    color: #ff5400;
-    margin-bottom: 1rem;
-    font-family: "Crispy Cream", cursive;
-}
 .modalTitle {
     font-size: 5rem;
     font-weight: 900;
@@ -353,7 +317,7 @@
     opacity: 0.8;
 }
 
-/* Modal animations */
+/* Modal animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -384,80 +348,92 @@
 }
 
 .rowHover {
-    position: relative; /* required */
+    position: relative;
     z-index: 1;
 }
 
-/* Big subtle torn outline behind the whole row (you already have this) */
-.rowHover::before {
-    content: "";
-    position: absolute;
-    inset: -40px;
-    background-image: url("/torn-paper-outline.png");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.row:hover .side:has(.card)::before {
-    content: "";
-    position: absolute;
-
-    /* keeps the torn paper the same size */
-    inset: -22px;
-
-    /* TRUE centering without transform */
-    left: 0;
-    right: 0;
-    margin-left: -80px;
-    margin-right: auto;
-
-    width: 560px;
-    max-width: 95vw;
-
-    background-image: url("/history/paper-edge.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: 0;
-    pointer-events: none;
-
-    animation: paperBreathe 4.8s ease-in-out infinite,
-               paperMicroMove 14s linear infinite;
-}
-
-
-
 .center {
-    /* the dot with the three bars */
-    z-index: 10; /* highest → always on top */
+    z-index: 10;
+    position: relative;
+    left: 15px;
 }
 
 .card {
     position: relative;
-    z-index: 5; /* above the torn paper */
-    /* background & backdrop-filter stay exactly as you have them */
+    z-index: 5;
 }
 
 .cardHover {
     transform: translateY(-18px) scale(1.05);
-    z-index: 6; /* slightly higher when hovered */
+    z-index: 6;
 }
 
-
-
-/* SUBTLE CRINKLE ANIMATION — only active when the torn paper is visible */
-
-@keyframes paperBreathe {
-    0%, 100% { transform: scale(1); }
-    45%      { transform: scale(1.018); }
-    80%      { transform: scale(0.994); }
+.cardImage {
+    max-height: 500px;
+    max-width: 400px;
+    margin-bottom: -30px;
+    margin-left: -33px;
 }
 
-@keyframes paperMicroMove {
-    0%   { background-position: 50% 50%; }
-    50%  { background-position: 51% 49%; }
-    100% { background-position: 50% 50%; }
+.cardImageWrapper {
+    position: relative;
+    margin: -9rem auto 1.5rem auto;
+    width: 110%;
+    left: -5%;
+    pointer-events: none;
+    z-index: 11;
+}
+
+.card {
+    max-width: 500px;
+    padding: 3.2rem;
+    background: #1a1d1e;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    transition: none !important;
+
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+
+    animation: microPaperBreathing 6s infinite ease-in-out;
+}
+
+.cardHover {
+    animation: jankyStopMotion 0.68s infinite steps(8) !important;
+}
+
+@keyframes jankyStopMotion {
+    0% {
+        transform: translateY(-10px) scale(1.02) rotate(0deg) translateX(0px);
+    }
+    25% {
+        transform: translateY(-10px) scale(1.02) rotate(-0.2deg)
+            translateX(0.5px);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.02) rotate(0.15deg)
+            translateX(-0.5px);
+    }
+    75% {
+        transform: translateY(-10px) scale(1.02) rotate(-0.1deg)
+            translateX(0.4px);
+    }
+    100% {
+        transform: translateY(-10px) scale(1.02) rotate(0deg) translateX(0px);
+    }
+}
+
+@keyframes microPaperBreathing {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-1px) rotate(0.2deg);
+    }
+    75% {
+        transform: translateY(1px) rotate(-0.2deg);
+    }
 }

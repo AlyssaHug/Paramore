@@ -7,7 +7,7 @@ import ModalPortal from "./ModalPortal";
 
 export default function TimelineItem({
     entry,
-    id, // ← NEW PROP
+    id, 
     isExpanded,
     onClick,
     isEven,
@@ -54,9 +54,7 @@ export default function TimelineItem({
                                     />
                                 </div>
                             )}
-                            <div className={styles.mobileYear}>
-                                {entry.year}
-                            </div>
+                            
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
                             <p className={styles.cardDesc}>
                                 {entry.description}
@@ -71,7 +69,7 @@ export default function TimelineItem({
                     )}
                 </div>
 
-                {/* CENTER — now has unique ID */}
+                {/* CENTER */}
                 <div
                     className={styles.center}
                     id={id}>
@@ -106,9 +104,7 @@ export default function TimelineItem({
                                     />
                                 </div>
                             )}
-                            <div className={styles.mobileYear}>
-                                {entry.year}
-                            </div>
+                           
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
                             <p className={styles.cardDesc}>
                                 {entry.description}
@@ -124,7 +120,7 @@ export default function TimelineItem({
                 </div>
             </div>
 
-            {/* MODAL — unchanged */}
+            {/* MODAL */}
             {isExpanded && (
                 <ModalPortal>
                     <div
@@ -142,9 +138,7 @@ export default function TimelineItem({
                             </button>
 
                             <div className={styles.modalContent}>
-                                <div className={styles.modalYear}>
-                                    {entry.year}
-                                </div>
+                                
                                 <h2 className={styles.modalTitle}>
                                     {entry.title}
                                 </h2>
