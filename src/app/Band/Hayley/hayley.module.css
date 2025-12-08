@@ -9,11 +9,11 @@
 }
 
 .close {
-    width: 30%;
+    width: 75%;
     position: absolute;
-    left: 1rem;
+    left: -14rem;
     z-index: 3;
-    top: 3rem;
+    top: 0;
 }
 .spacer {
     margin-top: 68vh;
@@ -24,7 +24,8 @@
     position: absolute;
     z-index: 1;
     left: -6rem;
-    top: -7rem;
+    top: -9rem;
+    transform: scaleY(-1) rotate(45deg);
 }
 .header {
     margin-left: 24rem;

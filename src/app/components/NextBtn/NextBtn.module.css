@@ -1,0 +1,18 @@
+.btnRow {
+    background-color: black;
+    z-index: 20;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+}
+.nextBtn {
+    padding-right: 1rem;
+    font-family: var(--font-display);
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
