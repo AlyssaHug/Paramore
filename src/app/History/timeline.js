@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import styles from "./timeline.module.css";
 import cn from "classnames";
+import ModalPortal from "./ModalPortal";
 
 export default function TimelineItem({
     entry,
+    id, // ← NEW PROP
     isExpanded,
     onClick,
-    isEven, // true = even index → card on RIGHT, year on LEFT
+    isEven,
     index,
 }) {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +23,6 @@ export default function TimelineItem({
 
     return (
         <>
-            {/* ROW */}
             <div
                 className={cn(
                     styles.row,
@@ -29,14 +30,14 @@ export default function TimelineItem({
                         ? isEven
                             ? styles.animateRight
                             : styles.animateLeft
-                        : styles.hidden
+                        : styles.hidden,
+                    isHovered && styles.rowHover
                 )}
                 style={{ animationDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
-                {/* LEFT COLUMN — card on odd entries, year on even entries */}
+                {/* LEFT */}
                 <div className={styles.side}>
-                    {/* Card when NOT even (odd index) */}
                     {!isEven && (
                         <button
                             onClick={onClick}
@@ -44,6 +45,15 @@ export default function TimelineItem({
                                 styles.card,
                                 isHovered && styles.cardHover
                             )}>
+                            {entry.image && (
+                                <div className={styles.cardImageWrapper}>
+                                    <img
+                                        src={entry.image}
+                                        alt={entry.title}
+                                        className={styles.cardImage}
+                                    />
+                                </div>
+                            )}
                             <div className={styles.mobileYear}>
                                 {entry.year}
                             </div>
@@ -56,28 +66,30 @@ export default function TimelineItem({
                             </div>
                         </button>
                     )}
-
-                    {/* Year when EVEN (card is on the right) */}
                     {isEven && (
                         <div className={styles.oppositeYear}>{entry.year}</div>
                     )}
                 </div>
 
-                {/* CENTER DOT + LINE */}
-                <div className={styles.center}>
+                {/* CENTER — now has unique ID */}
+                <div
+                    className={styles.center}
+                    id={id}>
                     <button
                         onClick={onClick}
                         className={cn(
-                            styles.dot,
-                            isHovered && styles.dotHover
+                            styles.paramoreBars,
+                            isHovered && styles.paramoreBarsHover
                         )}>
-                        {isHovered && <div className={styles.pulse} />}
+                        <span className={styles.bar}></span>
+                        <span className={styles.bar}></span>
+                        <span className={styles.bar}></span>
+                        {isHovered && <div className={styles.pulseRing} />}
                     </button>
                 </div>
 
-                {/* RIGHT COLUMN — card on even entries, year on odd entries */}
+                {/* RIGHT */}
                 <div className={styles.side}>
-                    {/* Card when EVEN */}
                     {isEven && (
                         <button
                             onClick={onClick}
@@ -85,6 +97,15 @@ export default function TimelineItem({
                                 styles.card,
                                 isHovered && styles.cardHover
                             )}>
+                            {entry.image && (
+                                <div className={styles.cardImageWrapper}>
+                                    <img
+                                        src={entry.image}
+                                        alt={entry.title}
+                                        className={styles.cardImage}
+                                    />
+                                </div>
+                            )}
                             <div className={styles.mobileYear}>
                                 {entry.year}
                             </div>
@@ -97,17 +118,15 @@ export default function TimelineItem({
                             </div>
                         </button>
                     )}
-
-                    {/* Year when ODD (card is on the left) */}
                     {!isEven && (
                         <div className={styles.oppositeYear}>{entry.year}</div>
                     )}
                 </div>
             </div>
 
-            {/* FULL-SCREEN MODAL */}
+            {/* MODAL — unchanged */}
             {isExpanded && (
-                <>
+                <ModalPortal>
                     <div
                         className={styles.backdrop}
                         onClick={onClick}
@@ -121,6 +140,7 @@ export default function TimelineItem({
                                 className={styles.closeBtn}>
                                 ×
                             </button>
+
                             <div className={styles.modalContent}>
                                 <div className={styles.modalYear}>
                                     {entry.year}
@@ -128,9 +148,17 @@ export default function TimelineItem({
                                 <h2 className={styles.modalTitle}>
                                     {entry.title}
                                 </h2>
+                                {entry.image && (
+                                    <img
+                                        src={entry.image}
+                                        alt={entry.title}
+                                        className={styles.modalImage}
+                                    />
+                                )}
                                 <p className={styles.modalDesc}>
                                     {entry.description}
                                 </p>
+
                                 <div className={styles.modalDetails}>
                                     {entry.details.map((detail, i) => (
                                         <div
@@ -146,13 +174,10 @@ export default function TimelineItem({
                                         </div>
                                     ))}
                                 </div>
-                                <div className={styles.modalFooter}>
-                                    Click anywhere to close
-                                </div>
                             </div>
                         </div>
                     </div>
-                </>
+                </ModalPortal>
             )}
         </>
     );

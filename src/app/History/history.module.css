@@ -23,11 +23,10 @@ body,
     padding-left: 20px;
 }
 
-/* THE MASSIVE TITLE */
 .title {
     font-size: 300px;
     font-weight: 900;
-    line-height: 0.86;
+    line-height: 1.3; /* ← more vertical spacing between letters */
     font-family: "Benniter Trial Version", sans-serif;
     color: #ffffff;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
@@ -37,49 +36,43 @@ body,
     white-space: nowrap;
 }
 
-.titlebreak {
-margin-top: 90px;
-}
-
 /* RIGHT COLUMN — timeline */
-/* RIGHT COLUMN — centered timeline */
-/* RIGHT COLUMN — timeline, now shifted left (closer to the giant title) */
-/* MAXIMUM LEFT SCOOT — the furthest it can go without breaking */
 .timelineColumn {
     flex: 1;
     display: flex;
     justify-content: center;
     padding: 180px 40px 300px;
     min-height: 100vh;
-
-    /* THIS IS THE LIMIT — don’t go past this */
-    margin-left: -32%;
-
-    /* Responsive safety net so cards never disappear */
-    @media (min-width: 2000px) { margin-left: -36%; }
-    @media (max-width: 1800px) { margin-left: -30%; }
-    @media (max-width: 1600px) { margin-left: -26%; }
-    @media (max-width: 1400px) { margin-left: -20%; }
-    @media (max-width: 1200px) { margin-left: -12%; }
-    @media (max-width: 1024px) { margin-left: 0; }   /* tablet & mobile = centered */
 }
 
-/* Optional: make it even closer on large screens only */
-@media (min-width: 1600px) {
+@media (min-width: 2000px) {
     .timelineColumn {
-        margin-left: -14%;
+        margin-left: -36%;
     }
 }
-
-/* On smaller screens, reduce or remove the shift so nothing gets cut off */
+@media (max-width: 1800px) {
+    .timelineColumn {
+        margin-left: -30%;
+    }
+}
+@media (max-width: 1600px) {
+    .timelineColumn {
+        margin-left: -26%;
+    }
+}
+@media (max-width: 1400px) {
+    .timelineColumn {
+        margin-left: -20%;
+    }
+}
 @media (max-width: 1200px) {
     .timelineColumn {
-        margin-left: -5%;
+        margin-left: -12%;
     }
 }
 @media (max-width: 1024px) {
     .timelineColumn {
-        margin-left: 0;   /* mobile/tablet = no shift, stays centered */
+        margin-left: 0;
     }
 }
 
@@ -89,7 +82,6 @@ margin-top: 90px;
     position: relative;
 }
 
-/* Keep everything else exactly as in the last version */
 .centerLine {
     position: absolute;
     left: 50%;
@@ -101,40 +93,16 @@ margin-top: 90px;
     z-index: 1;
 }
 
+/* timeline.module.css */
 .timelineItems {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 160px;
+
+    transform: translateX(
+        90px
+    ); /* ← scoot everything (cards + icons) to the right */
 }
 
-/* Mobile — stack vertically */
-@media (max-width: 1024px) {
-    .pageLayout {
-        flex-direction: column;
-    }
-    .titleColumn {
-        width: 100%;
-        padding: 80px 20px 40px;
-        text-align: center;
-    }
-    .title {
-        font-size: 120px;
-    }
-    .timelineColumn {
-        padding: 60px 20px;
-    }
-}
-
-@media (max-width: 640px) {
-    .title {
-        font-size: 80px;
-    }
-    .timelineColumn {
-        padding: 40px 15px;
-    }
-    .timelineItems {
-        gap: 100px;
-    }
-}

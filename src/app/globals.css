@@ -11,6 +11,20 @@
         url("/fonts/NotoSans.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Crispy Cream";
+    src: local("Crispy Cream"),
+        url("/fonts/CrispyCream.ttf") format("truetype");  /* Update filename if different */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;  /* Improves loading performance */
+}
+
+:root {
+    --font-crispy: "Crispy Cream";
+    /* Your existing vars stay the same */
+}
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
