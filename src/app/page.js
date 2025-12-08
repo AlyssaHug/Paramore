@@ -12,6 +12,9 @@ export default function Home() {
                  <Link href='/History'>
                     <button>Go to History Page</button>
                 </Link>
+                <Link href='/Albums'>
+                    <button>Go to Albums Page</button>
+                </Link>
             </main>
         </div>
     );
