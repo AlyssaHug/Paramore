@@ -5,7 +5,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
 .nextBtn {
     padding-right: 1rem;
@@ -15,6 +16,17 @@
     color: white;
     border: none;
     cursor: pointer;
-    margin: auto;
+
+    padding: 0.8rem;
+}
+.backBtn {
+    padding-right: 1rem;
+    font-family: var(--font-display);
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+
     padding: 0.8rem;
 }

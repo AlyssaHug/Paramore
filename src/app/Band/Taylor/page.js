@@ -6,7 +6,10 @@ import BandMemberNext from "@/app/components/BandBtn/BandBtn";
 export default function Page() {
     return (
         <div>
-            <Next value='Their History' />
+            <Next
+                nextLabel='Next Up: Their History'
+                backLabel='Previous: Homepage'
+            />
             <div className={styles.content}>
                 <div className={styles.left}>
                     <div className={styles.flip}>

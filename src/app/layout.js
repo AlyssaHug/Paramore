@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <html lang='en'>
             <body className={`${notoSans.variable} ${notoSans.variable}`}>
                 {children}
+                <MusicPlayer />
             </body>
         </html>
     );

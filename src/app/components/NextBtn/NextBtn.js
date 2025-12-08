@@ -1,23 +1,57 @@
 "use client";
-import React from "react";
-import styles from "../NextBtn/NextBtn.module.css";
 
-export default function Next({ href, value, target = "_self" }) {
-    function handleClick() {
-        if (href) {
-            window.open(href, target);
-            return;
+import { useRouter } from "next/navigation";
+import styles from "./NextBtn.module.css";
+
+export default function NextBtn({
+    backHref,
+    backOnClick,
+    backLabel,
+
+    nextHref,
+    nextOnClick,
+    nextLabel,
+
+    target = "_self", // "_self" or "_blank" only for external links
+}) {
+    const router = useRouter();
+
+    const handleBack = () => {
+        if (backHref) {
+            if (target === "_blank") {
+                window.open(backHref, "_blank");
+            } else {
+                router.push(backHref); // smooth internal navigation
+            }
+        } else if (backOnClick) {
+            backOnClick();
         }
-        if (onClick) {
-            onClick();
+    };
+
+    const handleNext = () => {
+        if (nextHref) {
+            if (target === "_blank") {
+                window.open(nextHref, "_blank");
+            } else {
+                router.push(nextHref); // smooth internal navigation
+            }
+        } else if (nextOnClick) {
+            nextOnClick();
         }
-    }
+    };
+
     return (
         <div className={styles.btnRow}>
             <button
-                onClick={handleClick}
+                onClick={handleBack}
+                className={styles.backBtn}>
+                {backLabel}
+            </button>
+
+            <button
+                onClick={handleNext}
                 className={styles.nextBtn}>
-                Next Up: {value}
+                {nextLabel}
             </button>
         </div>
     );

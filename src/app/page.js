@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./page.module.css";
-import Link from "next/link";
+import Next from "./components/NextBtn/NextBtn";
 
 export default function Home() {
     return (
         <div className={styles.page}>
-            <main className={styles.main}>
-                <Link href='/Band'>
-                    <button>Go to Band Page</button>
-                </Link>
-            </main>
+            <Next
+                nextLabel='Next up: Meet the Band'
+                nextHref='/Band'
+            />
+
+            <main className={styles.main}></main>
         </div>
     );
 }

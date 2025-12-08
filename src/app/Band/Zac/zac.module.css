@@ -20,11 +20,12 @@
     visibility: hidden;
 }
 .drums {
-    width: 60%;
+    width: 70%;
     position: absolute;
     z-index: 1;
-    left: -10rem;
-    top: 10.5rem;
+    left: -12rem;
+    top: 10rem;
+    transform: rotate(2deg);
 }
 .header {
     margin-left: 24rem;
