@@ -15,4 +15,6 @@
     color: white;
     border: none;
     cursor: pointer;
+    margin: auto;
+    padding: 0.8rem;
 }

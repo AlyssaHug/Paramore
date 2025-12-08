@@ -17,7 +17,7 @@ export default function Next({ href, value, target = "_self" }) {
             <button
                 onClick={handleClick}
                 className={styles.nextBtn}>
-                <p>Next Up: {value}</p>
+                Next Up: {value}
             </button>
         </div>
     );

@@ -1,0 +1,24 @@
+.bandBtn {
+    width: 100;
+    padding: 1.6rem 2rem;
+    border: none;
+
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    background-image: url("/Band/Backing.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconRight {
+    padding-left: 8px;
+}
+.iconLeft {
+    padding-right: 8px;
+}
