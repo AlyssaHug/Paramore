@@ -7,7 +7,7 @@ import ModalPortal from "./ModalPortal";
 
 export default function TimelineItem({
     entry,
-    id, 
+    id,
     isExpanded,
     onClick,
     isEven,
@@ -54,7 +54,7 @@ export default function TimelineItem({
                                     />
                                 </div>
                             )}
-                            
+
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
                             <p className={styles.cardDesc}>
                                 {entry.description}
@@ -104,7 +104,7 @@ export default function TimelineItem({
                                     />
                                 </div>
                             )}
-                           
+
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
                             <p className={styles.cardDesc}>
                                 {entry.description}
@@ -138,35 +138,62 @@ export default function TimelineItem({
                             </button>
 
                             <div className={styles.modalContent}>
-                                
-                                <h2 className={styles.modalTitle}>
-                                    {entry.title}
-                                </h2>
-                                {entry.image && (
-                                    <img
-                                        src={entry.image}
-                                        alt={entry.title}
-                                        className={styles.modalImage}
-                                    />
-                                )}
-                                <p className={styles.modalDesc}>
-                                    {entry.description}
-                                </p>
+                            
 
-                                <div className={styles.modalDetails}>
-                                    {entry.details.map((detail, i) => (
-                                        <div
-                                            key={i}
-                                            className={styles.detailItem}
-                                            style={{
-                                                animationDelay: `${i * 100}ms`,
-                                            }}>
-                                            <span className={styles.bullet}>
-                                                Right Arrow
-                                            </span>
-                                            <span>{detail}</span>
-                                        </div>
-                                    ))}
+                                {/* MAIN SIDE-BY-SIDE CONTENT */}
+                                <div className={styles.modalMain}>
+                                    {/* Image Left */}
+                                    {entry.image && (
+                                        <img
+                                            src={entry.image}
+                                            alt={entry.title}
+                                            className={styles.modalImage}
+                                        />
+                                    )}
+
+                                    {/* Text Right */}
+                                    <div className={styles.modalText}>
+                                        <h3 className={styles.modalTitle}>
+                                            {entry.title}
+                                        </h3>
+                                        <p className={styles.modalDesc}>
+                                            {entry.description}
+                                        </p>
+
+                                        {/* Details list (if you have any) */}
+                                        {entry.details &&
+                                            entry.details.length > 0 && (
+                                                <div
+                                                    className={
+                                                        styles.modalDetails
+                                                    }>
+                                                    {entry.details.map(
+                                                        (detail, i) => (
+                                                            <div
+                                                                key={i}
+                                                                className={
+                                                                    styles.detailItem
+                                                                }
+                                                                style={{
+                                                                    animationDelay: `${
+                                                                        i * 120
+                                                                    }ms`,
+                                                                }}>
+                                                                <span
+                                                                    className={
+                                                                        styles.bullet
+                                                                    }>
+                                                                    Right Arrow
+                                                                </span>
+                                                                <span>
+                                                                    {detail}
+                                                                </span>
+                                                            </div>
+                                                        )
+                                                    )}
+                                                </div>
+                                            )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
