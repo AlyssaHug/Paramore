@@ -1,7 +1,7 @@
 /* The panel — starts off-screen */
 .vinylPlayer {
     position: fixed;
-    top: 5%;
+    top: 11%;
     left: -500px; /* Hidden — adjust based on your panel width */
     width: 460px;
     max-width: 90vw;
@@ -21,7 +21,7 @@
 /* The little tab that sticks out */
 .tab {
     position: fixed;
-    top: 5%;
+    top: 11%;
     left: 0;
     background: #ff3489;
     color: white;

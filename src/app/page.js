@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import Next from "./components/NextBtn/NextBtn";
+import Header from "./components/Header/Header";
+import AlbumCarousel from "./components/Carousel/Carousel";
 
 export default function Home() {
     return (
@@ -10,7 +12,29 @@ export default function Home() {
                 nextHref='/Band'
             />
 
-            <main className={styles.main}></main>
+            <main className={styles.main}>
+                <Header value='Homepage' />
+                <div className={styles.cover}>
+                    <h1 className={styles.coverText}>
+                        <span className={styles.span}>This is</span> Paramore
+                    </h1>
+                    <img
+                        className={styles.coverImg}
+                        src='/Home/onstage.jpg'
+                        alt='Playing onstage'
+                    />
+                </div>
+                <div className={styles.divider}>"paramour" 'Secret Lover'</div>
+
+                <AlbumCarousel />
+
+                <div className={styles.divider}>"paramour" 'Secret Lover'</div>
+                <img
+                    className={styles.footer}
+                    src='/Home/waving.jpeg'
+                    alt='paramore members waving at crowd'
+                />
+            </main>
         </div>
     );
 }

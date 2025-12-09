@@ -1,0 +1,156 @@
+.container {
+    position: relative;
+    height: 103vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100vw;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album {
+    position: absolute;
+    transition: all 0.4s ease;
+}
+
+.albumImage {
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0);
+    transition: filter 0.4s ease;
+    width: 30vw;
+}
+
+/* Active (center) */
+.active {
+    z-index: 30;
+}
+.active .albumImage {
+    filter: none;
+}
+.active .glowRing {
+    position: absolute;
+    inset: -16px;
+    border: 4px solid white;
+    border-radius: 16px;
+    pointer-events: none;
+    box-shadow: 0 0 30px white;
+}
+
+/* Near (left/right one step) */
+.near {
+    transform: scale(0.9);
+    opacity: 0.7;
+    z-index: 20;
+}
+.near .albumImage {
+    filter: blur(1px);
+    width: 26vw;
+}
+
+/* Far (two steps away) */
+.far {
+    transform: scale(0.8);
+    opacity: 0.35;
+    z-index: 10;
+}
+.far .albumImage {
+    filter: blur(5px);
+    width: 22vw;
+}
+/*===Title Pill===*/
+.titlePillWrapper {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(14px);
+    padding: 0.6rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    min-width: 320px;
+    text-align: center;
+}
+
+.titlePill h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Arrows */
+.pillArrowLeft,
+.pillArrowRight {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    user-select: none;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+}
+
+.pillArrowLeft:hover,
+.pillArrowRight:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+.pillArrowLeft {
+    transform: translateY(-1);
+}
+/* Remove the old standalone arrows */
+.arrowLeft,
+.arrowRight {
+    display: none; /* we don’t need them anymore */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .titlePillWrapper {
+        gap: 1.5rem;
+        bottom: 2rem;
+    }
+    .titlePill {
+        padding: 0.9rem 2rem;
+        min-width: 260px;
+    }
+    .titlePill h2 {
+        font-size: 1.5rem;
+    }
+    .pillArrowLeft,
+    .pillArrowRight {
+        font-size: 3rem;
+        width: 50px;
+        height: 50px;
+    }
+}
