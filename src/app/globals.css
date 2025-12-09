@@ -1,32 +1,38 @@
 @font-face {
-    font-family: "Benniter Trial Version";
-    src: local("Benniter Trial Version"),
-        url("/fonts/BenniterTrialVersion.woff2") format("woff2"),
+    font-family: "Benniter";
+    src: url("/fonts/BenniterTrialVersion.woff2") format("woff2"),
         url("/fonts/BenniterTrialVersion.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Noto sans";
-    src: local("Noto sans"), url("/fonts/NotoSans.woff2") format("woff2"),
+    font-family: "Noto Sans";
+    src: url("/fonts/NotoSans.woff2") format("2"),
         url("/fonts/NotoSans.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Crispy Cream";
-    src: local("Crispy Cream"), url("/fonts/CrispyCream.ttf") format("truetype");
+    src: url("/fonts/CrispyCreamRegular.woff2") format("2"),
+        url("/fonts/CrispyCreamRegular.woff") format("woff"),
+        url("/fonts/CrispyCream.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
+/* Recommended: safer variable names */
 :root {
-    --font-crispy: "Crispy Cream";
-}
-
-:root {
+    --font-display: "Benniter", "Benniter Trial Version", sans-serif;
+    --font-body: "Noto Sans", sans-serif;
+    --font-accent: "Crispy Cream", serif;
     --background: #bfbfbf;
     --foreground: #bfbfbf;
-    --font-display: "Benniter Trial Version";
-    --font-body: "Noto sans";
 }
 
 @keyframes fadeIn {
@@ -68,16 +74,10 @@
 }
 .animate-slide-in-up {
     animation: slideInUp 0.6s ease-out forwards;
+}
 html,
 body {
     margin: 0;
     background-color: #bfbfbf;
-}
-.motionWrapper {
-    background-color: #000;
-}
-.no-fade {
-    opacity: 1 !important;
-    animation: none !important;
-    transition: none !important;
+    overflow-x: hidden;
 }
