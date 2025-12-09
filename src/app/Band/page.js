@@ -1,10 +1,15 @@
 import styles from "../Band/band.module.css";
 import classNames from "classnames";
 import Link from "next/link";
+import NextBtn from "../components/NextBtn/NextBtn";
 
 function Page() {
     return (
         <div className={styles.content}>
+            <NextBtn
+                backLabel='Previous: Homepage'
+                nextLabel='Next Up: Their History'
+            />
             <div className={styles.body}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>Meet The Band</h1>
@@ -86,7 +91,6 @@ function Page() {
                             alt='Zac Farro'
                         />
                     </Link>
-                    <p className={styles.spacer}>Paramore</p>
                 </div>
             </div>
         </div>

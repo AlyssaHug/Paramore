@@ -1,20 +1,24 @@
+.body {
+    width: 76vw;
+    background-color: #bfbfbf;
+    font-family: var(--font-display);
+
+    contain: layout style;
+}
 .content {
     background-color: #222526;
     display: flex;
     justify-content: center;
-}
-.body {
+    min-height: 100vh; /* let it grow naturally */
     overflow: hidden;
-    width: 76vw;
-    background-color: #bfbfbf;
-    font-family: var(--font-display);
 }
 .header {
     text-align: right;
     padding-right: 12px;
+    line-height: 220%;
 }
 .title {
-    margin-top: 20px;
+    margin-top: 28px;
     font-size: 72px;
     margin-bottom: 0;
 }
@@ -26,25 +30,25 @@
     background-color: #bfbfbf;
 }
 .bandHayley {
-    width: 38%;
+    width: 44%;
     position: absolute;
     z-index: 3;
-    left: 30vw;
-    top: 16vh;
+    left: 21vw;
+    top: 10vh;
 }
 .bandTaylor {
-    width: 35%;
+    width: 42%;
     position: absolute;
     z-index: 2;
-    left: 8vw;
-    top: 6vh;
+    left: -2vw;
+    top: 0vh;
 }
 .bandZac {
-    width: 41%;
+    width: 47%;
     position: absolute;
     z-index: 1;
-    left: 52vw;
-    top: 16vh;
+    left: 43vw;
+    top: 12vh;
 }
 .spacer {
     margin-top: 100%;
