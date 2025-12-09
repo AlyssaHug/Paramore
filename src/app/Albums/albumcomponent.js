@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./album.module.css";
 
@@ -13,23 +15,18 @@ const AlbumComponent = ({
 }) => {
     return (
         <div className={styles.albumPage}>
+          <div 
+                className={styles.backBtn} 
+                onClick={() => window.history.back()}   // or router.back() if you import useRouter
+            >
+                x
+            </div>
+            
             {/* Background */}
             <div
                 className={styles.albumBg}
                 style={{ backgroundImage: `url(${backgroundImage})` }}
             />
-
-            {/* Close Button */}
-            {onClose && (
-                <button
-                    onClick={onClose}
-                    className={styles.closeBtn}>
-                    <X
-                        size={48}
-                        strokeWidth={3}
-                    />
-                </button>
-            )}
 
             <div className={styles.topbarInner}>Album info</div>
 
