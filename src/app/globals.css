@@ -23,8 +23,8 @@
 }
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #bfbfbf;
+    --foreground: #bfbfbf;
     --font-display: "Benniter Trial Version";
     --font-body: "Noto sans";
 }
@@ -68,4 +68,16 @@
 }
 .animate-slide-in-up {
     animation: slideInUp 0.6s ease-out forwards;
+html,
+body {
+    margin: 0;
+    background-color: #bfbfbf;
+}
+.motionWrapper {
+    background-color: #000;
+}
+.no-fade {
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
 }

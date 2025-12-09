@@ -1,0 +1,112 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    background: #191919;
+    padding: 0.7rem 0;
+    font-family: var(--font-display);
+}
+
+/* === HORIZONTAL === */
+.container.horizontal {
+    width: 100%;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.track {
+    display: flex;
+    white-space: nowrap;
+}
+.left {
+    animation: scrollLeft var(--speed, 30s) linear infinite;
+}
+.right {
+    animation: scrollLeft var(--speed, 30s) linear infinite reverse;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* === VERTICAL === */
+.container.vertical {
+    width: 120px; /* adjust per page */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    right: 0;
+    transform: rotate(90deg); /* flip for right side */
+    transform-origin: right top;
+}
+
+.track.up {
+    animation: scrollUp var(--speed, 30s) linear infinite;
+}
+.track.down {
+    animation: scrollUp var(--speed, 30s) linear infinite reverse;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Text styling (you can override per page with className) */
+.track span {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Horizontal fades */
+.fadeLeft,
+.fadeRight,
+.fadeTop,
+.fadeBottom {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+.fadeLeft {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(to right, #000, transparent);
+}
+.fadeRight {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(to left, #000, transparent);
+}
+.fadeTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+.fadeBottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, #000, transparent);
+}
