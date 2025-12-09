@@ -1,0 +1,382 @@
+html {
+    height: auto;
+    min-height: 100vh;
+
+    background: linear-gradient(
+            to bottom,
+            rgba(34, 37, 38, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 40%,
+            rgba(0, 0, 0, 0.85) 90%,
+            black 100%
+        ),
+        url("/thanks/bg.jpg") center/cover fixed;
+
+    background-color: black;
+}
+.wholepage {
+    font-family: "Benniter Trial Version", sans-serif;
+    color: white;
+}
+
+.title {
+    font-size: 250px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: -110px;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    
+}
+
+.title:hover {
+    font-size: 265px;
+    text-shadow: 0 0 60px #ff5400, 0 0 100px #ff5400, 0 0 140px #ff5400,
+        12px 12px 40px rgba(0, 0, 0, 0.95);
+    -webkit-text-stroke: 8px #ff5400;
+    color: #ffffff;
+    transform: translateY(-20px);
+    letter-spacing: -0.01em;
+}
+
+.thanks {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: -5px;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0.95);
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+     
+
+    animation: fontSwap 1.2s infinite ease-in-out;
+}
+
+@keyframes fontSwap {
+    0%,
+    8%,
+    92%,
+    100% {
+        font-family: "Benniter Trial Version", sans-serif;
+        transform: translateY(0);
+    }
+
+    25% {
+        font-family: "Noto Sans";
+        font-weight: 700;
+        transform: translateY(-1px);
+    }
+
+    33%,
+    58% {
+        font-family: "Noto Sans";
+        font-weight: 700;
+        transform: translateY(-1px);
+    }
+
+    66% {
+        font-family: "Crispy Cream", cursive;
+        transform: translateY(-3px);
+    }
+
+    74%,
+    91% {
+        font-family: "Crispy Cream", cursive;
+        transform: translateY(-3px);
+    }
+}
+
+.us {
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
+     animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+
+
+@keyframes wiggle {
+    0% {
+        text-shadow: 2px 0 0 black, -2px 0 0 #ff5400;
+    }
+    20% {
+        text-shadow: 3px -1px 0 black, -3px 1px 0 #ff5400;
+    }
+    40% {
+        text-shadow: -3px 2px 0 black, 3px -2px 0 #ff5400;
+    }
+    60% {
+        text-shadow: 4px 0 0 black, -4px 0 0#ff5400;
+    }
+    80% {
+        text-shadow: -2px -2px 0 black, 2px 2px 0 #ff5400;
+    }
+    100% {
+        text-shadow: 2px 0 0 black, -2px 0 0 #ff5400;
+    }
+}
+
+.images {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    margin-left: 150px;
+    margin-top: 60px;
+    margin-bottom: -200px;
+}
+
+/* Base style for all three images */
+.images img {
+    position: absolute;
+    width: 420px;
+    height: auto;
+    object-fit: cover;
+    padding: 38px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.img1 {
+    top: 40px;
+    left: -30px;
+    transform: rotate(-10deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.img3 {
+    top: 50px;
+    right: -20px;
+    transform: rotate(14deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.img2 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(3deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.img2:hover {
+    transform: translateX(-50%) rotate(-5deg) scale(1.15);
+    z-index: 100;
+    object-fit: cover;
+    background: white;
+    padding: 38px;
+    clip-path: polygon(
+        8% 4%,
+        22% 1%,
+        38% 6%,
+        52% 2%,
+        68% 8%,
+        82% 3%,
+        94% 9%,
+        96% 22%,
+        93% 38%,
+        97% 55%,
+        92% 70%,
+        95% 85%,
+        88% 95%,
+        75% 92%,
+        60% 96%,
+        45% 93%,
+        30% 97%,
+        15% 92%,
+        6% 88%,
+        3% 70%,
+        5% 52%,
+        2% 35%,
+        4% 18%
+    );
+}
+
+.img3:hover {
+    transform: rotate(20deg) scale(1.15);
+    z-index: 100;
+    object-fit: cover;
+    background: white;
+    padding: 38px;
+    clip-path: polygon(
+        8% 4%,
+        22% 1%,
+        38% 6%,
+        52% 2%,
+        68% 8%,
+        82% 3%,
+        94% 9%,
+        96% 22%,
+        93% 38%,
+        97% 55%,
+        92% 70%,
+        95% 85%,
+        88% 95%,
+        75% 92%,
+        60% 96%,
+        45% 93%,
+        30% 97%,
+        15% 92%,
+        6% 88%,
+        3% 70%,
+        5% 52%,
+        2% 35%,
+        4% 18%
+    );
+}
+
+.img1:hover {
+    transform: rotate(-20deg) scale(1.15);
+    z-index: 100;
+    object-fit: cover;
+    background: white;
+    padding: 38px;
+    clip-path: polygon(
+        8% 4%,
+        22% 1%,
+        38% 6%,
+        52% 2%,
+        68% 8%,
+        82% 3%,
+        94% 9%,
+        96% 22%,
+        93% 38%,
+        97% 55%,
+        92% 70%,
+        95% 85%,
+        88% 95%,
+        75% 92%,
+        60% 96%,
+        45% 93%,
+        30% 97%,
+        15% 92%,
+        6% 88%,
+        3% 70%,
+        5% 52%,
+        2% 35%,
+        4% 18%
+    );
+}
+
+.scrollText {
+    background: black;
+    padding: 16px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #222;
+    width: 200%;
+    margin-top: 200px;
+    margin-left: -70px;
+}
+
+/* if ur reading this, idk what im doing, i think ive overused padding and margins like a billion times.... */
+.scroll {
+    animation: marquee 45s linear infinite;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    font-family: "Benniter Trial Version", sans-serif;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.topbarInner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: black;
+
+    overflow: hidden;
+    z-index: 1000;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    font-family: "Benniter Trial Version", sans-serif;
+    font-size: 35px;
+    padding-left: 1200px;
+}
+
+
+.title {
+    opacity: 0;
+    transform: translateY(70px);
+    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.thanks {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.us {
+    opacity: 0;
+    transform: translateY(50px);
+    animation-name: riseUp;
+    animation-duration: 1.9s;
+    animation-delay: 0.9s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
+}
+
+.us:hover {
+    animation-name: riseUp, wiggle;
+    animation-duration: 1.6s, 1.8s;
+    animation-delay: 0.3s, 0s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), ease-in-out;
+    animation-fill-mode: forwards, none;
+    animation-iteration-count: 1, infinite;
+}
+
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topbarInner {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: topbarDrop 1s ease-out 0.2s forwards;
+}
+
+@keyframes topbarDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.images{
+    opacity: 0;
+    animation: bgFade 1s ease-out 0.2s forwards;
+}
+
+@keyframes bgFade {
+    to {
+        opacity: 1;
+    }
+}
