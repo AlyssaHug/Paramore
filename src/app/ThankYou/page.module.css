@@ -94,9 +94,7 @@ html {
      animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
-.us:hover {
-    animation: wiggle 1.8s ease-in-out infinite;
-}
+
 
 @keyframes wiggle {
     0% {
@@ -334,8 +332,22 @@ html {
 .us {
     opacity: 0;
     transform: translateY(50px);
-    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+    animation-name: riseUp;
+    animation-duration: 1.9s;
+    animation-delay: 0.9s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
 }
+
+.us:hover {
+    animation-name: riseUp, wiggle;
+    animation-duration: 1.6s, 1.8s;
+    animation-delay: 0.3s, 0s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), ease-in-out;
+    animation-fill-mode: forwards, none;
+    animation-iteration-count: 1, infinite;
+}
+
 
 @keyframes riseUp {
     to {
