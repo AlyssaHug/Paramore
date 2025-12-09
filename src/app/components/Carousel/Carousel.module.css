@@ -10,7 +10,7 @@
 .background {
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: 0;
     width: 100vw;
 }
 
@@ -18,7 +18,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.65);
-    z-index: -1;
+    z-index: 1;
 }
 
 .carousel {

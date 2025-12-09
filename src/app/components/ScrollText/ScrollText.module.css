@@ -1,33 +1,31 @@
-.marqueeContainer {
+.container {
     position: relative;
-    width: 100%;
     overflow: hidden;
-    padding: 1.2rem 0;
     background: #191919;
+    padding: 0.7rem 0;
+    font-family: var(--font-display);
+}
+
+/* === HORIZONTAL === */
+.container.horizontal {
+    width: 100%;
+    padding: 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.marquee {
+.track {
     display: flex;
     white-space: nowrap;
-    animation: scroll var(--speed, 30s) linear infinite;
+}
+.left {
+    animation: scrollLeft var(--speed, 30s) linear infinite;
+}
+.right {
+    animation: scrollLeft var(--speed, 30s) linear infinite reverse;
 }
 
-.reverse {
-    animation-direction: reverse;
-}
-
-.marquee span {
-    color: #fff;
-    font-size: 1.35rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    opacity: 0.9;
-}
-
-@keyframes scroll {
+@keyframes scrollLeft {
     from {
         transform: translateX(0);
     }
@@ -36,32 +34,79 @@
     }
 }
 
-.fadeLeft,
-.fadeRight {
-    position: absolute;
+/* === VERTICAL === */
+.container.vertical {
+    width: 120px; /* adjust per page */
+    height: 100vh;
+    position: fixed;
     top: 0;
-    bottom: 0;
-    width: 150px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    right: 0;
+    transform: rotate(90deg); /* flip for right side */
+    transform-origin: right top;
+}
+
+.track.up {
+    animation: scrollUp var(--speed, 30s) linear infinite;
+}
+.track.down {
+    animation: scrollUp var(--speed, 30s) linear infinite reverse;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Text styling (you can override per page with className) */
+.track span {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Horizontal fades */
+.fadeLeft,
+.fadeRight,
+.fadeTop,
+.fadeBottom {
+    position: absolute;
     pointer-events: none;
     z-index: 10;
 }
-
 .fadeLeft {
     left: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
     background: linear-gradient(to right, #000, transparent);
 }
 .fadeRight {
     right: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
     background: linear-gradient(to left, #000, transparent);
 }
-
-@media (max-width: 768px) {
-    .marquee span {
-        font-size: 1.1rem;
-        letter-spacing: 0.15em;
-    }
-    .fadeLeft,
-    .fadeRight {
-        width: 80px;
-    }
+.fadeTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+.fadeBottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, #000, transparent);
 }

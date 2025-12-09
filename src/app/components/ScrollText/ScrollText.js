@@ -1,22 +1,37 @@
 import styles from "../ScrollText/ScrollText.module.css";
 
-export default function ScrollText({ text, direction = "left", speed = 30 }) {
-    // Duplicate the text many times so the loop is seamless
-    const repeatedText = (text + "     •     ").repeat(8);
+export default function ScrollText({
+    text,
+    direction = "left", // 'left' | 'right' | 'up' | 'down'
+    speed = 30, // seconds per full loop
+    className = "", // optional extra class for custom styling per page
+}) {
+    // Repeat enough times for seamless loop
+    const repeated = (text + "     •     ").repeat(
+        direction === "up" || direction === "down" ? 10 : 8
+    );
 
     return (
-        <div className={styles.marqueeContainer}>
+        <div className={`${styles.container} ${className}`}>
             <div
-                className={`${styles.marquee} ${
-                    direction === "right" ? styles.reverse : ""
-                }`}
+                className={`${styles.track} ${styles[direction]}`}
                 style={{ "--speed": `${speed}s` }}>
-                <span>{repeatedText}</span>
+                <span>{repeated}</span>
             </div>
 
-            {/* Edge fades – makes it look premium */}
-            <div className={styles.fadeLeft} />
-            <div className={styles.fadeRight} />
+            {/* Edge fades – only show for horizontal */}
+            {(direction === "left" || direction === "right") && (
+                <>
+                    <div className={styles.fadeLeft} />
+                    <div className={styles.fadeRight} />
+                </>
+            )}
+            {(direction === "up" || direction === "down") && (
+                <>
+                    <div className={styles.fadeTop} />
+                    <div className={styles.fadeBottom} />
+                </>
+            )}
         </div>
     );
 }

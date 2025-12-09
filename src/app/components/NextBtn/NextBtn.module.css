@@ -1,12 +1,15 @@
 .btnRow {
     background-color: black;
-    z-index: 20;
+    z-index: 200;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
 }
 .nextBtn {
     padding-right: 1rem;

@@ -11,6 +11,8 @@ export default function BandMemberNext({
     backOnClick,
     nextOnClick,
     target = "_self",
+    onBackClick,
+    onNextClick,
 }) {
     const router = useRouter();
 

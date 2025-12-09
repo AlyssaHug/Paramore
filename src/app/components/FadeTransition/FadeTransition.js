@@ -1,10 +1,14 @@
+// components/PageTransition.js
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
+const heavyPages = ["/band", "/band/hayley", "/band/taylor", "/band/zac"]; // add your paths
+
 export default function PageTransition({ children }) {
     const pathname = usePathname();
+    const isHeavy = heavyPages.some((p) => pathname.startsWith(p));
 
     return (
         <AnimatePresence mode='wait'>
@@ -13,8 +17,10 @@ export default function PageTransition({ children }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                style={{ width: "100%", minHeight: "100dvh" }}>
+                transition={{
+                    duration: isHeavy ? 0.25 : 0.5, // ← band pages = super fast fade
+                    ease: "easeInOut",
+                }}>
                 {children}
             </motion.div>
         </AnimatePresence>

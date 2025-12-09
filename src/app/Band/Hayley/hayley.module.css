@@ -6,6 +6,7 @@
     overflow: hidden;
     font-family: var(--font-display);
     background-color: #bfbfbf;
+    transform: translateZ(0);
 }
 
 .close {

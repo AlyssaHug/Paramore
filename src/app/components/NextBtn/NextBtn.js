@@ -44,7 +44,7 @@ export default function NextBtn({
         <div className={styles.btnRow}>
             <button
                 onClick={handleBack}
-                className={styles.backBtn}>
+                className={`${styles.backBtn} no-fade`}>
                 {backLabel}
             </button>
 

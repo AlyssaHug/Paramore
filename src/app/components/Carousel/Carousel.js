@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import styles from "../Carousel/Carousel.module.css";
 
 // Your albums – add/remove as many as you want

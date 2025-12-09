@@ -26,7 +26,7 @@ export default function Page() {
                     </div>
                     <img
                         className={styles.close}
-                        src='/Band/Zac/Close-up.png'
+                        src='/Band/Zac/Closeup.png'
                         alt='Zac Farro'
                     />
                     <img

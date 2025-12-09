@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Next from "./components/NextBtn/NextBtn";
 import Header from "./components/Header/Header";
 import AlbumCarousel from "./components/Carousel/Carousel";
-import ScrollText from "./components/ScrollText/ScrollText";
+import ScrollText from "@/app/components/ScrollText/ScrollText";
 
 export default function Home() {
     return (
@@ -31,7 +31,7 @@ export default function Home() {
                     text='Pressure • Misery Business • The Only Exception • Still Into You • Hard Times • This is Why'
                     direction='left'
                     speed={35}
-                />{" "}
+                />
                 <img
                     className={styles.footer}
                     src='/Home/waving.jpeg'

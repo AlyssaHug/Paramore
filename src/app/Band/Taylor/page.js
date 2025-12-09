@@ -25,7 +25,7 @@ export default function Page() {
                     </div>
                     <img
                         className={styles.close}
-                        src='/Band/Taylor/Close-up.png'
+                        src='/Band/Taylor/Closeup.png'
                         alt='Hayley Williams'
                     />
                     <img
