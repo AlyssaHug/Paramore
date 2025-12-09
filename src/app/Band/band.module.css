@@ -1,43 +1,138 @@
-html {
+.body {
+    width: 76vw;
+    background-color: #bfbfbf;
+    font-family: var(--font-display);
+
+    contain: layout style;
+}
+.content {
     background-color: #222526;
     display: flex;
     justify-content: center;
+    min-height: 100vh; /* let it grow naturally */
     overflow: hidden;
 }
-body {
-    width: 76vw;
-    background-color: #bfbfbf;
+.header {
+    text-align: right;
+    padding-right: 12px;
+    line-height: 220%;
+}
+.title {
+    margin-top: 28px;
+    font-size: 72px;
+    margin-bottom: 0;
 }
 .caption {
-    font-family: var(--font-body);
+    margin-top: 0;
+    font-size: 20px;
 }
 .band {
     background-color: #bfbfbf;
 }
 .bandHayley {
-    width: 38%;
+    width: 44%;
     position: absolute;
     z-index: 3;
-    left: 30vw;
-    top: 16vh;
+    left: 21vw;
+    top: 10vh;
 }
 .bandTaylor {
-    width: 34%;
+    width: 42%;
     position: absolute;
     z-index: 2;
-    left: 9vw;
-    top: 7vh;
+    left: -2vw;
+    top: 0vh;
 }
 .bandZac {
-    width: 43%;
+    width: 47%;
     position: absolute;
     z-index: 1;
-    left: 52vw;
+    left: 43vw;
     top: 12vh;
 }
 .spacer {
     margin-top: 100%;
+    visibility: hidden;
 }
-.header {
-    font-family: "Benniter Trial Version";
+
+/*=== People Hover/Click ===*/
+.hayley img,
+.taylor img,
+.zac img {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.hayley img:nth-child(1),
+.taylor img:nth-child(1),
+.zac img:nth-child(1) {
+    opacity: 1;
+}
+
+.hayley:hover img:nth-child(2),
+.taylor:hover img:nth-child(2),
+.zac:hover img:nth-child(2) {
+    animation: flip1 1s infinite steps(1);
+}
+.hayley:hover img:nth-child(3),
+.taylor:hover img:nth-child(3),
+.zac:hover img:nth-child(3) {
+    animation: flip2 1s infinite steps(1);
+}
+.hayley:hover img:nth-child(4),
+.taylor:hover img:nth-child(4),
+.zac:hover img:nth-child(4) {
+    animation: flip3 1s infinite steps(1);
+}
+
+@keyframes flip1 {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flip2 {
+    0% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    63% {
+        opacity: 1;
+    }
+    64% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flip3 {
+    0% {
+        opacity: 0;
+    }
+    63% {
+        opacity: 0;
+    }
+    64% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }

@@ -1,0 +1,35 @@
+.btnRow {
+    background-color: black;
+    z-index: 200;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+.nextBtn {
+    padding-right: 1rem;
+    font-family: var(--font-display);
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    padding: 0.8rem;
+}
+.backBtn {
+    padding-right: 1rem;
+    font-family: var(--font-display);
+    font-size: 20px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    padding: 0.8rem;
+}

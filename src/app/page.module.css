@@ -1,0 +1,31 @@
+html {
+    background-color: #191919;
+    font-family: var(--font-display);
+}
+
+.coverImg {
+    width: 100vw;
+}
+.coverText {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    right: 25%;
+    bottom: 25%;
+    color: white;
+    text-align: justify;
+    font-size: 9rem;
+}
+.span {
+    font-size: 12rem;
+}
+.divider {
+    color: white;
+    padding: 1rem;
+    background-color: #191919;
+    text-align: center;
+    font-size: 24px;
+}
+.footer {
+    width: 100vw;
+}
