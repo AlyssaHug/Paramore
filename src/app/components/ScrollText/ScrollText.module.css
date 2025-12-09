@@ -1,0 +1,67 @@
+.marqueeContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1.2rem 0;
+    background: #191919;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll var(--speed, 30s) linear infinite;
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
+.marquee span {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.fadeLeft,
+.fadeRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.fadeLeft {
+    left: 0;
+    background: linear-gradient(to right, #000, transparent);
+}
+.fadeRight {
+    right: 0;
+    background: linear-gradient(to left, #000, transparent);
+}
+
+@media (max-width: 768px) {
+    .marquee span {
+        font-size: 1.1rem;
+        letter-spacing: 0.15em;
+    }
+    .fadeLeft,
+    .fadeRight {
+        width: 80px;
+    }
+}
