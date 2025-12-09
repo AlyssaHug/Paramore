@@ -25,6 +25,7 @@ html {
     margin-bottom: -110px;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    
 }
 
 .title:hover {
@@ -47,6 +48,7 @@ html {
     line-height: 1.1;
     font-weight: 400;
     letter-spacing: 0.5px;
+     
 
     animation: fontSwap 1.2s infinite ease-in-out;
 }
@@ -89,6 +91,7 @@ html {
     font-size: 15px;
     text-align: center;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
+     animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
 .us:hover {
@@ -313,4 +316,55 @@ html {
     font-family: "Benniter Trial Version", sans-serif;
     font-size: 35px;
     padding-left: 1200px;
+}
+
+
+.title {
+    opacity: 0;
+    transform: translateY(70px);
+    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.thanks {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.us {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topbarInner {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: topbarDrop 1s ease-out 0.2s forwards;
+}
+
+@keyframes topbarDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.images{
+    opacity: 0;
+    animation: bgFade 1s ease-out 0.2s forwards;
+}
+
+@keyframes bgFade {
+    to {
+        opacity: 1;
+    }
 }
