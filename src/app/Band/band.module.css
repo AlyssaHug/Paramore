@@ -6,11 +6,15 @@
     contain: layout style;
 }
 .content {
-    background-color: #222526;
     display: flex;
     justify-content: center;
-    min-height: 100vh; /* let it grow naturally */
+    min-height: 100vh;
     overflow: hidden;
+    height: auto;
+    min-height: 100vh;
+    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
+        url("/paperbg/paper2.jpg") center/cover fixed;
+    background-color: #222526;
 }
 .header {
     text-align: right;
@@ -19,8 +23,11 @@
 }
 .title {
     margin-top: 28px;
-    font-size: 72px;
+    font-size: 40px;
     margin-bottom: 0;
+    text-align: center;
+    color:white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.55);
 }
 .caption {
     margin-top: 0;
@@ -34,28 +41,82 @@
     position: absolute;
     z-index: 3;
     left: 21vw;
-    top: 10vh;
+    top: 6vh;
 }
 .bandTaylor {
     width: 42%;
     position: absolute;
     z-index: 2;
     left: -2vw;
-    top: 0vh;
+    top: -4vh;
 }
 .bandZac {
     width: 47%;
     position: absolute;
     z-index: 1;
     left: 43vw;
-    top: 12vh;
+    top:8vh;
 }
 .spacer {
     margin-top: 100%;
     visibility: hidden;
 }
 
-/*=== People Hover/Click ===*/
+
+/* === HOVER / GROW EFFECT === */
+.taylor,
+.hayley,
+.zac {
+    display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    transform: translateY(0);
+}
+
+
+.taylor:hover,
+.hayley:hover,
+.zac:hover {
+    transform: translateY(-12px);           
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));                          
+}
+
+.taylor:hover img,
+.hayley:hover img,
+.zac:hover img {
+    transform: scale(1.12);                
+}
+
+.hayley img,
+.taylor img,
+.zac img {
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.35s ease; 
+.hayley img:nth-child(1),
+.taylor img:nth-child(1),
+.zac img:nth-child(1) {
+    opacity: 1;
+}
+}
+
+
+.hayley:hover img:nth-child(2),
+.taylor:hover img:nth-child(2),
+.zac:hover img:nth-child(2) {
+    animation: flip1 1s infinite steps(1);
+}
+.hayley:hover img:nth-child(3),
+.taylor:hover img:nth-child(3),
+.zac:hover img:nth-child(3) {
+    animation: flip2 1s infinite steps(1);
+}
+
+.hayley:hover img:nth-child(4),
+.taylor:hover img:nth-child(4),
+.zac:hover img:nth-child(4) {
+    animation: flip3 1s infinite steps(1);
+}
+
+
 .hayley img,
 .taylor img,
 .zac img {
@@ -67,6 +128,7 @@
 .taylor img:nth-child(1),
 .zac img:nth-child(1) {
     opacity: 1;
+    
 }
 
 .hayley:hover img:nth-child(2),
@@ -79,6 +141,7 @@
 .zac:hover img:nth-child(3) {
     animation: flip2 1s infinite steps(1);
 }
+
 .hayley:hover img:nth-child(4),
 .taylor:hover img:nth-child(4),
 .zac:hover img:nth-child(4) {
