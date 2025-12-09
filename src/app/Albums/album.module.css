@@ -1,0 +1,498 @@
+/* album.module.css — matches your screenshot 1:1 */
+html {
+    background: black;
+}
+.albumPage {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.albumBg {
+    position: absolute;
+    inset: 0;
+    background: center/cover no-repeat;
+    filter: brightness(0.55);
+    z-index: 1;
+    animation: bgFadeIn 2.5s ease-out 0.3s forwards;
+
+    height: 140vh !important;
+}
+
+/* Main content */
+.albumContent {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top hero section */
+.albumTop {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4rem 6rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ALBUM NAME */
+.albumTitle {
+    font-size: 11vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    margin-top: 300px;
+    font-family: "Benniter Trial Version", sans-serif;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.albumTitle:hover {
+    font-size: 12vw;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.8);;
+    -webkit-text-stroke: 8px white;
+    color: #ffffff;
+    transform: translateY(-20px);
+    letter-spacing: -0.01em;
+}
+
+/* SUBHEADER */
+.albumSubheader {
+    font-size: 5vw;
+    font-size: 60px;
+    text-transform: uppercase;
+    opacity: 0.95;
+    margin-top: 10px;
+    font-family: "Benniter Trial Version", sans-serif;
+    text-align: center;
+}
+
+@keyframes titleRise {
+    to {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+}
+
+/* NOW PLAYING bar */
+.nowPlaying {
+    left: 0;
+    right: 0;
+    width: 100vw; /* full viewport width */
+    margin-left: calc(-50vw + 50%); /* centers it perfectly */
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 22px 50px;
+    background: black;
+    font-family: "Benniter Trial Version", sans-serif;
+    font-size: 22px;
+    top: 600px;
+    color: #fff;
+    margin-top: 300px;
+}
+
+.nowPlayingSong {
+    font-weight: 600;
+    color: white;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nowPlayingSong:hover{
+     font-size: 30px;
+    text-shadow: 0 0 60px #ff5400, 0 0 10px #ff5400, 0 0 10px #ff5400,
+        5px 5px 10px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 1px #ff5400;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.nowPlayingSoundWave {
+    display: flex;
+    gap: 4px;
+    margin-left: 0.5rem;
+}
+.nowPlayingSoundWave span {
+    width: 3px;
+    height: 18px;
+    border-radius: 5px;
+    background: #fff;
+    animation: wave 1.6s ease-in-out infinite;
+}
+.nowPlayingSoundWave span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.nowPlayingSoundWave span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.nowPlayingSoundWave span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.nowPlayingSoundWave span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+/* Middle section — text + vinyl */
+.albumMiddle {
+    padding: 5rem 4rem 8rem;
+    height: auto;
+    min-height: 100vh;
+    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
+        url("/paperbg/paper2.jpg") center/cover fixed;
+    background-color: #222526;
+    margin-top: -100px;
+    padding-bottom: 0px;
+}
+
+.albumMiddleGrid {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 8rem;
+    align-items: start;
+}
+
+.albumMiddleText {
+    padding-top: 3rem;
+}
+.albumMiddleInfo {
+    font-size: 1.35rem;
+    line-height: 2;
+    color: #ccc;
+    max-width: 650px;
+}
+
+.tracklist {
+    font-size: 2rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-family: "Crispy Cream", cursive;
+    color: #e0e0e0;
+    letter-spacing: 0.06em;
+    margin-left: 130px;
+}
+
+.tracklist > div {
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Black vinyl disc (always visible) */
+.vinylContainer {
+    position: relative;
+    width: 480px;
+    height: 500px;
+    margin-top: 70px;
+    perspective: 1200px;
+    margin-left: -150px;
+}
+
+/* White glossy sleeve (left side) */
+.vinylSleeve {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    height: 480px;
+    z-index: 10;
+    overflow: hidden;
+    padding-left: 140px;
+    margin-left: -420px;
+    background: center/cover no-repeat;
+}
+
+.vinylSleeve::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/* Black vinyl disc sliding out */
+.vinylDisc {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle at 25%, #1a1a1a 0%, #000 75%);
+    border-radius: 50%;
+    box-shadow: 0 50px 120px rgba(0, 0, 0, 0.9);
+    transform: rotate(8deg);
+    z-index: 1;
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center;
+}
+
+/* Groove shine (the subtle ring) */
+.vinylGroove {
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.08) 48%,
+        rgba(255, 255, 255, 0.04) 52%,
+        transparent 60%
+    );
+    animation: spin 25s linear infinite;
+    pointer-events: none;
+}
+
+.vinylLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 166px;
+    height: 166px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    animation: spin 28s linear infinite;
+}
+
+/* Tiny center hole */
+.vinylHole {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background: #000;
+    border: 4px solid #111;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+/* Spin animation */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Scrolling lyrics */
+.scrollText {
+    background: black;
+    padding: 16px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #222;
+    width: 200%;
+    margin-top: 190px;
+    margin-left: -70px;
+}
+
+/* if ur reading this, idk what im doing, i think ive overused padding and margins like a billion times.... */
+.scroll {
+    animation: marquee 45s linear infinite;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    font-family: "Benniter Trial Version", sans-serif;
+}
+
+/* Animations */
+@keyframes wave {
+    0%,
+    100% {
+        transform: scaleY(0.3);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .albumMiddleGrid {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+    .vinylContainer {
+        justify-self: center;
+    }
+}
+@media (max-width: 768px) {
+    .albumTitle {
+        font-size: 14vw;
+    }
+    .albumSubheader {
+        font-size: 7vw;
+    }
+    .albumTop {
+        padding: 0 2rem 4rem;
+    }
+    .albumMiddle {
+        padding: 8rem 2rem;
+    }
+}
+
+.topbarInner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: black;
+
+    overflow: hidden;
+    z-index: 1000;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    font-family: "Benniter Trial Version", sans-serif;
+    font-size: 35px;
+    padding-left: 1270px;
+}
+
+
+
+/* animations for load in */
+.albumPage {
+    animation: pageFadeIn 1.4s ease-out forwards;
+}
+
+
+.albumTitle {
+    opacity: 0;
+    transform: translateY(70px);
+    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.albumSubheader {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.nowPlaying {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: riseUp 1.3s ease-out 0.9s forwards;
+}
+
+
+.albumBg {
+    opacity: 0;
+    animation: bgFade 3s ease-out 0.2s forwards;
+}
+
+
+.albumMiddle {
+    opacity: 0;
+    animation: fadeInDelay 1s ease-out 1s forwards;
+}
+
+.vinylContainer {
+    opacity: 0;
+    transform: translateY(80px);
+    animation: vinylEnter 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards,
+               vinylFloat 7s ease-in-out infinite 4s;
+}
+
+.vinylDisc:hover {
+transform: translateX(80px) rotate(8deg);
+}
+
+
+.scrollText {
+    opacity: 0;
+    animation: fadeInDelay 2s ease-out 1.8s forwards;
+}
+
+
+.topbarInner {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: topbarDrop 1s ease-out 0.2s forwards;
+}
+
+
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes bgFade {
+    to { opacity: 1; }
+}
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDelay {
+    to { opacity: 1; }
+}
+
+@keyframes vinylEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes vinylFloat {
+    0%, 100% { transform: translateY(0) }
+    50%      { transform: translateY(-18px) }
+}
+
+@keyframes topbarDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
