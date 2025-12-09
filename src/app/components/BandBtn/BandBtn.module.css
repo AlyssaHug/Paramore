@@ -16,6 +16,16 @@
     justify-content: center;
     align-items: center;
 }
+.flip {
+    z-index: 15;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 44;
+    left: 10;
+    right: 41%;
+    justify-content: space-between;
+}
 .iconRight {
     padding-left: 12px;
 }

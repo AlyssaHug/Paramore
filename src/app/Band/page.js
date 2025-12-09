@@ -8,6 +8,7 @@ function Page() {
         <div className={styles.content}>
             <NextBtn
                 backLabel='Previous: Homepage'
+                backHref='/'
                 nextLabel='Next Up: Their History'
             />
             <div className={styles.body}>

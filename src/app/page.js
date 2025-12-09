@@ -28,7 +28,7 @@ export default function Home() {
                 <div className={styles.divider}>"paramour" 'Secret Lover'</div>
                 <AlbumCarousel />
                 <ScrollText
-                    text='All We Know is Falling • Riot! • brand new eyes • paramore • After Laughter • This is Why'
+                    text='Pressure • Misery Business • The Only Exception • Still Into You • Hard Times • This is Why'
                     direction='left'
                     speed={35}
                 />{" "}

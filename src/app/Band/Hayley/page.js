@@ -13,48 +13,12 @@ export default function Page() {
             />
             <div className={styles.content}>
                 <div className={styles.left}>
-                    <div className={styles.flip}>
-                        <BandMemberNext
-                            href='/Band/Taylor'
-                            value='Taylor'
-                            leftIcon={
-                                <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='17'
-                                    height='25'
-                                    viewBox='0 0 17 25'
-                                    fill='none'>
-                                    <path
-                                        d='M14.5 22.5001L2.5 12.5001L14.5 2.50012'
-                                        stroke='white'
-                                        strokeWidth='5'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                    />
-                                </svg>
-                            }
-                        />
-                        <BandMemberNext
-                            href='/Band/Zac'
-                            value='Zac'
-                            rightIcon={
-                                <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='17'
-                                    height='25'
-                                    viewBox='0 0 17 25'
-                                    fill='none'>
-                                    <path
-                                        d='M2.5 2.50012L14.5 12.5001L2.5 22.5001'
-                                        stroke='white'
-                                        strokeWidth='5'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                    />
-                                </svg>
-                            }
-                        />
-                    </div>
+                    <BandMemberNext
+                        backHref='/Band/Taylor'
+                        backValue='Taylor'
+                        nextHref='/Band/Zac'
+                        nextValue='Zac'
+                    />
                     <div className={styles.header}>
                         <h1 className={styles.title}>Singer</h1>
                         <h2 className={styles.caption}>Hayley Williams</h2>
