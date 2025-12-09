@@ -6,7 +6,7 @@ import Header from "../components/Header/Header";
 
 function Page() {
     return (
-        <div>
+        <div className={styles.wholepage}>
             <Header value="Meet The Band" />
             <div className={styles.content}>
                 <NextBtn
@@ -15,11 +15,6 @@ function Page() {
                     nextLabel="Next Up: Their History"
                 />
                 <div className={styles.body}>
-                    <div className={styles.header}>
-                        <h1 className={styles.title}>
-                            The Faces Behind The Music
-                        </h1>
-                    </div>
                     <div className="band">
                         <Link
                             className={styles.taylor}
@@ -96,6 +91,11 @@ function Page() {
                                 alt="Hayley Williams"
                             />
                         </Link>
+                    </div>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>
+                            The Faces Behind The Music
+                        </h1>
                     </div>
                 </div>
             </div>
