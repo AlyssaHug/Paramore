@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <div>
             <Next
-                nextLabel='Their History'
+                nextLabel='Next Up: Their History'
                 backLabel='Previous: HomePage'
                 backHref='/'
                 nextHref='/History'
