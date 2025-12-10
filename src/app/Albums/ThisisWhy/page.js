@@ -5,7 +5,7 @@ export default function thisisWhy(){
         <AlbumComponent
   title="This is Why"
   subheader="Sixth Album"
-  backgroundImage="/Albums/thisiswhy.jpg"
+  backgroundImage="/Albums/thisiswhy.webp"
   albumCoverImage="/Albums/thisiswhyvinyl.jpg"  
   currentSong="Crave"
   albumInfo=" This Is Why • The News • Running Out of Time •

@@ -33,7 +33,7 @@ export default function AlbumsPage() {
             cover: "/Home/AfterLaughter.png",
         },
         {
-            id: "ThisIsWhy",
+            id: "ThisisWhy",
             title: "This Is Why",
             year: 2023,
             cover: "/Home/ThisIsWhy.png",

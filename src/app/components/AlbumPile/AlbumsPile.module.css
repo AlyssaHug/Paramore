@@ -87,3 +87,14 @@
         height: 650px;
     }
 }
+
+/* ⭐ NEW: Start everything in a pile */
+.preExplode .albumLink {
+    transform: translate(0px, 0px) !important;
+}
+
+/* ⭐ Smooth explosion animation */
+.albumLink {
+    transition: transform 1.1s cubic-bezier(0.22, 0.9, 0.3, 1);
+}
+

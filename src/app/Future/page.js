@@ -6,21 +6,25 @@ import Header from "../components/Header/Header";
 export default function Page() {
     return (
         <div className={styles.wrapper}>
-            <Header value='The Present' />
+            <Header value="The Present" />
             <div className={styles.head}>
                 <NextBtn
-                    nextLabel='Next Up: Thank you'
-                    nextHref='/ThankYou'
-                    backLabel='Previous: Albums'
-                    backHref='/Albums'
+                    nextLabel="Next Up: Thank you"
+                    nextHref="/ThankYou"
+                    backLabel="Previous: Albums"
+                    backHref="/Albums"
                 />
-                <div className={styles.scroll}>
-                    <ScrollText text='idk something rendom to fill' />
-                </div>
+                   <img
+                    className={styles.interview}
+                    src="/Future/interview.png"
+                    alt="Picture of Hayley, Taylor, and Zac on the couch in an interview"
+                />
+
                 <div className={styles.column}>
                     <div className={styles.header}>
                         <p className={styles.title}>Where are they now?</p>
                     </div>
+                    
                     <p className={styles.bodyText}>
                         Their most recent release was their 20th anniversary
                         edition of their debut album, “All we know is falling”
@@ -35,19 +39,15 @@ export default function Page() {
                     </p>
                 </div>
 
-                <img
-                    className={styles.interview}
-                    src='/Future/interview.png'
-                    alt='Picture of Hayley, Taylor, and Zac on the couch in an interview'
-                />
+             
                 <div className={styles.pageColumn}></div>
             </div>
             <div className={styles.divider}>"paramour" 'Secret Lover'</div>
             <div className={styles.hayley}>
                 <img
                     className={styles.hayleyImg}
-                    src='/Future/hayley.webp'
-                    alt='Hayley in a bridal dress with food and drinks around her from her solo tour poster'
+                    src="/Future/hayley.webp"
+                    alt="Hayley in a bridal dress with food and drinks around her from her solo tour poster"
                 />
                 <div className={styles.hayleyText}>
                     <h2 className={styles.Subhead}>
@@ -65,7 +65,7 @@ export default function Page() {
                     </p>
                 </div>
             </div>
-            <ScrollText text='Ego Death at a bachelorette party' />
+            <ScrollText text="Ego Death at a bachelorette party" />
             <div className={styles.zac}>
                 <div className={styles.zacText}>
                     <h2 className={styles.Subhead}>
@@ -82,16 +82,16 @@ export default function Page() {
                 </div>
                 <img
                     className={styles.zacImg}
-                    src='/Future/zac.jpg'
-                    alt='/'
+                    src="/Future/zac.jpg"
+                    alt="/"
                 />
             </div>
-            <ScrollText text='Operator • Operator' />
+            <ScrollText text="Operator • Operator" />
             <div className={styles.taylor}>
                 <img
                     className={styles.taylorImg}
-                    src='/Future/taylor.jpg'
-                    alt='Taylor York holding a guitar posing for a photo'
+                    src="/Future/taylor.jpg"
+                    alt="Taylor York holding a guitar posing for a photo"
                 />
                 <div className={styles.taylorText}>
                     <h2 className={styles.Subhead}>

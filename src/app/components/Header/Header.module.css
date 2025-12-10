@@ -12,3 +12,17 @@
     padding-left: 3rem;
     font-size: 32px;
 }
+
+
+.header {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: topbarDrop 1s ease-out 0.2s forwards;
+}
+
+@keyframes topbarDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

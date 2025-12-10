@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./AlbumsPile.module.css";
 
 const rotations = [-21, -14, -8, -3, 4, 11, 18, 24, -17, 9];
@@ -10,16 +10,28 @@ const rotations = [-21, -14, -8, -3, 4, 11, 18, 24, -17, 9];
 export default function AlbumsPile({ albums }) {
     const [hoveredId, setHoveredId] = useState(null);
 
+    // ⭐ NEW — explosion class toggle
+    const [preExplode, setPreExplode] = useState(true);
+
+    // Remove pile state after load → triggers explosion
+    useEffect(() => {
+        const t = setTimeout(() => setPreExplode(false), 50);
+        return () => clearTimeout(t);
+    }, []);
+
     return (
-        <div className={styles.pileContainer}>
+        <div
+            className={`${styles.pileContainer} ${
+                preExplode ? styles.preExplode : ""
+            }`}
+        >
             {albums.map((album, i) => {
                 const isHovered = hoveredId === album.id;
 
-                // Responsive horizontal spacing
+                // ---------- YOUR ORIGINAL CODE ----------
                 const total = albums.length;
                 const indexFromCenter = i - (total - 1) / 2;
 
-                // Base spacing scales with screen size
                 const baseSpacing =
                     typeof window !== "undefined" && window.innerWidth < 768
                         ? 110 + indexFromCenter * 90 // mobile: tighter
@@ -28,6 +40,7 @@ export default function AlbumsPile({ albums }) {
                 const randomX = (Math.random() - 0.5) * 70;
                 const randomY = (Math.random() - 0.5) * 140;
                 const rotate = rotations[i % rotations.length];
+                // -----------------------------------------
 
                 return (
                     <Link
@@ -41,12 +54,14 @@ export default function AlbumsPile({ albums }) {
                             zIndex: isHovered ? 1000 : i + 10,
                         }}
                         onMouseEnter={() => setHoveredId(album.id)}
-                        onMouseLeave={() => setHoveredId(null)}>
+                        onMouseLeave={() => setHoveredId(null)}
+                    >
                         <div
                             className={`${styles.albumWrapper} ${
                                 isHovered ? styles.hovered : ""
                             }`}
-                            style={{ transform: `rotate(${rotate}deg)` }}>
+                            style={{ transform: `rotate(${rotate}deg)` }}
+                        >
                             <Image
                                 src={album.cover}
                                 alt={album.title}

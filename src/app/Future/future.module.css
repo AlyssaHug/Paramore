@@ -1,10 +1,15 @@
 .interview {
-    z-index: -1;
     position: absolute;
-    margin-right: 0;
     right: 0;
-    width: 70vw;
     bottom: 0;
+    width: 70vw;
+    z-index: 1; 
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interview:hover {
+    transform: scale(107%) translateY(-10px);
+    z-index: 1;
 }
 
 .header {
@@ -12,7 +17,7 @@
     padding-right: 12px;
     line-height: 100%;
     font-family: var(--font-display);
-    font-size: 26px;
+    font-size: 40px;
     position: absolute;
     top: 5rem;
 }
@@ -23,14 +28,31 @@
 .bodyText {
     font-size: 18px;
     font-family: var(--font-body);
-    margin-top: 10rem;
-    width: 24%;
+    margin-top: 22rem;
+    width: 26%;
+    color: white;
+    margin-left: 30px;
 }
 .title {
-    margin-top: 28px;
-    font-size: 72px;
+    margin-top: 10px;
+    font-size: 160px;
+    margin-right: 70px;
+    line-height: 150px;
     margin-bottom: 0;
+    color: white;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.title:hover {
+    font-size: 166px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.2), 0 4px 15px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 1px white;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
 .pageColumn {
     background-color: #222526;
     position: absolute;
@@ -39,7 +61,8 @@
     height: 100vh;
     right: 0;
     top: 0;
-    background-image: url("/Band/texture.jpg");
+    background: url("/Future/back.gif") center/cover fixed;
+
     background-blend-mode: multiply;
 }
 .wrapper {
@@ -47,6 +70,8 @@
     inset: 0;
     overflow-x: hidden;
     background-color: #bfbfbf;
+    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
+        center/cover fixed;
 }
 
 .head {

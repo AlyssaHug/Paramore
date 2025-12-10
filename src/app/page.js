@@ -102,7 +102,7 @@ export default function Home() {
             />
 
             <main className={styles.main}>
-                <Header value="Homepage" />
+                <Header value="Homepage"/>
                 <div className={styles.cover}>
                     <h1 className={styles.title}>
                         <span className={styles.span}>This is</span> Paramore
