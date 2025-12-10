@@ -8,9 +8,10 @@ export default function Page() {
     return (
         <div>
             <Next
-                nextLabel="Their History"
-                backLabel="Previous: HomePage"
-                backHref="/"
+                nextLabel='Their History'
+                backLabel='Previous: HomePage'
+                backHref='/'
+                nextHref='/History'
             />
             <div className={styles.content}>
                 <div className={styles.left}>
@@ -37,6 +38,7 @@ export default function Page() {
                     />
                     <p className={styles.spacer}>Hayley</p>
                 </div>
+
                 <div className={styles.rightHug}>
                     <div className={styles.right}>
                         <img

@@ -3,14 +3,15 @@ import AlbumComponent from "../albumcomponent";
 export default function afterLaughter() {
     return (
         <AlbumComponent
-            title="After Laughter"
-            subheader="Fifth Album"
-            backgroundImage="/Albums/afterlaughter.jpg"
-            albumCoverImage="/Albums/afterlaughtervinyl.jpg"
-            currentSong="Hard Times "
-            albumInfo="Hard Times • Rose-Colored Boy • Told You So • Forgiveness • Fake Happy • 26 • Pool • Grudges • Caught in the Middle • Idle Worship • No Friend • Tell Me How 
+            title='After Laughter'
+            subheader='Fifth Album'
+            backgroundImage='/Albums/afterlaughter.jpg'
+            albumCoverImage='/Albums/afterlaughtervinyl.jpg'
+            currentSong='Hard Times '
+            albumEnding='/Albums/AfterPress.png'
+            albumInfo='Hard Times • Rose-Colored Boy • Told You So • Forgiveness • Fake Happy • 26 • Pool • Grudges • Caught in the Middle • Idle Worship • No Friend • Tell Me How 
 
-"
+'
             songLyrics="All that I want
 Is to wake up fine
 Tell me that I'm alright
@@ -76,6 +77,25 @@ Still don't know how
 I survive
 And I gotta get to rock bottom
 (Ooh!)"
+            albumDesc={
+                <>
+                    Their fifth studio album, After Laughter was released on May
+                    12, 2017. This was the band's first album since the return
+                    of drummer Zac Farro (who left in 2010) and the official
+                    departure of former bassist Jeremy Davis. After Laughter
+                    leaves behind their previous pop-punk and alt rock sounds
+                    and trades them for 1980s new wave and synth-pop sounds.
+                    <br />
+                    <br />
+                    The album debuted at No. 6 on the US Bllboard 200, marking
+                    their third top 10 album on the chart, with 67,000 units
+                    selling in its first week. The album recieved critical
+                    acclaim, with people stating they sound 'musically free as
+                    they ever sounded' on this album. Through the songs they
+                    explore themes of exhaustion, depression, and anxiety with
+                    its upbeat and vibrant sound.
+                </>
+            }
         />
     );
 }

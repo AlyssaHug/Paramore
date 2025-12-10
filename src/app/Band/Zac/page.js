@@ -7,9 +7,10 @@ export default function Page() {
     return (
         <div>
             <Next
-                nextLabel="Next Up: Their History"
-                backLabel="Previous: Homepage"
-                backHref="/"
+                nextLabel='Next Up: Their History'
+                backLabel='Previous: Homepage'
+                backHref='/'
+                nextHref='/History'
             />
             <div className={styles.content}>
                 <div className={styles.left}>

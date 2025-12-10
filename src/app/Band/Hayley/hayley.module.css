@@ -169,6 +169,17 @@
     transform: translateY(70px);
     animation: riseUp 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
 }
+.vertical {
+    width: 120px; /* adjust per page */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    right: 0;
+    transform: rotate(90deg); /* flip for right side */
+    transform-origin: right top;
+}
 
 
 .desc {
