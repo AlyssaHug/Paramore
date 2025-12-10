@@ -1,12 +1,14 @@
 .header {
     background-color: black;
-
+    position: fixed;
     width: 100%;
     display: flex;
+    z-index: 1000;
 }
 .text {
     color: white;
     margin: 1rem 0;
     font-family: var(--font-display);
     padding-left: 3rem;
+    font-size: 32px;
 }

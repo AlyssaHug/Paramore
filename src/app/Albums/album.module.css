@@ -99,7 +99,6 @@ html {
     font-size: 22px;
     top: 600px;
     color: #fff;
-    margin-top: 300px;
 }
 
 .nowPlayingSong {
@@ -164,7 +163,7 @@ html {
 }
 
 .albumMiddleText {
-    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 .albumMiddleInfo {
     font-size: 1.35rem;
@@ -306,17 +305,6 @@ html {
     width: 200%;
     margin-top: 190px;
     margin-left: -70px;
-}
-
-/* if ur reading this, idk what im doing, i think ive overused padding and margins like a billion times.... */
-.scroll {
-    animation: marquee 45s linear infinite;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-weight: 500;
-    font-family: "Benniter Trial Version", sans-serif;
 }
 
 /* Animations */
@@ -503,7 +491,7 @@ html {
 .backBtn {
     position: fixed;
     top: 15px;
-    left: 20px; 
+    left: 20px;
     z-index: 99999;
     width: 76px;
     height: 76px;
@@ -519,9 +507,9 @@ html {
 }
 
 .backBtn:hover {
-   font-size: 3vw;
+    font-size: 3vw;
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
     animation: jankyStopMotion 0.68s infinite steps(8);
 }
 

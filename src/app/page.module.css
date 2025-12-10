@@ -5,16 +5,20 @@ html {
 
 .coverImg {
     width: 100vw;
+    margin-top: 1rem;
 }
-.coverText {
+.title {
     position: absolute;
     left: 25%;
-    top: 15%;
+    top: 10%;
     right: 25%;
     bottom: 25%;
     color: white;
     text-align: justify;
     font-size: 9rem;
+}
+.cover {
+    background-color: #191919;
 }
 .span {
     font-size: 12rem;
@@ -28,4 +32,11 @@ html {
 }
 .footer {
     width: 100vw;
+}
+.title:hover {
+    text-shadow: 0 0 60px #ff5400, 0 0 100px #ff5400, 0 0 140px #ff5400,
+        12px 12px 40px rgba(0, 0, 0, 0.95);
+    -webkit-text-stroke: 8px #ff5400;
+    color: #ffffff;
+    letter-spacing: -0.01em;
 }
