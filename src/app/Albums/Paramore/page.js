@@ -73,14 +73,12 @@ I'm still into you"
             albumDesc={
                 <>
                     Paramore, their self-titled album, is their fourth studio
-                    album released on April 5th, 2013. It was recorded between
-                    April and November 2012. The album was the first in which
+                    album released on April 5th, 2013. The album was the first in which
                     guitarist Josh Farro was absent, and is also one of the only
                     albums from the band without Zac Farro. It also marked the
                     final album for their bassist, Jeremy Davis. It was
                     described by the band as a "statement" and a reintroduction
-                    to the world and themselves. The album is experimental,
-                    exploring new musical genres.
+                    to the world and themselves. 
                     <br />
                     <br />
                     Music critics acclaimed Paramore for the experimentation and
