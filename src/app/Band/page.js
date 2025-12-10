@@ -78,7 +78,7 @@ function Page() {
                             />
                             <img
                                 className={styles.bandHayley}
-                                src='/Band/Home/Hayley_Ver01.png'
+                                src='/Band/Home/hayley_Ver01.png'
                                 alt='Hayley Williams'
                             />
                             <img
