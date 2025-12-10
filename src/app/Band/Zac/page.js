@@ -10,6 +10,7 @@ export default function Page() {
                 nextLabel='Next Up: Their History'
                 backLabel='Previous: Homepage'
                 backHref='/'
+                nextHref='/History'
             />
             <div className={styles.content}>
                 <div className={styles.left}>

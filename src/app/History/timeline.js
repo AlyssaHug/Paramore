@@ -56,9 +56,7 @@ export default function TimelineItem({
                             )}
 
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
-                            <p className={styles.cardDesc}>
-                                {entry.description}
-                            </p>
+                            <p className={styles.cardDesc}>{entry.summary}</p>
                             <div className={styles.cardCta}>
                                 Click to explore
                             </div>
@@ -106,9 +104,7 @@ export default function TimelineItem({
                             )}
 
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
-                            <p className={styles.cardDesc}>
-                                {entry.description}
-                            </p>
+                            <p className={styles.cardDesc}>{entry.summary}</p>
                             <div className={styles.cardCta}>
                                 Click to explore
                             </div>
@@ -138,8 +134,6 @@ export default function TimelineItem({
                             </button>
 
                             <div className={styles.modalContent}>
-                            
-
                                 {/* MAIN SIDE-BY-SIDE CONTENT */}
                                 <div className={styles.modalMain}>
                                     {/* Image Left */}

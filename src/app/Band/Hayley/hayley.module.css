@@ -75,3 +75,14 @@
     font-family: var(--font-body);
     font-size: 14px;
 }
+.vertical {
+    width: 120px; /* adjust per page */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    right: 0;
+    transform: rotate(90deg); /* flip for right side */
+    transform-origin: right top;
+}

@@ -230,22 +230,22 @@
 }
 
 .modal {
-    width: 90vw;          
-    height: 88vh;        
-    max-width: 1400px;     
-    max-height: 920px;     
-    margin: auto;          
-    
+    width: 90vw;
+    height: 88vh;
+    max-width: 1400px;
+    max-height: 920px;
+    margin: auto;
+
     background: linear-gradient(rgba(34, 37, 38, 0.92), rgba(20, 22, 23, 0.96)),
-                url("/paperbg/paper2.jpg") center/cover fixed;
+        url("/paperbg/paper2.jpg") center/cover fixed;
     background-color: #1a1d1e;
-    
-    border-radius: 20px;   /* nice rounded corners */
+
+    border-radius: 20px; /* nice rounded corners */
     border: 1px solid rgba(255, 255, 255, 0.15);
-    
+
     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.85);
     overflow: hidden;
-    
+
     position: relative;
     animation: modalZoom 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -275,12 +275,12 @@
 }
 
 .modalTitle {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 900;
     color: white;
     margin-top: -15px;
     margin-bottom: -20px;
-    font-family: "Benniter Trial Version", sans-serif;
+    font-family: var(--font-display);
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -288,20 +288,19 @@
     font-size: 210x;
     text-shadow: 0 0 60px #ff5400, 0 0 100px #ff5400, 0 0 140px #ff5400,
         12px 12px 40px rgba(0, 0, 0, 0.95);
-    -webkit-text-stroke: 8px #ff5400;
+    -webkit-text-stroke: 4px #ff5400;
     color: #ffffff;
     transform: translateY(-5px);
     letter-spacing: -0.01em;
 }
 
 .modalDesc {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #e0e0e0;
     max-width: 900px;
     margin: 0 auto 4rem;
-    line-height: 1.9;
-    font-family: "Noto Sans";
-    font-family: "Crispy Cream", cursive;
+    line-height: 1.7;
+    font-family: var(--font-body);
     margin-top: 20px;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
 }
@@ -455,19 +454,16 @@
     }
 }
 
-
-
 .modalContent {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding: 4rem 6rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-   margin-top: -60px;
-
+    margin-top: -60px;
 }
 
 /* NEW: Main side-by-side container */
@@ -492,8 +488,6 @@
     pointer-events: none;
 }
 
-
-
 /* Text column */
 .modalText {
     flex: 1;
@@ -504,20 +498,7 @@
     justify-content: center;
 }
 
-
-.modalDesc {
-    font-size: 1.7rem;
-    color: #e0e0e0;
-    line-height: 1.9;
-    font-family: "Crispy Cream", cursive;
-    margin-bottom: 2.5rem;
-    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
-}
-
 /* Details list */
 .modalDetails {
     margin-top: 2rem;
 }
-
-
-

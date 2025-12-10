@@ -11,6 +11,7 @@ export default function Page() {
                 nextLabel='Their History'
                 backLabel='Previous: HomePage'
                 backHref='/'
+                nextHref='/History'
             />
             <div className={styles.content}>
                 <div className={styles.left}>
@@ -37,14 +38,8 @@ export default function Page() {
                     />
                     <p className={styles.spacer}>Hayley</p>
                 </div>
+
                 <div className={styles.rightHug}>
-                    <div className={styles.ScrollDiv}>
-                        <ScrollText
-                            text='Pressure • Misery Business • The Only Exception • Still Into You • Hard Times • This is Why'
-                            direction='left'
-                            speed={35}
-                        />
-                    </div>
                     <div className={styles.right}>
                         <img
                             className={styles.perform}
