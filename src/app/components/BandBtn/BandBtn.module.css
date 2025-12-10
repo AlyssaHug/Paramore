@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .flip {
     z-index: 15;
@@ -34,4 +35,9 @@
 }
 .bandBtn span {
     margin-top: 0.5rem;
+}
+
+.bandBtn:hover {
+    transform: scale(110%);
+    color: #ff5400;
 }

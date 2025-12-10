@@ -42,7 +42,9 @@ export default function Page() {
                         src='/Band/Taylor/Perform.webp'
                         alt='Taylor York playing the guitar during a performace.'
                     />
-                    <p className={styles.desc}>lorem ipsum</p>
+                     <p className={styles.desc}>Taylor York was born on December 17, 1989. He is currently 34 years old. Taylor has been in the band since 2007.</p>
+                    <p className={styles.desc}>Described as the band's "glue" during difficult times, Taylor York is Paramore's cornerstone. Hailey has even called him the "heart of Paramore." He provides intricate guitar work and pop-punk energy. Not only is he a guitarist for the band, but he also is a key to creative songwriting, production, and arrangements.</p>
+                     <p className={styles.desc}><span className={styles.funfact}>Fun Fact:</span> Taylor is apparently good at sports, being called a formidable opponent by fans who have played ping-pong with him.</p>
                 </div>
             </div>
         </div>
