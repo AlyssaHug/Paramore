@@ -43,7 +43,8 @@ export default function Page() {
                         src='/Band/Zac/Perform.jpg'
                         alt='Zac playing the drums'
                     />
-                    <p className={styles.desc}>lorem ipsum</p>
+                    <p className={styles.desc}>Zac is Paramore’s backbone as the drummer. As one of the founding members, he brings a signature style that’s carried throughout their albums. While keeping in time, he shapes the personality of each track. Beyond playing the drums, he also contributes to the band’s writing in later albums and its energy.
+</p>
                 </div>
             </div>
         </div>

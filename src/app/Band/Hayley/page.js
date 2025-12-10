@@ -8,17 +8,17 @@ export default function Page() {
     return (
         <div>
             <Next
-                nextLabel='Their History'
-                backLabel='Previous: HomePage'
-                backHref='/'
+                nextLabel="Their History"
+                backLabel="Previous: HomePage"
+                backHref="/"
             />
             <div className={styles.content}>
                 <div className={styles.left}>
                     <BandMemberNext
-                        nextHref='/Band/Zac'
-                        nextValue='Zac'
-                        backHref='/Band/Taylor'
-                        backValue='Taylor'
+                        nextHref="/Band/Zac"
+                        nextValue="Zac"
+                        backHref="/Band/Taylor"
+                        backValue="Taylor"
                     />
 
                     <div className={styles.header}>
@@ -27,29 +27,22 @@ export default function Page() {
                     </div>
                     <img
                         className={styles.close}
-                        src='/Band/Hayley/Closeup.png'
-                        alt='Hayley Williams'
+                        src="/Band/Hayley/Closeup.png"
+                        alt="Hayley Williams"
                     />
                     <img
                         className={styles.mic}
-                        src='/Band/Hayley/Mic.png'
-                        alt='microphone graphic'
+                        src="/Band/Hayley/Mic.png"
+                        alt="microphone graphic"
                     />
                     <p className={styles.spacer}>Hayley</p>
                 </div>
                 <div className={styles.rightHug}>
-                    <div className={styles.ScrollDiv}>
-                        <ScrollText
-                            text='Pressure • Misery Business • The Only Exception • Still Into You • Hard Times • This is Why'
-                            direction='left'
-                            speed={35}
-                        />
-                    </div>
                     <div className={styles.right}>
                         <img
                             className={styles.perform}
-                            src='/Band/Hayley/Perform.png'
-                            alt='Hayley singing on stage opening for Taylor Swift'
+                            src="/Band/Hayley/Perform.png"
+                            alt="Hayley singing on stage opening for Taylor Swift"
                         />
                         <p className={styles.desc}>
                             Hayley is the voice and face of Paramore. She’s the

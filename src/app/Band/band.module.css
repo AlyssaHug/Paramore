@@ -20,14 +20,14 @@
     line-height: 600%;
 }
 .title {
-    margin-top: 40px;
+    margin-top: 90px;
     margin-right: 50px;
     margin-bottom: -30px;
     font-size: 100px;
     text-align: center;
     color: white;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.55);
-     text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
         0 0 40px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -43,21 +43,21 @@
     position: absolute;
     z-index: 3;
     left: 21vw;
-    top: 6vh;
+    top: 10vh;
 }
 .bandTaylor {
     width: 42%;
     position: absolute;
     z-index: 2;
     left: -2vw;
-    top: -4vh;
+    top: 5vh;
 }
 .bandZac {
     width: 47%;
     position: absolute;
     z-index: 1;
     left: 43vw;
-    top: 8vh;
+    top: 15vh;
 }
 .spacer {
     margin-top: 100%;
