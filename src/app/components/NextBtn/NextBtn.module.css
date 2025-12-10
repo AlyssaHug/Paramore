@@ -21,6 +21,7 @@
     cursor: pointer;
 
     padding: 0.8rem;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .backBtn {
     padding-right: 1rem;
@@ -32,4 +33,13 @@
     cursor: pointer;
 
     padding: 0.8rem;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nextBtn:hover {
+    color: #ff5400;
+}
+
+.backBtn:hover {
+    color: #ff5400;
 }
