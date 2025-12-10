@@ -1,9 +1,10 @@
 .interview {
     z-index: -1;
-    position: fixed;
+    position: absolute;
+    margin-right: 0;
     right: 0;
     width: 70vw;
-    bottom: 1rem;
+    bottom: 0;
 }
 
 .header {
@@ -13,17 +14,17 @@
     font-family: var(--font-display);
     font-size: 26px;
     position: absolute;
-    top: 4rem;
+    top: 5rem;
 }
 .column {
-    padding-left: 3rem;
+    padding-left: 4rem;
     padding-top: 2rem;
 }
 .bodyText {
     font-size: 18px;
     font-family: var(--font-body);
-    position: fixed;
-    top: 28%;
+    margin-top: 10rem;
+    width: 24%;
 }
 .title {
     margin-top: 28px;
@@ -44,13 +45,55 @@
 .wrapper {
     position: fixed;
     inset: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-color: #bfbfbf;
 }
 
-.content {
+.head {
     position: relative;
     height: 100vh;
 }
 .scroll {
     position: absolute;
+}
+.divider {
+    color: white;
+    padding: 1rem;
+    background-color: #191919;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--font-display);
+}
+/*===Hayley Section===*/
+.hayley,
+.zac,
+.taylor {
+    display: flex;
+    gap: 6rem;
+}
+.hayleyImg {
+    width: 50vw;
+    margin-left: -10rem;
+    height: 70vh;
+}
+.zacImg,
+.taylorImg {
+    width: 37vw;
+}
+.Subhead {
+    font-family: var(--font-display);
+    font-size: 40px;
+    margin-top: 6rem;
+}
+.subText {
+    font-family: var(--font-body);
+    width: 80%;
+    font-size: 18px;
+}
+.zacText h2 {
+    text-align: right;
+}
+.zacText .subText {
+    margin-left: 11rem;
+    text-align: justify;
 }
