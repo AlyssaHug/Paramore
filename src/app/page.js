@@ -16,7 +16,7 @@ export default function Home() {
             <main className={styles.main}>
                 <Header value='Homepage' />
                 <div className={styles.cover}>
-                    <h1 className={styles.coverText}>
+                    <h1 className={styles.title}>
                         <span className={styles.span}>This is</span> Paramore
                     </h1>
                     <img

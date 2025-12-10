@@ -37,6 +37,54 @@ html {
     letter-spacing: -0.01em;
 }
 
+.thanks {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: -5px;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0.95);
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    animation: fontSwap 1.2s infinite ease-in-out;
+}
+
+@keyframes fontSwap {
+    0%,
+    8%,
+    92%,
+    100% {
+        font-family: "Benniter Trial Version", sans-serif;
+        transform: translateY(0);
+    }
+
+    25% {
+        font-family: "Noto Sans";
+        font-weight: 700;
+        transform: translateY(-1px);
+    }
+
+    33%,
+    58% {
+        font-family: "Noto Sans";
+        font-weight: 700;
+        transform: translateY(-1px);
+    }
+
+    66% {
+        font-family: "Crispy Cream", cursive;
+        transform: translateY(-3px);
+    }
+
+    74%,
+    91% {
+        font-family: "Crispy Cream", cursive;
+        transform: translateY(-3px);
+    }
+}
+
 .us {
     font-size: 15px;
     text-align: center;
@@ -211,26 +259,13 @@ html {
 
 .scrollText {
     background: black;
-    padding: 16px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
+
     box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
-    border-top: 1px solid #222;
+
     width: 200%;
     margin-top: 200px;
     margin-left: -70px;
-}
-
-/* if ur reading this, idk what im doing, i think ive overused padding and margins like a billion times.... */
-.scroll {
-    animation: marquee 45s linear infinite;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-weight: 500;
-    font-family: "Benniter Trial Version", sans-serif;
+    margin-bottom: 50px;
 }
 
 @keyframes marquee {

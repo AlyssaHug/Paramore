@@ -1,6 +1,7 @@
 "use client";
-
+import ScrollText from "../components/ScrollText/ScrollText";
 import styles from "./page.module.css";
+import NextBtn from "../components/NextBtn/NextBtn";
 
 function fireConfetti() {
     const confetti = document.createElement("canvas");
@@ -80,6 +81,12 @@ function fireConfetti() {
 export default function thankYou() {
     return (
         <div className={styles.wholepage}>
+            <NextBtn
+                backLabel='Previous: Future'
+                backHref='/Future'
+                nextLabel='Next Up: HomePage'
+                nextHref='/'
+            />
             <div
                 className={styles.topbarInner}
                 onClick={() => fireConfetti()}>
@@ -92,46 +99,18 @@ export default function thankYou() {
             </div>
             <div className={styles.images}>
                 <img
-                    src="/thanks/one.jpg"
+                    src='/thanks/one.jpg'
                     className={styles.img1}></img>
                 <img
-                    src="/thanks/two.jpg"
+                    src='/thanks/two.jpg'
                     className={styles.img2}></img>
                 <img
-                    src="/thanks/three.jpg"
+                    src='/thanks/three.jpg'
                     className={styles.img3}></img>
             </div>
 
             <div className={styles.scrollText}>
-                <div className={styles.scroll}>
-                    <span>
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You{" "}
-                    </span>
-                    <span>
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You{" "}
-                    </span>
-                    <span>
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You Thank You Thank You Thank You Thank
-                        You Thank You Thank You Thank You Thank You Thank You
-                        Thank You Thank You{" "}
-                    </span>
-                </div>
+                <ScrollText text='Thank you • Thank you' />
             </div>
         </div>
     );

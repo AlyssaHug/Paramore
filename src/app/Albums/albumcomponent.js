@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "./album.module.css";
+import ScrollText from "../components/ScrollText/ScrollText";
 
 const AlbumComponent = ({
     title = "ALBUM NAME",
@@ -15,13 +16,13 @@ const AlbumComponent = ({
 }) => {
     return (
         <div className={styles.albumPage}>
-          <div 
-                className={styles.backBtn} 
-                onClick={() => window.history.back()}   // or router.back() if you import useRouter
+            <div
+                className={styles.backBtn}
+                onClick={() => window.history.back()} // or router.back() if you import useRouter
             >
                 x
             </div>
-            
+
             {/* Background */}
             <div
                 className={styles.albumBg}
@@ -85,14 +86,8 @@ const AlbumComponent = ({
                     </div>
 
                     {/* Lyrics Marquee */}
-                    <div className={styles.scrollText}>
-                        <div className={styles.scroll}>
-                            <span>{songLyrics} </span>
-                            <span>{songLyrics} </span>
-                            <span>{songLyrics} </span>
-                        </div>
-                    </div>
                 </section>
+                <ScrollText text={songLyrics} />
             </div>
         </div>
     );
