@@ -1,17 +1,17 @@
-import AlbumComponent from "../albumcomponent"
+import AlbumComponent from "../albumcomponent";
 
-export default function brandNewEyes(){
-    return(
+export default function brandNewEyes() {
+    return (
         <AlbumComponent
-  title="Brand New Eyes"
-  subheader="Third Album"
-  backgroundImage="/Albums/brandneweyes.png"
-  albumCoverImage="/Albums/brandneweyesvinyl.jpg"   
-  currentSong="The Only Exception"
-  albumInfo=" Careful • Ignorance • Playing God • Brick by Boring Brick • Turn it Off • The Only Exception • Feeling Sorry • Looking Up • Where the Lines Overlap • Misguided Ghosts • All I Wanted
+            title="Brand New Eyes"
+            subheader="Third Album"
+            backgroundImage="/Albums/brandneweyes.png"
+            albumCoverImage="/Albums/brandneweyesvinyl.jpg"
+            currentSong="The Only Exception"
+            albumInfo=" Careful • Ignorance • Playing God • Brick by Boring Brick • Turn it Off • The Only Exception • Feeling Sorry • Looking Up • Where the Lines Overlap • Misguided Ghosts • All I Wanted
 
 "
-songLyrics="When I was younger, I saw
+            songLyrics="When I was younger, I saw
 My daddy cry, and curse at the wind
 He broke his own heart and I watched
 As he tried to reassemble it
@@ -50,7 +50,6 @@ You are the only exception
 You are the only exception
 And I'm on my way to believing
 Oh, and I'm on my way to believing"
- 
-/>
-    )
+        />
+    );
 }

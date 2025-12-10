@@ -101,6 +101,11 @@ html {
     color: #fff;
 }
 
+.nowPlayingTitle {
+    font-size: 25px;
+    color: #ff5400;
+}
+
 .nowPlayingSong {
     font-weight: 600;
     color: white;

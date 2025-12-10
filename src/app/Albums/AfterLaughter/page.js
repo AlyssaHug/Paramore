@@ -1,17 +1,17 @@
-import AlbumComponent from "../albumcomponent"
+import AlbumComponent from "../albumcomponent";
 
-export default function afterLaughter(){
-    return(
+export default function afterLaughter() {
+    return (
         <AlbumComponent
-  title="After Laughter"
-  subheader="Fifth Album"
-  backgroundImage="/Albums/afterlaughter.jpg"
-  albumCoverImage="/Albums/afterlaughtervinyl.jpg"                                    
-  currentSong="Hard Times "
-  albumInfo="Hard Times • Rose-Colored Boy • Told You So • Forgiveness • Fake Happy • 26 • Pool • Grudges • Caught in the Middle • Idle Worship • No Friend • Tell Me How 
+            title="After Laughter"
+            subheader="Fifth Album"
+            backgroundImage="/Albums/afterlaughter.jpg"
+            albumCoverImage="/Albums/afterlaughtervinyl.jpg"
+            currentSong="Hard Times "
+            albumInfo="Hard Times • Rose-Colored Boy • Told You So • Forgiveness • Fake Happy • 26 • Pool • Grudges • Caught in the Middle • Idle Worship • No Friend • Tell Me How 
 
 "
-songLyrics="All that I want
+            songLyrics="All that I want
 Is to wake up fine
 Tell me that I'm alright
 That I ain't gonna die
@@ -76,7 +76,6 @@ Still don't know how
 I survive
 And I gotta get to rock bottom
 (Ooh!)"
- 
-/>
-    )
+        />
+    );
 }
