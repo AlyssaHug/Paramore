@@ -74,22 +74,22 @@ function Page() {
                             <img
                                 className={styles.bandHayley}
                                 src='/Band/Home/Hayley.png'
-                                alt='Hayley Williams'
+                                alt='Hayley Williams default'
                             />
                             <img
                                 className={styles.bandHayley}
-                                src='/Band/Home/Hayley_Ver01.png'
-                                alt='Hayley Williams'
+                                src='/Band/Home/HayleyVer01.png'
+                                alt='Hayley Williams ver01'
                             />
                             <img
                                 className={styles.bandHayley}
-                                src='/Band/Home/Hayley_Ver02.png'
-                                alt='Hayley Williams'
+                                src='/Band/Home/HayleyVer02.png'
+                                alt='Hayley Williams ver02'
                             />
                             <img
                                 className={styles.bandHayley}
-                                src='/Band/Home/Hayley_Ver03.png'
-                                alt='Hayley Williams'
+                                src='/Band/Home/HayleyVer03.png'
+                                alt='Hayley Williams ver03'
                             />
                         </Link>
                     </div>
