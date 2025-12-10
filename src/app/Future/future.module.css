@@ -92,22 +92,34 @@
     position: relative;
     z-index: 10;
 
-
     animation: colorCycle 2s ease-in-out infinite;
 }
 
-
 @keyframes colorCycle {
-     0%   { color: #e63e4f; }    
-  16.66% { color: #e63e4f; }
+    0% {
+        color: #e63e4f;
+    }
+    16.66% {
+        color: #e63e4f;
+    }
 
-  33.33% { color: #00439c; }  
-  50%   { color: #00439c; }
+    33.33% {
+        color: #00439c;
+    }
+    50% {
+        color: #00439c;
+    }
 
-  66.66% { color: #f9e632; }   
-  83.33% { color: #f9e632; }
+    66.66% {
+        color: #f9e632;
+    }
+    83.33% {
+        color: #f9e632;
+    }
 
-  100%  { color: #e63e4f; }    
+    100% {
+        color: #e63e4f;
+    }
 }
 
 /*===Hayley Section===*/
@@ -138,6 +150,7 @@
     width: 80%;
     font-size: 18px;
     color: white;
+    animation: microPaperBreathing 6s infinite ease-in-out;
 }
 .zacText h2 {
     text-align: left;
@@ -150,7 +163,8 @@
 .hayleySubhead {
     color: #e63e4f;
     margin-bottom: 10px;
-    margin-left: -10px
+    margin-left: -10px;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .zacSubhead {
@@ -158,22 +172,83 @@
     width: 80%;
     margin-bottom: 10px;
     margin-left: 175px;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .taylorSubhead {
     color: #f9e632;
     width: 70%;
     margin-bottom: 10px;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .subName {
     color: white;
 }
 
-.artistbg{
+.artistbg {
     height: auto;
     min-height: 100vh;
-    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
+    background: linear-gradient(rgba(34, 37, 38, 0.8), rgba(0, 0, 0, 0.6)),
         url("/paperbg/paper2.jpg") center/cover fixed;
     background-color: #222526;
+}
+
+@keyframes riseDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    opacity: 0;
+    transform: translateY(-70px);
+    animation: riseDown 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.bodyText {
+    opacity: 0;
+    transform: translateY(-70px);
+    animation: riseDown 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+}
+
+.hayleySubhead:hover {
+    font-size: 82px;
+    text-shadow: 0 0 10px #e63e4f, 0 0 20px #e63e4f, 0 0 20px #e63e4f,
+        5px 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1px #e63e4f;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.zacSubhead:hover {
+    font-size: 82px;
+    text-shadow: 0 0 10px #00439c, 0 0 20px #00439c, 0 0 20px #00439c,
+        5px 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1px #00439c;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.taylorSubhead:hover {
+    font-size: 82px;
+    text-shadow: 0 0 10px #f9e632, 0 0 20px #f9e632, 0 0 20px #f9e632,
+        5px 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1px #f9e632;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+@keyframes microPaperBreathing {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-3px) rotate(0.3deg);
+    }
+    75% {
+        transform: translateY(3px) rotate(-0.3deg);
+    }
 }

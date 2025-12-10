@@ -70,7 +70,7 @@ export default function Page() {
             <div className={styles.zac}>
                 <div className={styles.zacText}>
                     <h2 className={styles.zacSubhead}>
-                        Zac Farro<span className={styles.subName}>Debut Solo Album</span>
+                        Zac Farro<span className={styles.subName}> Debut Solo Album</span>
                     </h2>
                     <p className={styles.subText}>
                         In July 2025, Zac released his debut solo album under
