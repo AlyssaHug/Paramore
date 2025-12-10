@@ -42,16 +42,17 @@ export default function Page() {
              
                 <div className={styles.pageColumn}></div>
             </div>
-            <div className={styles.divider}>"paramour" 'Secret Lover'</div>
+            <div className={styles.divider}>Their Solo Journeys</div>
+            <div className={styles.artistbg}>
             <div className={styles.hayley}>
                 <img
                     className={styles.hayleyImg}
-                    src="/Future/hayley.webp"
+                    src="/Future/hayley.png"
                     alt="Hayley in a bridal dress with food and drinks around her from her solo tour poster"
                 />
                 <div className={styles.hayleyText}>
-                    <h2 className={styles.Subhead}>
-                        Hayley Williams - Third Solo Album
+                    <h2 className={styles.hayleySubhead}>
+                        Hayley Williams<span className={styles.subName}> Third Solo Album</span>
                     </h2>
                     <p className={styles.subText}>
                         In August 2025, Hayley released a surprise collection of
@@ -68,8 +69,8 @@ export default function Page() {
             <ScrollText text="Ego Death at a bachelorette party" />
             <div className={styles.zac}>
                 <div className={styles.zacText}>
-                    <h2 className={styles.Subhead}>
-                        Zac Farro - Debut Solo Album
+                    <h2 className={styles.zacSubhead}>
+                        Zac Farro<span className={styles.subName}>Debut Solo Album</span>
                     </h2>
                     <p className={styles.subText}>
                         In July 2025, Zac released his debut solo album under
@@ -94,8 +95,8 @@ export default function Page() {
                     alt="Taylor York holding a guitar posing for a photo"
                 />
                 <div className={styles.taylorText}>
-                    <h2 className={styles.Subhead}>
-                        Taylor York - Low Profile
+                    <h2 className={styles.taylorSubhead}>
+                        Taylor York <span className={styles.subName}>Low Profile</span>
                     </h2>
                     <p className={styles.subText}>
                         With the band's wiped social media presence earlier in
@@ -107,6 +108,7 @@ export default function Page() {
                         links to any side-projects or music this year. The
                         band's break has allowed him to step back for awhile.
                     </p>
+                </div>
                 </div>
             </div>
         </div>
