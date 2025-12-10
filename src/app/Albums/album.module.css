@@ -102,6 +102,11 @@ html {
     margin-top: 300px;
 }
 
+.nowPlayingTitle {
+    font-size: 25px;
+    color: #ff5400;
+}
+
 .nowPlayingSong {
     font-weight: 600;
     color: white;

@@ -1,17 +1,17 @@
-import AlbumComponent from "../albumcomponent"
+import AlbumComponent from "../albumcomponent";
 
-export default function allweknowisfalling(){
-    return(
+export default function allweknowisfalling() {
+    return (
         <AlbumComponent
-  title="All We Know Is Falling"
-  subheader="First Album"
-  backgroundImage="/Albums/allweknowisfalling.png"
-  albumCoverImage="/Albums/allweknowisfallingvinyl.jpg"  
-  currentSong="My Heart"
-  albumInfo=" All We Know • Pressure • Emergency • Brighter • Here We Go Again • Never Let This Go • Whoa • Conspiracy • Franklin • My Heart
+            title="All We Know Is Falling"
+            subheader="First Album"
+            backgroundImage="/Albums/allweknowisfalling.png"
+            albumCoverImage="/Albums/allweknowisfallingvinyl.jpg"
+            currentSong="My Heart"
+            albumInfo=" All We Know • Pressure • Emergency • Brighter • Here We Go Again • Never Let This Go • Whoa • Conspiracy • Franklin • My Heart
 
 "
-songLyrics="I am finding out
+            songLyrics="I am finding out
 That maybe I was wrong
 That I've fallen down
 And I can't do this alone
@@ -54,7 +54,6 @@ My heart is yours (please, don't go now! Please, don't fade away!)
 My heart is yours (please, don't go! Please, don't fade away!)
 (Please, don't go now! Please, don't fade away!)
 My heart is"
- 
-/>
-    )
+        />
+    );
 }

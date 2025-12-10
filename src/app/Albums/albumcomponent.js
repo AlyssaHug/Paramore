@@ -38,7 +38,7 @@ const AlbumComponent = ({
 
                     <div className={styles.nowPlaying}>
                         <span className={styles.nowPlayingTitle}>
-                            NOW PLAYING:
+                            Click to play:
                         </span>
                         <span className={styles.nowPlayingSong}>
                             {currentSong}
