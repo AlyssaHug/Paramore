@@ -18,7 +18,7 @@ html {
     z-index: 1;
     animation: bgFadeIn 2.5s ease-out 0.3s forwards;
 
-    height: 140vh !important;
+    height: 130vh !important;
 }
 
 /* Main content */
@@ -74,6 +74,7 @@ html {
     margin-top: 10px;
     font-family: "Benniter Trial Version", sans-serif;
     text-align: center;
+    margin-bottom: 200px;
 }
 
 @keyframes titleRise {
