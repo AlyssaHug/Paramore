@@ -90,6 +90,28 @@
     animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
+.info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 55px;
+    text-align: center;
+    font-size: 8px;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
+    font-family: "Noto Sans", sans-serif;
+    color: white;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: riseUp 1.9s cubic-bezier(0.22, 1, 0.36, 1) 1.3s forwards;
+}
+
+/* Add this to your body or a full-height wrapper */
+.wholepage {
+    position: relative;
+    /* make space for the info text */
+}
+
 @keyframes wiggle {
     0% {
         text-shadow: 2px 0 0 black, -2px 0 0 #ff5400;
@@ -309,6 +331,16 @@
     animation-name: riseUp;
     animation-duration: 1.9s;
     animation-delay: 0.9s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
+}
+
+.info {
+    opacity: 0;
+    transform: translateY(50px);
+    animation-name: riseUp;
+    animation-duration: 1.9s;
+    animation-delay: 1.3s;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;
 }

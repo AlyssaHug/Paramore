@@ -109,6 +109,8 @@ export default function thankYou() {
                     className={styles.img3}></img>
             </div>
 
+             <p className={styles.info}>This is a school project created for educational purposes.</p>
+
             <div className={styles.scrollText}>
                 <ScrollText text='Thank you • Thank you' />
             </div>
