@@ -1,11 +1,11 @@
 /* album.module.css — matches your screenshot 1:1 */
 html {
-    background: black;
+    background: #191919;
 }
 .albumPage {
     position: relative;
     min-height: 100vh;
-    background: #000;
+    background: #191919;
     color: #fff;
     overflow: hidden;
 }
@@ -534,4 +534,30 @@ html {
     100% {
         transform: scale(1.02) rotate(0deg) translateX(0px);
     }
+}
+
+/*===Album last section===*/
+.albumEnding {
+    background-image: url("/paperbg/paperWhite.webp");
+    background-blend-mode: multiply;
+    background-color: #bfbfbf;
+}
+.endingBg {
+    width: 85vw;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-position-x: right;
+    height: 85vh;
+    z-index: -1;
+    margin-left: 18vw;
+}
+.albumDescription {
+    position: absolute;
+    z-index: 1;
+    top: 74%;
+    left: 6%;
+    width: 30%;
+    color: black;
+    font-family: var(--font-body);
+    font-size: 18px;
 }

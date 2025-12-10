@@ -1,17 +1,18 @@
-import AlbumComponent from "../albumcomponent"
+import AlbumComponent from "../albumcomponent";
 
-export default function riot(){
-    return(
+export default function riot() {
+    return (
         <AlbumComponent
-  title="Riot"
-  subheader="Second Album"
-  backgroundImage="/Albums/riot.png"
-  albumCoverImage="/Albums/riotvinyl.jpg"  
-  currentSong="Misery Business"
-  albumInfo=" For a Pessimist, I'm Pretty Optimisitc • That's What You Get • Hallelujah • Misery Business • When It Rains • Let the Flames Begin • Miracle • crushcrushcrush • We Are Broken • Fences • Born for This
+            title='Riot'
+            subheader='Second Album'
+            backgroundImage='/Albums/riot.png'
+            albumCoverImage='/Albums/riotvinyl.jpg'
+            albumEnding='/Albums/RiotPress.png'
+            currentSong='Misery Business'
+            albumInfo=" For a Pessimist, I'm Pretty Optimisitc • That's What You Get • Hallelujah • Misery Business • When It Rains • Let the Flames Begin • Miracle • crushcrushcrush • We Are Broken • Fences • Born for This
 
 "
- songLyrics="I'm in the business of misery, let's take it from the top
+            songLyrics="I'm in the business of misery, let's take it from the top
 She's got a body like an hourglass, it's ticking like a clock
 It's a matter of time before we all run out
 When I thought he was mine, she caught him by the mouth
@@ -60,6 +61,25 @@ But God, does it feel so good
 And if you could, then you know you would
 'Cause God, it just feels so
 It just feels so good"
-/>
-    )
+            albumDesc={
+                <>
+                    Their second studio album, released on June 12, 2007. The
+                    album was successful in the US, reaching No. 15 on the
+                    Billboard 200 and being certified triple-platinum on April
+                    20, 2021. it's lead single, 'Misery Business', reached top
+                    thirty positions in the US and is considered the bands
+                    breakthrough hit!
+                    <br />
+                    <br />
+                    BEfore recording this album, Jeremy Davis was kicked from
+                    the band for his lack of participation and work ethic. The
+                    album was title Riot because during the writing process
+                    theie words came out so fast they couldn't control them,
+                    comparing it to a riot. The singles were (in order): Misery
+                    Business, Hallelujah, CrushCruchCrush, and That's What You
+                    Get.
+                </>
+            }
+        />
+    );
 }
