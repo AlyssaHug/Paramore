@@ -11,7 +11,7 @@ const albums = [
     { id: 3, title: "Brand New Eyes", src: "/Home/BrandNew.png" },
     { id: 4, title: "Paramore", src: "/Home/Paramore.png" },
     { id: 5, title: "After Laughter", src: "/Home/AfterLaughter.png" },
-    { id: 6, title: "This is Why", src: "/Home/thisIsWhy.png" },
+    { id: 6, title: "This is Why", src: "/Home/ThisIsWhy.png" },
 ];
 
 export default function AlbumCarousel() {
