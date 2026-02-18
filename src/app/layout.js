@@ -2,7 +2,7 @@ import "./globals.css";
 import { Noto_Sans } from "next/font/google";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
-import { benniter, notoSans, crispyCream } from "../lib/fonts";
+import { benniter, notoSans, CrispyCream } from "./fonts";
 
 const notoSans = Noto_Sans({
     subsets: ["latin"],
