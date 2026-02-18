@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Benniter";
-    src: url("/fonts/BenniterTrialVersion.woff2") format("woff2"),
+    src:
+        url("/fonts/BenniterTrialVersion.woff2") format("woff2"),
         url("/fonts/BenniterTrialVersion.woff") format("woff");
     font-weight: normal;
     font-style: normal;
@@ -9,8 +10,9 @@
 
 @font-face {
     font-family: "Noto Sans";
-    src: url("/fonts/NotoSans.woff2") format("2"),
-        url("/fonts/NotoSans.woff") format("woff");
+    src:
+        url("/fonts/NotoSans-Regular.woff2") format("2"),
+        url("/fonts/NotoSans-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,7 +20,8 @@
 
 @font-face {
     font-family: "Crispy Cream";
-    src: url("/fonts/CrispyCreamRegular.woff2") format("2"),
+    src:
+        url("/fonts/CrispyCreamRegular.woff2") format("2"),
         url("/fonts/CrispyCreamRegular.woff") format("woff"),
         url("/fonts/CrispyCream.otf") format("opentype");
     font-weight: normal;
@@ -81,4 +84,3 @@ body {
     background-color: #bfbfbf;
     overflow-x: hidden;
 }
-
