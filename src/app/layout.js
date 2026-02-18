@@ -1,7 +1,7 @@
 import "./globals.css";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
-import { benniter, notoSans, CrispyCream } from "./fonts";
+import { benniter, notoSans, crispyCream } from "./fonts";
 
 export const metadata = {
     title: "Paramore Discography",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <body
-                className={`${benniter.variable} ${notoSans.variable} ${CrispyCream.variable}`}>
+                className={`${benniter.variable} ${notoSans.variable} ${crispyCream.variable}`}>
                 {children}
                 <MusicPlayer />
                 <AlbumMusic /> {/* ← plays only on album pages */}
