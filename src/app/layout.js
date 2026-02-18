@@ -1,18 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import { benniter, notoSans, crispyCream } from "../lib/fonts";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 const notoSans = Noto_Sans({
     subsets: ["latin"],
     weight: ["300", "400", "500", "600", "700"], // choose what you actually use
@@ -32,7 +23,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
-            <body className={`${notoSans.variable} ${notoSans.variable}`}>
+            <body
+                className={`${benniter.variable} ${notoSans.variable} ${crispyCream.variable}`}>
                 {children}
                 <MusicPlayer />
                 <AlbumMusic /> {/* ← plays only on album pages */}

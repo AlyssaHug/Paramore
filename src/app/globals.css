@@ -31,9 +31,10 @@
 
 /* Recommended: safer variable names */
 :root {
-    --font-display: "Benniter", "Benniter Trial Version", sans-serif;
-    --font-body: "Noto Sans", sans-serif;
-    --font-accent: "Crispy Cream", serif;
+    --font-display: var(--font-benniter), "Benniter", sans-serif;
+    --font-body: var(--font-noto-sans), sans-serif;
+    --font-accent: var(--font-crispy-cream), serif;
+
     --background: #bfbfbf;
     --foreground: #bfbfbf;
 }
