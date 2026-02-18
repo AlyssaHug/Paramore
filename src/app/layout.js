@@ -1,5 +1,4 @@
 import "./globals.css";
-import { Noto_Sans } from "next/font/google";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import { benniter, notoSans, CrispyCream } from "./fonts";
@@ -17,7 +16,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <body
-                className={`${benniter.variable} ${notoSans.variable} ${crispyCream.variable}`}>
+                className={`${benniter.variable} ${notoSans.variable} ${CrispyCream.variable}`}>
                 {children}
                 <MusicPlayer />
                 <AlbumMusic /> {/* ← plays only on album pages */}

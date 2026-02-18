@@ -1,15 +1,14 @@
-// lib/fonts.js
 import localFont from "next/font/local";
 
 export const benniter = localFont({
     src: [
         {
-            path: "../public/fonts/BenniterTrialVersion.woff2",
+            path: "public/fonts/BenniterTrialVersion.woff2",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/BenniterTrialVersion.woff",
+            path: "public/fonts/BenniterTrialVersion.woff",
             weight: "normal",
             style: "normal",
         },
@@ -21,12 +20,12 @@ export const benniter = localFont({
 export const notoSans = localFont({
     src: [
         {
-            path: "../public/fonts/NotoSans.woff2",
+            path: "public/fonts/NotoSans.woff2",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/NotoSans.woff",
+            path: "public/fonts/NotoSans.woff",
             weight: "normal",
             style: "normal",
         },
@@ -38,17 +37,17 @@ export const notoSans = localFont({
 export const crispyCream = localFont({
     src: [
         {
-            path: "../public/fonts/CrispyCreamRegular.woff2",
+            path: "public/fonts/CrispyCreamRegular.woff2",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/CrispyCreamRegular.woff",
+            path: "public/fonts/CrispyCreamRegular.woff",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/CrispyCream.otf",
+            path: "public/fonts/CrispyCream.otf",
             weight: "normal",
             style: "normal",
         },
