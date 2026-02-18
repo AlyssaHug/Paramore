@@ -4,13 +4,6 @@ import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import { benniter, notoSans, CrispyCream } from "./fonts";
 
-const notoSans = Noto_Sans({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"], // choose what you actually use
-    display: "swap", // looks good while loading
-    variable: "--font-body", // optional – if you want CSS variables
-});
-
 export const metadata = {
     title: "Paramore Discography",
     title: "This is Paramore",
