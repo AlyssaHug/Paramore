@@ -1,4 +1,3 @@
-/*
 @font-face {
     font-family: "Benniter";
     src:
@@ -12,8 +11,8 @@
 @font-face {
     font-family: "Noto Sans";
     src:
-        url("/fonts/NotoSans-Regular.woff2") format("2"),
-        url("/fonts/NotoSans-Regular.woff") format("woff");
+        url("/fonts/NotoSans.woff2") format("2"),
+        url("/fonts/NotoSans.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -22,21 +21,19 @@
 @font-face {
     font-family: "Crispy Cream";
     src:
-        url("/fonts/CrispyCreamRegular.woff2") format("2"),
-        url("/fonts/CrispyCreamRegular.woff") format("woff"),
+        url("/fonts/CrispyCream.woff2") format("2"),
+        url("/fonts/CrispyCream.woff") format("woff"),
         url("/fonts/CrispyCream.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-    */
 
 /* Recommended: safer variable names */
 :root {
-    --font-display: var(--font-benniter), "Benniter", sans-serif;
-    --font-body: var(--font-noto-sans), sans-serif;
-    --font-accent: var(--font-crispy-cream), serif;
-
+    --font-display: "Benniter", "Benniter Trial Version", sans-serif;
+    --font-body: "Noto Sans", sans-serif;
+    --font-accent: "Crispy Cream", serif;
     --background: #bfbfbf;
     --foreground: #bfbfbf;
 }

@@ -11,8 +11,11 @@
     "classnames": "^2.5.1",
     "framer-motion": "^12.23.25",
     "howler": "^2.2.4",
-    "next": "16.0.10",
+    "next": "^16.1.6",
     "react": "19.2.0",
     "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "baseline-browser-mapping": "^2.9.19"
   }
 }

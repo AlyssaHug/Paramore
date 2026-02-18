@@ -1,35 +1,28 @@
-// app/fonts.js
+// src/app/fonts.js
 import localFont from "next/font/local";
 
+// Paths are RELATIVE TO THIS FILE (sibling folder = ./filename)
 export const benniter = localFont({
     src: [
         {
-            path: "../public/fonts/BenniterTrialVersion.woff2",
+            path: "./BenniterTrialVersion.woff2",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/BenniterTrialVersion.woff",
+            path: "./BenniterTrialVersion.woff",
             weight: "normal",
             style: "normal",
         },
     ],
     display: "swap",
-    variable: "--font-benniter", // optional
+    variable: "--font-benniter",
 });
 
 export const notoSans = localFont({
     src: [
-        {
-            path: "../public/fonts/NotoSans.woff2",
-            weight: "normal",
-            style: "normal",
-        },
-        {
-            path: "../public/fonts/NotoSans.woff",
-            weight: "normal",
-            style: "normal",
-        },
+        { path: "./NotoSans.woff2", weight: "normal", style: "normal" },
+        { path: "./NotoSans.woff", weight: "normal", style: "normal" },
     ],
     display: "swap",
     variable: "--font-noto-sans",
@@ -38,20 +31,16 @@ export const notoSans = localFont({
 export const crispyCream = localFont({
     src: [
         {
-            path: "../public/fonts/CrispyCreamRegular.woff2",
+            path: "./CrispyCreamRegular.woff2",
             weight: "normal",
             style: "normal",
         },
         {
-            path: "../public/fonts/CrispyCreamRegular.woff",
+            path: "./CrispyCreamRegular.woff",
             weight: "normal",
             style: "normal",
         },
-        {
-            path: "../public/fonts/CrispyCream.otf",
-            weight: "normal",
-            style: "normal",
-        },
+        { path: "./CrispyCream.otf", weight: "normal", style: "normal" },
     ],
     display: "swap",
     variable: "--font-crispy-cream",

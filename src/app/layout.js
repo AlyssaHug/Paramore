@@ -1,7 +1,24 @@
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Noto_Sans } from "next/font/google";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
-import { benniter, notoSans, crispyCream } from "./fonts";
+
+const geistSans = Geist({
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+const notoSans = Noto_Sans({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"], // choose what you actually use
+    display: "swap", // looks good while loading
+    variable: "--font-body", // optional – if you want CSS variables
+});
 
 export const metadata = {
     title: "Paramore Discography",
@@ -15,8 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
-            <body
-                className={`${benniter.variable} ${notoSans.variable} ${crispyCream.variable}`}>
+            <body className={`${notoSans.variable} ${notoSans.variable}`}>
                 {children}
                 <MusicPlayer />
                 <AlbumMusic /> {/* ← plays only on album pages */}
