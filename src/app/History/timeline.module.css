@@ -69,7 +69,7 @@
 .oppositeYear {
     font-size: 200px;
     font-weight: 900;
-    font-family: "Crispy Cream", cursive;
+    font-family: var(--font-display);
     color: white;
     user-select: none;
     line-height: 1;
