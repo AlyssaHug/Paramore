@@ -1,8 +1,7 @@
-/* The panel — starts off-screen */
 .vinylPlayer {
     position: fixed;
     top: 11%;
-    left: -500px; /* Hidden — adjust based on your panel width */
+    left: -500px; 
     width: 460px;
     max-width: 90vw;
     background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
@@ -13,12 +12,10 @@
     transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* When open → slide in */
 .vinylPlayer.open {
     left: 0;
 }
 
-/* The little tab that sticks out */
 .tab {
     position: fixed;
     top: 11%;
@@ -50,19 +47,18 @@
     border-radius: 12px;
 }
 
-/* Mobile tap support */
 @media (max-width: 768px) {
     .vinylPlayer {
         width: 380px;
-        left: -400px;
+        left: -416px;
     }
     .tab {
         writing-mode: horizontal-tb;
-        padding: 12px 20px;
-        border-radius: 30px 0 0 30px;
-        top: auto;
-        bottom: 20px;
+        padding: 1.2rem 0.8rem 1.2rem 0.4rem;
+        border-radius: 0 1.5rem 1.5rem 0;
+        top: 4.5rem;
         transform: none;
+        writing-mode: vertical-lr;
     }
 
     .tabText {

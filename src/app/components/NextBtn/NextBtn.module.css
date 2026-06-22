@@ -14,19 +14,19 @@
 .nextBtn {
     padding-right: 1rem;
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: 1.2rem;
     background: none;
     color: white;
     border: none;
     cursor: pointer;
 
-    padding: 0.8rem;
+    padding: 1rem 0.8rem 0.8rem;
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .backBtn {
     padding-right: 1rem;
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: 1.2rem;
     background: none;
     color: white;
     border: none;
@@ -70,3 +70,26 @@
     }
 }
 
+/* === Tablet Sizing === */
+@media screen and (min-width:700px){
+ .nextBtn {
+    font-size: 1.5rem;
+}
+
+.backBtn {
+    font-size: 1.5rem;
+}
+}
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1100px){
+ .nextBtn {
+    font-size: 28px;
+    padding: 0.8rem; 
+}
+
+.backBtn {
+    font-size: 28px;
+    padding: 0.8rem;
+}
+}

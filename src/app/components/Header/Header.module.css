@@ -7,10 +7,10 @@
 }
 .text {
     color: white;
-    margin: 1rem 0;
+    margin: 1.2rem 0 1rem;
     font-family: var(--font-display);
-    padding-left: 3rem;
-    font-size: 32px;
+    padding-left: 1rem;
+    font-size: 1.8rem;
 }
 
 
@@ -25,4 +25,19 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* === Tablet Sizing === */
+@media screen and (min-width:700px){
+
+}
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1100px){
+
+.text {
+    margin: 1rem 0;
+    padding-left: 3rem;
+    font-size: 32px;
+}
+
 }

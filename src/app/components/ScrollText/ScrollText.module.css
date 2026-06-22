@@ -63,10 +63,9 @@
     }
 }
 
-/* Text styling (you can override per page with className) */
 .track span {
     color: #fff;
-    font-size: 1.35rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -109,4 +108,11 @@
     right: 0;
     height: 150px;
     background: linear-gradient(to top, #000, transparent);
+}
+
+@media screen and (min-width:700px){
+    .track span {
+    font-size: 1.35rem;
+    
+}
 }
