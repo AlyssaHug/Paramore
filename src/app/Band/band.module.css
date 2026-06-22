@@ -1,5 +1,5 @@
 .body {
-    width: 76vw;
+    width: 100vw;
 
     font-family: var(--font-display);
     contain: layout style;
@@ -17,15 +17,13 @@
 }
 .header {
     text-align: right;
-    line-height: 600%;
 }
 .title {
     position: fixed;
     z-index: -5;
-    margin-top: 90px;
-    margin-right: 50px;
-    margin-bottom: -30px;
-    font-size: 100px;
+    margin-top: 9rem;
+    line-height: 120%;
+    font-size: 3rem;
     text-align: center;
     color: white;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.55);
@@ -46,33 +44,30 @@
     }
 }
 
-.caption {
-    margin-top: 0;
-    font-size: 20px;
-}
+
 .band {
     background-color: #bfbfbf;
 }
 .bandHayley {
-    width: 44%;
-    position: absolute;
-    z-index: 3;
-    left: 21vw;
-    top: 10vh;
-}
-.bandTaylor {
-    width: 42%;
-    position: absolute;
-    z-index: 2;
-    left: -2vw;
-    top: 5vh;
-}
-.bandZac {
     width: 47%;
     position: absolute;
+    z-index: 3;
+    left: 25vw;
+    top: 40vh;
+}
+.bandTaylor {
+    width: 45%;
+    position: absolute;
+    z-index: 2;
+    left: -1vw;
+    top: 37vh;
+}
+.bandZac {
+    width: 50%;
+    position: absolute;
     z-index: 1;
-    left: 43vw;
-    top: 15vh;
+    left: 52vw;
+    top: 42vh;
 }
 .spacer {
     margin-top: 100%;
@@ -212,3 +207,75 @@
     }
 }
 
+/* === Tablet Sizing === */
+@media screen and (min-width: 700px){
+
+    .title {
+    margin-top: 6.5rem;
+    font-size: 4rem;
+        line-height:130%;
+    }   
+    
+    .bandHayley {
+        width: 47%;
+
+        left: 26vw;
+        top: 17vh;
+    }
+    .bandTaylor {
+        width: 45%;
+
+        left: -1vw;
+        top: 12vh;
+    }
+    .bandZac {
+        width: 50%;
+
+        left: 52vw;
+        top: 21vh;
+    }
+
+}
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1100px){
+    .body {
+    width: 76vw;
+
+}
+
+.header {
+    text-align: right;
+}
+.title {
+    line-height:100%;
+    margin: 6rem 2.5rem 0;
+    font-size: 6.5vw;
+ 
+}
+
+.band {
+    background-color: #bfbfbf;
+}
+.bandHayley {
+    width: 44%;
+
+    left: 21vw;
+    top: 10vh;
+}
+.bandTaylor {
+    width: 42%;
+
+    left: -2vw;
+    top: 5vh;
+}
+.bandZac {
+    width: 47%;
+
+    left: 43vw;
+    top: 15vh;
+}
+
+
+
+}
