@@ -1,5 +1,5 @@
 .wholepage {
-    font-family: "Benniter Trial Version", sans-serif;
+    font-family: var(--font-display);
     color: white;
 
     background: linear-gradient(
@@ -16,27 +16,17 @@
 }
 
 .title {
-    font-size: 250px;
+    font-size: 5rem;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 12rem;
     padding-top: 60px;
-    margin-bottom: -110px;
+    margin-bottom: -4rem;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.title:hover {
-    font-size: 265px;
-    text-shadow: 0 0 60px #ff5400, 0 0 100px #ff5400, 0 0 140px #ff5400,
-        12px 12px 40px rgba(0, 0, 0, 0.95);
-    -webkit-text-stroke: 8px #ff5400;
-    color: #ffffff;
-    transform: translateY(-20px);
-    letter-spacing: -0.01em;
-}
-
 .thanks {
-    font-size: 70px;
+    font-size: 4rem;
     text-align: center;
     margin-bottom: -5px;
     text-shadow: 8px 8px 30px rgba(0, 0, 0.95);
@@ -54,37 +44,37 @@
     8%,
     92%,
     100% {
-        font-family: "Benniter Trial Version", sans-serif;
+        font-family: var(--font-display);
         transform: translateY(0);
     }
 
     25% {
-        font-family: "Noto Sans";
+        font-family: var(--font-body);
         font-weight: 700;
         transform: translateY(-1px);
     }
 
     33%,
     58% {
-        font-family: "Noto Sans";
+        font-family: var(--font-body);
         font-weight: 700;
         transform: translateY(-1px);
     }
 
     66% {
-        font-family: "Crispy Cream", cursive;
+        font-family: var(--font-display);
         transform: translateY(-3px);
     }
 
     74%,
     91% {
-        font-family: "Crispy Cream", cursive;
+        font-family: var(--font-display);
         transform: translateY(-3px);
     }
 }
 
 .us {
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: center;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
     animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
@@ -98,7 +88,7 @@
     text-align: center;
     font-size: 8px;
     text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-body);
     color: white;
 
     opacity: 0;
@@ -135,17 +125,264 @@
 
 .images {
     position: relative;
-    width: 1200px;
-    height: 700px;
-    margin-left: 150px;
-    margin-top: 60px;
-    margin-bottom: -200px;
+    width: 100vw;
+    height: 40vw;
+    margin:  3rem 1rem 0;
 }
 
 /* Base style for all three images */
 .images img {
     position: absolute;
-    width: 420px;
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+    padding: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.img1 {
+    top: 40px;
+    left: -1.5rem;
+    transform: rotate(-10deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.img3 {
+    top: 50px;
+    right: 1.5rem;
+    transform: rotate(14deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.img2 {
+    top: 0;
+    left: 46%;
+    transform: translateX(-50%) rotate(3deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.scrollText {
+    background: black;
+
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+
+    width: 200%;
+    margin-top: 200px;
+    margin-left: -70px;
+    margin-bottom: 50px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.topbarInner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: black;
+
+    overflow: hidden;
+    z-index: 1000;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    white-space: nowrap;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    padding-right:1rem;
+}
+
+.title {
+    opacity: 0;
+    transform: translateY(70px);
+    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.us {
+    opacity: 0;
+    transform: translateY(50px);
+    animation-name: riseUp;
+    animation-duration: 1.9s;
+    animation-delay: 0.9s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
+}
+
+.info {
+    opacity: 0;
+    transform: translateY(50px);
+    animation-name: riseUp;
+    animation-duration: 1.9s;
+    animation-delay: 1.3s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: forwards;
+}
+
+.us:hover {
+    animation-name: riseUp, wiggle;
+    animation-duration: 1.6s, 1.8s;
+    animation-delay: 0.3s, 0s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), ease-in-out;
+    animation-fill-mode: forwards, none;
+    animation-iteration-count: 1, infinite;
+}
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topbarInner {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: topbarDrop 1s ease-out 0.2s forwards;
+}
+
+@keyframes topbarDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.images {
+    opacity: 0;
+    animation: bgFade 1s ease-out 0.2s forwards;
+}
+
+@keyframes bgFade {
+    to {
+        opacity: 1;
+    }
+}
+
+.thanks {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: -5px;
+    text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.95);
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    opacity: 0;
+    transform: translateY(50px);
+
+    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards,
+        fontSwap 1.8s infinite ease-in-out 1.8s;
+
+    transform: translateZ(0);
+}
+
+@keyframes fontSwap {
+    0%,
+    10%,
+    32%,
+    50%,
+    70%,
+    100% {
+        font-family: var(--font-display);
+        transform: translateY(0);
+    }
+    20%,
+    40%,
+    62%,
+    82% {
+        font-family: var(--font-body);
+        font-weight: bolder;
+        transform: translateY(-1px);
+    }
+ 
+}
+
+
+/* === Tablet Sizing === */
+@media screen and (min-width:700px){
+    .title{
+        font-size:6.5rem;
+    }
+
+    .images img {
+    width: 36vw;
+    }
+
+    .img1 {
+        top: 40px;
+        left: 2remrem;
+    }
+
+    .img3 {
+        top: 50px;
+        right: 2rem;
+    }
+
+    .img2 {
+        top: 0;
+        left: 46%;
+    }
+    .scrollText{
+        margin-bottom:4rem;
+    }
+}
+
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1000px){
+
+.title {
+    font-size: 9rem;
+    text-align: center;
+    margin-top: 10rem;
+    padding-top: 60px;
+    margin-bottom: -6rem;
+}
+
+.title:hover {
+    font-size: 10rem;
+    text-shadow: 0 0 60px #ff5400, 0 0 100px #ff5400, 0 0 140px #ff5400,
+        12px 12px 40px rgba(0, 0, 0, 0.95);
+    -webkit-text-stroke: 8px #ff5400;
+    color: #ffffff;
+    transform: translateY(-20px);
+    letter-spacing: -0.01em;
+}
+
+.us {
+    font-size: 1rem;
+}
+
+.images {
+    width: 1200px;
+    height: 700px;
+    margin-top: 60px;
+    margin: 60px auto -200px;
+}
+
+/* Base style for all three images */
+.images img {
+    position: absolute;
+    width: 26rem;
     height: auto;
     object-fit: cover;
     padding: 38px;
@@ -285,16 +522,7 @@
     width: 200%;
     margin-top: 200px;
     margin-left: -70px;
-    margin-bottom: 50px;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    margin-bottom: 4.2rem;
 }
 
 .topbarInner {
@@ -314,7 +542,7 @@
     white-space: nowrap;
 
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-    font-family: "Benniter Trial Version", sans-serif;
+    font-family: var(--font-display);
     font-size: 35px;
     padding-left: 1200px;
 }
@@ -354,24 +582,10 @@
     animation-iteration-count: 1, infinite;
 }
 
-@keyframes riseUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .topbarInner {
     opacity: 0;
     transform: translateY(-100%);
     animation: topbarDrop 1s ease-out 0.2s forwards;
-}
-
-@keyframes topbarDrop {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .images {
@@ -379,11 +593,6 @@
     animation: bgFade 1s ease-out 0.2s forwards;
 }
 
-@keyframes bgFade {
-    to {
-        opacity: 1;
-    }
-}
 
 .thanks {
     font-size: 70px;
@@ -405,25 +614,4 @@
     transform: translateZ(0);
 }
 
-@keyframes fontSwap {
-    0%,
-    8%,
-    92%,
-    100% {
-        font-family: "Benniter Trial Version", sans-serif;
-        transform: translateY(0);
-    }
-    25%,
-    33%,
-    58% {
-        font-family: "Noto Sans", sans-serif;
-        font-weight: 700;
-        transform: translateY(-1px);
-    }
-    66%,
-    74%,
-    91% {
-        font-family: "Crispy Cream", cursive;
-        transform: translateY(-3px);
-    }
 }
