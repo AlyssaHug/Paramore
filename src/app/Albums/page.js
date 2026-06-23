@@ -50,7 +50,10 @@ export default function AlbumsPage() {
                 nextHref='/Future'
             />
             <main className={styles.main}>
+                <div className={styles.albumStack}>
+
                 <AlbumsPile albums={paramoreAlbums} />
+                </div>
             </main>
         </div>
     );

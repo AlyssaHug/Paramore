@@ -2,4 +2,27 @@
     background-color: #191919;
     background: linear-gradient(rgba(34, 37, 38, 0.8), rgba(0, 0, 0, 2)),
         url("/Albums/the-flip.gif") center/cover fixed;
+    }
+    .albumStack{
+    left:-2rem;
+    position:relative;
+    width:60vw;
+
+}
+/* === Tablet Sizing === */
+@media screen and (min-width:700px){
+        .albumStack{
+    left:-6vw;
+    position:relative;
+    width:70vw;
+
+}
+}
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1000px){
+    .albumStack{
+        width:auto;
+        top:-2vw;
+    }
 }
