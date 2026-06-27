@@ -1,899 +1,858 @@
-/* album.module.css — matches your screenshot 1:1 */
 html {
-    background: #191919;
+	background: #191919
 }
+
 .albumPage {
-    position: relative;
-    min-height: 100vh;
-    background: #191919;
-    color: #fff;
-    overflow: hidden;
+	position: relative;
+	min-height: 100vh;
+	background: #191919;
+	color: #fff;
+	overflow: hidden
 }
 
 .albumBg {
-    position: absolute;
-    inset: 0;
-    background: center/cover no-repeat;
-    filter: brightness(0.55);
-    z-index: 1;
-    animation: bgFadeIn 2.5s ease-out 0.3s forwards;
-    height:110vw;
+	position: absolute;
+	inset: 0;
+	background: center/cover no-repeat;
+	filter: brightness(.55);
+	z-index: 1;
+	animation: bgFadeIn 2.5s ease-out 0.3s forwards;
+	height: 110vw
 }
 
-/* Main content */
 .albumContent {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+	position: relative;
+	z-index: 10;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column
 }
 
-/* Top hero section */
 .albumTop {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 4rem 6rem;
-    max-width: 1800px;
-    margin: 0 auto;
-    text-align: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 0 4rem 6rem;
+	max-width: 1800px;
+	margin: 0 auto;
+	text-align: center
 }
 
-/* ALBUM NAME */
 .albumTitle {
-    font-size: 11vw;
-    text-transform: uppercase;
-    margin: 0;
-    line-height:120%;
-    color: #fff;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    margin: 10rem auto 1rem;
-    font-family: var(--font-display);
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	font-size: 11vw;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: 120%;
+	color: #fff;
+	text-shadow: 0 10px 30px rgb(0 0 0 / .8);
+	margin: 10rem auto 1rem;
+	font-family: var(--font-display);
+	transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
 }
 
-
-
-/* SUBHEADER */
 .albumSubheader {
-    font-size: 5.5vw;
-    text-transform: uppercase;
-    opacity: 0.95;
-    font-family: var(--font-display);
-    text-align: center;
-    margin-bottom: 4rem;
+	font-size: 5.5vw;
+	text-transform: uppercase;
+	opacity: .95;
+	font-family: var(--font-display);
+	text-align: center;
+	margin-bottom: 4rem
 }
 
 @keyframes titleRise {
-    to {
-        opacity: 0.95;
-        transform: translateY(0);
-    }
+	to {
+		opacity: .95;
+		transform: translateY(0)
+	}
 }
 
-/* NOW PLAYING bar */
 .nowPlaying {
-    left: 0;
-    right: 0;
-    width: 100vw; 
-    margin-left: calc(-50vw + 50%); 
-
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 22px 50px;
-    background: black;
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    top: 600px;
-    color: #fff;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	margin-left: calc(-50vw + 50%);
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 22px 50px;
+	background: #000;
+	font-family: var(--font-display);
+	font-size: 1.2rem;
+	top: 600px;
+	color: #fff
 }
 
 .nowPlayingTitle {
-    font-size: 1.6rem;
-    color: #ff5400;
+	font-size: 1.6rem;
+	color: #ff5400
 }
 
 .nowPlayingSong {
-    color: white;
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	color: #fff;
+	transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
 }
 
 .nowPlayingSong:hover {
-    font-size: 1.5rem;
-    text-shadow: 0 0 60px #ff5400, 0 0 10px #ff5400, 0 0 10px #ff5400,
-        5px 5px 10px rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke: 1px #ff5400;
-    color: #ffffff;
-    letter-spacing: -0.01em;
+	font-size: 1.5rem;
+	text-shadow: 0 0 60px #ff5400, 0 0 10px #ff5400, 0 0 10px #ff5400, 5px 5px 10px rgb(0 0 0 / .8);
+	-webkit-text-stroke: 1px #ff5400;
+	color: #fff;
+	letter-spacing: -.01em
 }
 
 .nowPlayingSoundWave {
-    display: flex;
-    gap: 4px;
-    margin-left: 0.5rem;
-}
-.nowPlayingSoundWave span {
-    width: 3px;
-    height: 18px;
-    border-radius: 5px;
-    background: #fff;
-    animation: wave 1.6s ease-in-out infinite;
-}
-.nowPlayingSoundWave span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-.nowPlayingSoundWave span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-.nowPlayingSoundWave span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-.nowPlayingSoundWave span:nth-child(5) {
-    animation-delay: 0.4s;
+	display: flex;
+	gap: 4px;
+	margin-left: .5rem
 }
 
-/* Middle section — text + vinyl */
+.nowPlayingSoundWave span {
+	width: 3px;
+	height: 18px;
+	border-radius: 5px;
+	background: #fff;
+	animation: wave 1.6s ease-in-out infinite
+}
+
+.nowPlayingSoundWave span:nth-child(2) {
+	animation-delay: 0.1s
+}
+
+.nowPlayingSoundWave span:nth-child(3) {
+	animation-delay: 0.2s
+}
+
+.nowPlayingSoundWave span:nth-child(4) {
+	animation-delay: 0.3s
+}
+
+.nowPlayingSoundWave span:nth-child(5) {
+	animation-delay: 0.4s
+}
+
 .albumMiddle {
-    padding: 5rem 4rem 8rem;
-    height: auto;
-    min-height: 100vh;
-    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
-        url("/paperbg/paper2.jpg") center/cover fixed;
-    background-color: #222526;
-    margin-top: -100px;
-    padding-bottom: 0px;
+	padding: 5rem 4rem 8rem;
+	height: auto;
+	min-height: 100vh;
+	background: linear-gradient(rgb(34 37 38 / .7), rgb(0 0 0 / .1)), url(/paperbg/paper2.jpg) center/cover fixed;
+	background-color: #222526;
+	margin-top: -100px;
+	padding-bottom: 0
 }
 
 .albumMiddleGrid {
-    margin: 0 auto;
-    display:flex;
-    flex-direction:column;
-    gap: 8rem;
-    align-items: start;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 8rem;
+	align-items: start
 }
 
 .albumMiddleText {
-    padding-bottom: 2rem;
+	padding-bottom: 2rem
 }
+
 .albumMiddleInfo {
-    font-size: 1.35rem;
-    line-height: 2;
-    color: #ccc;
+	font-size: 1.35rem;
+	line-height: 2;
+	color: #ccc
 }
 
 .tracklist {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-transform: uppercase;
-    font-family: var(--font-display);
-    color: #e0e0e0;
-    letter-spacing: 0.06em;
+	font-size: 1.2rem;
+	line-height: 1.8;
+	text-transform: uppercase;
+	font-family: var(--font-display);
+	color: #e0e0e0;
+	letter-spacing: .06em
 }
 
-.tracklist > div {
-    word-break: break-word;
-    hyphens: auto;
-    line-height: 1.6;
+.tracklist>div {
+	word-break: break-word;
+	hyphens: auto;
+	line-height: 1.6
 }
 
-/* Black vinyl disc (always visible) */
 .vinylContainer {
-    position: relative;
-    width: 300px;
-    height: 320px;
-    margin-top: 1rem;
-    perspective: 1200px;
+	position: relative;
+	width: 300px;
+	height: 320px;
+	margin-top: 1rem;
+	perspective: 1200px
 }
 
-/* White glossy sleeve (left side) */
 .vinylSleeve {
-    position: absolute;
-    top: -3rem;
-    left: 23.5rem;
-    width: 180px;
-    height: 320px;
-    z-index: 10;
-    overflow: hidden;
-    padding-left: 140px;
-    margin-left: -420px;
-    background: center/cover no-repeat;
+	position: absolute;
+	top: -3rem;
+	left: 23.5rem;
+	width: 180px;
+	height: 320px;
+	z-index: 10;
+	overflow: hidden;
+	padding-left: 140px;
+	margin-left: -420px;
+	background: center/cover no-repeat
 }
 
 .vinylSleeve::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 4px;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	border-radius: 4px;
+	pointer-events: none
 }
 
-/* Black vinyl disc sliding out */
 .vinylDisc {
-    position: absolute;
-    top: -2.5rem;
-    right: -6rem;
-    width: 310px;
-    height: 310px;
-    background: radial-gradient(circle at 25%, #1a1a1a 0%, #000 75%);
-    border-radius: 50%;
-    box-shadow: 0 50px 120px rgba(0, 0, 0, 0.9);
-    transform: rotate(8deg);
-    z-index: 1;
-    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: center;
+	position: absolute;
+	top: -2.5rem;
+	right: -6rem;
+	width: 310px;
+	height: 310px;
+	background: radial-gradient(circle at 25%, #1a1a1a 0%, #000 75%);
+	border-radius: 50%;
+	box-shadow: 0 50px 120px rgb(0 0 0 / .9);
+	transform: rotate(8deg);
+	z-index: 1;
+	transition: transform 1s cubic-bezier(.22, 1, .36, 1);
+	transform-origin: center
 }
 
-/* Groove shine (the subtle ring) */
 .vinylGroove {
-    position: absolute;
-    inset: 20px;
-    border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        transparent 40%,
-        rgba(255, 255, 255, 0.08) 48%,
-        rgba(255, 255, 255, 0.04) 52%,
-        transparent 60%
-    );
-    animation: spin 25s linear infinite;
-    pointer-events: none;
+	position: absolute;
+	inset: 20px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, transparent 40%, rgb(255 255 255 / .08) 48%, rgb(255 255 255 / .04) 52%, transparent 60%);
+	animation: spin 25s linear infinite;
+	pointer-events: none
 }
 
 .vinylLabel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 166px;
-    height: 166px;
-    object-fit: cover;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    animation: spin 28s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 166px;
+	height: 166px;
+	object-fit: cover;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 20px 60px rgb(0 0 0 / .8);
+	animation: spin 28s linear infinite
 }
 
-/* Tiny center hole */
 .vinylHole {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    background: #000;
-    border: 4px solid #111;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	background: #000;
+	border: 4px solid #111;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4
 }
 
-/* Spin animation */
 @keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+	from {
+		transform: translate(-50%, -50%) rotate(0deg)
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
 }
 
-/* Scrolling lyrics */
 .scrollText {
-    background: black;
-    padding: 16px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
-    border-top: 1px solid #222;
-    width: 200%;
-    margin-top: 190px;
-    margin-left: -70px;
+	background: #000;
+	padding: 16px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+	box-shadow: 0 -10px 40px rgb(0 0 0 / .9);
+	border-top: 1px solid #222;
+	width: 200%;
+	margin-top: 190px;
+	margin-left: -70px
 }
 
-/* Animations */
 @keyframes wave {
-    0%,
-    100% {
-        transform: scaleY(0.3);
-    }
-    50% {
-        transform: scaleY(1);
-    }
+
+	0%,
+	100% {
+		transform: scaleY(.3)
+	}
+
+	50% {
+		transform: scaleY(1)
+	}
 }
+
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
 }
+
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+	0% {
+		transform: translateX(0)
+	}
+
+	100% {
+		transform: translateX(-50%)
+	}
 }
 
 .topbarInner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    background: black;
-
-    overflow: hidden;
-    z-index: 1000;
-    user-select: none;
-
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-    font-family: var(--font-display);
-    font-size: 35px;
-    padding-left: 1270px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 90px;
+	background: #000;
+	overflow: hidden;
+	z-index: 1000;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	box-shadow: 0 8px 30px rgb(0 0 0 / .8);
+	font-family: var(--font-display);
+	font-size: 35px;
+	padding-left: 1270px
 }
 
-/* animations for load in */
 .albumPage {
-    animation: pageFadeIn 1.4s ease-out forwards;
+	animation: pageFadeIn 1.4s ease-out forwards
 }
 
 .albumTitle {
-    opacity: 0;
-    transform: translateY(70px);
-    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+	opacity: 0;
+	transform: translateY(70px);
+	animation: riseUp 1.6s cubic-bezier(.22, 1, .36, 1) 0.3s forwards
 }
 
 .albumSubheader {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: riseUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+	opacity: 0;
+	transform: translateY(50px);
+	animation: riseUp 1.4s cubic-bezier(.22, 1, .36, 1) 0.6s forwards
 }
 
 .nowPlaying {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: riseUp 1.3s ease-out 0.9s forwards;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: riseUp 1.3s ease-out 0.9s forwards
 }
 
 .albumBg {
-    opacity: 0;
-    animation: bgFade 3s ease-out 0.2s forwards;
+	opacity: 0;
+	animation: bgFade 3s ease-out 0.2s forwards
 }
 
 .albumMiddle {
-    opacity: 0;
-    animation: fadeInDelay 1s ease-out 1s forwards;
+	opacity: 0;
+	animation: fadeInDelay 1s ease-out 1s forwards
 }
 
 .vinylContainer {
-    opacity: 0;
-    transform: translateY(80px);
-    animation: vinylEnter 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards,
-        vinylFloat 7s ease-in-out infinite 4s;
+	opacity: 0;
+	transform: translateY(80px);
+	animation: vinylEnter 1.8s cubic-bezier(.22, 1, .36, 1) 1.2s forwards, vinylFloat 7s ease-in-out infinite 4s
 }
 
 .vinylDisc:hover {
-    transform: translateX(80px) rotate(8deg);
+	transform: translateX(80px) rotate(8deg)
 }
 
 .scrollText {
-    opacity: 0;
-    animation: fadeInDelay 2s ease-out 1.8s forwards;
+	opacity: 0;
+	animation: fadeInDelay 2s ease-out 1.8s forwards
 }
 
 .topbarInner {
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: topbarDrop 1s ease-out 0.2s forwards;
+	opacity: 0;
+	transform: translateY(-100%);
+	animation: topbarDrop 1s ease-out 0.2s forwards
 }
 
 @keyframes pageFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
 }
 
 @keyframes bgFade {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1
+	}
 }
 
 @keyframes riseUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
 }
 
 @keyframes fadeInDelay {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1
+	}
 }
 
 @keyframes vinylEnter {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
 }
 
 @keyframes vinylFloat {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-18px);
-    }
+
+	0%,
+	100% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(-18px)
+	}
 }
 
 @keyframes topbarDrop {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
 }
 
 .backBtn {
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-    z-index: 99999;
-    width: 76px;
-    height: 76px;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    font-size: 36px;
-    color: #fff;
-    font-family: var(--font-display);
-
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	position: fixed;
+	top: .5rem;
+	right: .5rem;
+	z-index: 99999;
+	width: 76px;
+	height: 76px;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	font-size: 36px;
+	color: #fff;
+	font-family: var(--font-display);
+	transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
 }
 
 .backBtn:hover {
-    font-size: 3vw;
-    opacity: 1;
-    transform: translateY(0);
-    animation: jankyStopMotion 0.68s infinite steps(8);
+	font-size: 3vw;
+	opacity: 1;
+	transform: translateY(0);
+	animation: jankyStopMotion 0.68s infinite steps(8)
 }
 
 @keyframes jankyStopMotion {
-    0% {
-        transform: scale(1.02) rotate(0deg) translateX(0px);
-    }
-    25% {
-        transform: scale(1.02) rotate(-0.5deg) translateX(0.5px);
-    }
-    50% {
-        transform: scale(1.02) rotate(0.15deg) translateX(-0.5px);
-    }
-    75% {
-        transform: scale(1.02) rotate(-0.1deg) translateX(0.4px);
-    }
-    100% {
-        transform: scale(1.02) rotate(0deg) translateX(0px);
-    }
+	0% {
+		transform: scale(1.02) rotate(0deg) translateX(0)
+	}
+
+	25% {
+		transform: scale(1.02) rotate(-0.5deg) translateX(.5px)
+	}
+
+	50% {
+		transform: scale(1.02) rotate(0.15deg) translateX(-.5px)
+	}
+
+	75% {
+		transform: scale(1.02) rotate(-0.1deg) translateX(.4px)
+	}
+
+	100% {
+		transform: scale(1.02) rotate(0deg) translateX(0)
+	}
 }
 
-/*===Album last section===*/
 .albumEnding {
-    background: linear-gradient(rgba(34, 37, 38, 0.8), rgba(0, 0, 0, 0.3)),
-        url("/Future/back.gif");
-    background-blend-mode: multiply;
-
-
-    background-blend-mode: multiply;
-    background-color: #bfbfbf;
-    display:flex;
-    flex-direction:column;
+	background: linear-gradient(rgb(34 37 38 / .8), rgb(0 0 0 / .3)), url(/Future/back.gif);
+	background-blend-mode: multiply;
+	background-blend-mode: multiply;
+	background-color: #bfbfbf;
+	display: flex;
+	flex-direction: column
 }
+
 .endingBg {
-    width: 85vw;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    background-position-x: right;
-    right:0;
-    height: 85vh;
-    z-index: -1;
-        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	width: 85vw;
+	background-repeat: no-repeat;
+	background-position: 0%;
+	background-position-x: right;
+	right: 0;
+	height: 85vh;
+	z-index: -1;
+	transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
 }
-
-
 
 .albumDescription {
-    position: absolute;
-    z-index: 1;
-    top: 72%;
-    left: 4%;
-    width: 90%;
-    color: white;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
-    animation: microPaperBreathing 6s infinite ease-in-out;
+	position: absolute;
+	z-index: 1;
+	top: 72%;
+	left: 4%;
+	width: 90%;
+	color: #fff;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	text-shadow: 1px 1px 5px rgb(255 255 255 / .5);
+	animation: microPaperBreathing 6s infinite ease-in-out
 }
 
 @keyframes microPaperBreathing {
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    25% {
-        transform: translateY(-3px) rotate(0.3deg);
-    }
-    75% {
-        transform: translateY(3px) rotate(-0.3deg);
-    }
+
+	0%,
+	100% {
+		transform: translateY(0) rotate(0deg)
+	}
+
+	25% {
+		transform: translateY(-3px) rotate(0.3deg)
+	}
+
+	75% {
+		transform: translateY(3px) rotate(-0.3deg)
+	}
 }
 
 /* === Tablet Sizing === */
-@media screen and (min-width:700px){
-    .albumTitle{
-        font-size:10vw;
-    }
-    .albumSubheader{
-        font-size:5vw;
-    }
-    .nowPlaying{
-        font-size:1.4rem;
-    }
-    .nowPlaying.hover{
-        font-size:1.7rem;
-    }
-   .vinylContainer {
-    width: 400px;
-    height: 420px;
-    margin-top: 0;
-    }
+@media screen and (min-width:700px) {
+	.albumTitle {
+		font-size: 10vw
+	}
 
-    .vinylSleeve {
-    top: -3rem;
-    left: 21rem;
-    width: 240px;
-    height: 380px;
+	.albumSubheader {
+		font-size: 5vw
+	}
 
-    }
+	.nowPlaying {
+		font-size: 1.4rem
+	}
 
-    .vinylDisc {
-    top: -2.5rem;
-    right: -4rem;
-    width: 370px;
-    height: 370px;
+	.nowPlaying.hover {
+		font-size: 1.7rem
+	}
 
-    }
-    .tracklist{
-        text-align:center;
-    }
-    .albumMiddleGrid{
-        justify-content:center;
-        align-items:center;
-    }
-    .albumDescription{
-        top:74%;
-        font-size:1.1rem;
-        width:85%;
-    }
+	.vinylContainer {
+		width: 400px;
+		height: 420px;
+		margin-top: 0
+	}
+
+	.vinylSleeve {
+		top: -3rem;
+		left: 21rem;
+		width: 240px;
+		height: 380px
+	}
+
+	.vinylDisc {
+		top: -2.5rem;
+		right: -4rem;
+		width: 370px;
+		height: 370px
+	}
+
+	.tracklist {
+		text-align: center
+	}
+
+	.albumMiddleGrid {
+		justify-content: center;
+		align-items: center
+	}
+
+	.albumDescription {
+		top: 74%;
+		font-size: 1.1rem;
+		width: 85%
+	}
 }
 
 /* === Desktop Sizing === */
-@media screen and (min-width:1000px){
-.albumPage {
-    position: relative;
-    min-height: 100vh;
-    background: #191919;
-    color: #fff;
-    overflow: hidden;
-}
+@media screen and (min-width:1000px) {
+	.albumPage {
+		position: relative;
+		min-height: 100vh;
+		background: #191919;
+		color: #fff;
+		overflow: hidden
+	}
 
-/* Main content */
-.albumContent {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+	.albumContent {
+		position: relative;
+		z-index: 10;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column
+	}
 
-/* Top hero section */
-.albumTop {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 4rem 6rem;
-    max-width: 1800px;
-    margin: 0 auto;
-    text-align: center;
-}
+	.albumTop {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 4rem 6rem;
+		max-width: 1800px;
+		margin: 0 auto;
+		text-align: center
+	}
 
-/* ALBUM NAME */
-.albumTitle {
-    font-size: 10vw;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    margin-top: 300px;
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
+	.albumTitle {
+		font-size: 10vw;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0;
+		color: #fff;
+		text-shadow: 0 10px 30px rgb(0 0 0 / .8);
+		margin-top: 300px;
+		transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
+	}
 
-.albumTitle:hover {
-    font-size: 10.5vw;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
-        0 0 40px rgba(255, 255, 255, 0.2), 0 4px 15px rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke: 8px white;
-    color: #ffffff;
-    transform: translateY(-20px);
-    letter-spacing: -0.01em;
-}
+	.albumTitle:hover {
+		font-size: 10.5vw;
+		text-shadow: 0 0 20px rgb(255 255 255 / .4), 0 0 40px rgb(255 255 255 / .2), 0 4px 15px rgb(0 0 0 / .8);
+		-webkit-text-stroke: 8px #fff;
+		color: #fff;
+		transform: translateY(-20px);
+		letter-spacing: -.01em
+	}
 
-/* SUBHEADER */
-.albumSubheader {
-    font-size: 5vw;
-    font-size: 60px;
-    text-transform: uppercase;
-    opacity: 0.95;
-    margin-top: 10px;
-    text-align: center;
-    margin-bottom: 200px;
-}
+	.albumSubheader {
+		font-size: 5vw;
+		font-size: 60px;
+		text-transform: uppercase;
+		opacity: .95;
+		margin-top: 10px;
+		text-align: center;
+		margin-bottom: 200px
+	}
 
-@keyframes titleRise {
-    to {
-        opacity: 0.95;
-        transform: translateY(0);
-    }
-}
+	@keyframes titleRise {
+		to {
+			opacity: .95;
+			transform: translateY(0)
+		}
+	}
 
-/* Middle section — text + vinyl */
-.albumMiddle {
-    padding: 5rem 4rem 0;
-    height: auto;
-    min-height: 100vh;
-    background: linear-gradient(rgba(34, 37, 38, 0.7), rgba(0, 0, 0, 0.1)),
-        url("/paperbg/paper2.jpg") center/cover fixed;
-    background-color: #222526;
-    margin-top: -100px;
+	.albumMiddle {
+		padding: 5rem 4rem 0;
+		height: auto;
+		min-height: 100vh;
+		background: linear-gradient(rgb(34 37 38 / .7), rgb(0 0 0 / .1)), url(/paperbg/paper2.jpg) center/cover fixed;
+		background-color: #222526;
+		margin-top: -100px
+	}
 
-}
+	.albumMiddleGrid {
+		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 500px;
+		align-items: start;
+		align-items: center
+	}
 
-.albumMiddleGrid {
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 500px;
-    align-items: start;
-    align-items:center;
-}
+	.tracklist {
+		font-size: 1.4rem;
+		text-align: left;
+		margin-left: 3rem;
+		width: 90%
+	}
 
+	.tracklist>div {
+		word-break: break-word;
+		hyphens: auto;
+		line-height: 1.6;
+		max-width: 90%
+	}
 
+	.vinylContainer {
+		width: 400px;
+		height: 500px;
+		margin-top: 70px
+	}
 
+	.vinylSleeve {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 280px;
+		height: 420px;
+		z-index: 10;
+		overflow: hidden;
+		background: center/cover no-repeat
+	}
 
-.tracklist {
-    font-size: 1.4rem;
-    text-align:left;
-    margin-left: 3rem;
-    width:90%;
-}
+	.vinylSleeve::before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		border-radius: 4px;
+		pointer-events: none
+	}
 
-.tracklist > div {
-    word-break: break-word;
-    hyphens: auto;
-    line-height: 1.6;
-    max-width: 90%;
-}
+	.vinylDisc {
+		position: absolute;
+		top: 0;
+		right: 2rem;
+		width: 420px;
+		height: 420px;
+		background: radial-gradient(circle at 25%, #1a1a1a 0%, #000 75%);
+		border-radius: 50%;
+		box-shadow: 0 50px 120px rgb(0 0 0 / .9);
+		transform: rotate(8deg);
+		z-index: 1;
+		transition: transform 1s cubic-bezier(.22, 1, .36, 1);
+		transform-origin: center
+	}
 
-/* Black vinyl disc (always visible) */
-.vinylContainer {
-    width: 400px;
-    height: 500px;
-    margin-top: 70px;
+	.vinylGroove {
+		position: absolute;
+		inset: 20px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, transparent 40%, rgb(255 255 255 / .08) 48%, rgb(255 255 255 / .04) 52%, transparent 60%);
+		animation: spin 25s linear infinite;
+		pointer-events: none
+	}
 
-}
+	.vinylLabel {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 166px;
+		height: 166px;
+		object-fit: cover;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		box-shadow: 0 20px 60px rgb(0 0 0 / .8);
+		animation: spin 28s linear infinite
+	}
 
-/* White glossy sleeve (left side) */
-.vinylSleeve {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 280px;
-    height: 420px;
-    z-index: 10;
-    overflow: hidden;
-    background: center/cover no-repeat;
-}
+	.vinylHole {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		background: #000;
+		border: 4px solid #111;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 4
+	}
 
-.vinylSleeve::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 4px;
-    pointer-events: none;
-}
+	.scrollText {
+		background: #000;
+		padding: 16px 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: center;
+		box-shadow: 0 -10px 40px rgb(0 0 0 / .9);
+		border-top: 1px solid #222;
+		width: 200%;
+		margin-top: 190px;
+		margin-left: -70px
+	}
 
-/* Black vinyl disc sliding out */
-.vinylDisc {
-    position: absolute;
-    top: 0;
-    right: 2rem;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle at 25%, #1a1a1a 0%, #000 75%);
-    border-radius: 50%;
-    box-shadow: 0 50px 120px rgba(0, 0, 0, 0.9);
-    transform: rotate(8deg);
-    z-index: 1;
-    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: center;
-}
+	.topbarInner {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 90px;
+		background: #000;
+		overflow: hidden;
+		z-index: 1000;
+		user-select: none;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		box-shadow: 0 8px 30px rgb(0 0 0 / .8);
+		font-size: 35px;
+		padding-left: 1270px
+	}
 
-/* Groove shine (the subtle ring) */
-.vinylGroove {
-    position: absolute;
-    inset: 20px;
-    border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        transparent 40%,
-        rgba(255, 255, 255, 0.08) 48%,
-        rgba(255, 255, 255, 0.04) 52%,
-        transparent 60%
-    );
-    animation: spin 25s linear infinite;
-    pointer-events: none;
-}
+	.scrollText {
+		opacity: 0;
+		animation: fadeInDelay 2s ease-out 1.8s forwards
+	}
 
-.vinylLabel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 166px;
-    height: 166px;
-    object-fit: cover;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    animation: spin 28s linear infinite;
-}
+	.topbarInner {
+		opacity: 0;
+		transform: translateY(-100%);
+		animation: topbarDrop 1s ease-out 0.2s forwards
+	}
 
-/* Tiny center hole */
-.vinylHole {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    background: #000;
-    border: 4px solid #111;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-}
+	.backBtn {
+		position: fixed;
+		top: .4rem;
+		left: 1rem;
+		z-index: 99999;
+		width: 76px;
+		height: 76px;
+		display: grid;
+		place-items: center;
+		cursor: pointer;
+		transition: all 0.4s ease;
+		font-size: 2.5rem;
+		color: #fff;
+		transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
+	}
 
-/* Scrolling lyrics */
-.scrollText {
-    background: black;
-    padding: 16px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
-    border-top: 1px solid #222;
-    width: 200%;
-    margin-top: 190px;
-    margin-left: -70px;
-}
+	.backBtn:hover {
+		font-size: 3vw;
+		opacity: 1;
+		transform: translateY(0);
+		animation: jankyStopMotion 0.68s infinite steps(8)
+	}
 
-.topbarInner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    background: black;
+	.albumEnding {
+		background: linear-gradient(rgb(34 37 38 / .8), rgb(0 0 0 / .2)), url(/Future/back.gif);
+		background-blend-mode: multiply;
+		right: 0;
+		top: 0;
+		background-blend-mode: multiply
+	}
 
-    overflow: hidden;
-    z-index: 1000;
-    user-select: none;
+	.endingBg {
+		width: 85vw;
+		background-repeat: no-repeat;
+		background-position: 0%;
+		background-position-x: right;
+		height: 85vh;
+		z-index: 0;
+		width: 100%;
+		transition: all 0.7s cubic-bezier(.16, 1, .3, 1)
+	}
 
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
+	.endingBg:hover {
+		transform: scale(1.1)
+	}
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-    font-size: 35px;
-    padding-left: 1270px;
-}
-
-
-.scrollText {
-    opacity: 0;
-    animation: fadeInDelay 2s ease-out 1.8s forwards;
-}
-
-.topbarInner {
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: topbarDrop 1s ease-out 0.2s forwards;
-}
-
-.backBtn {
-    position: fixed;
-    top: 0.4rem;
-    left: 1rem;
-    z-index: 99999;
-    width: 76px;
-    height: 76px;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    font-size: 2.5rem;
-    color: #fff;
-
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.backBtn:hover {
-    font-size: 3vw;
-    opacity: 1;
-    transform: translateY(0);
-    animation: jankyStopMotion 0.68s infinite steps(8);
-}
-
-/*===Album last section===*/
-.albumEnding {
-    background: linear-gradient(rgba(34, 37, 38, 0.8), rgba(0, 0, 0, 0.2)),
-        url("/Future/back.gif");
-    background-blend-mode: multiply;
-
-    right: 0;
-    top: 0;
-    background-blend-mode: multiply;
-
-}
-.endingBg {
-    width: 85vw;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    background-position-x: right;
-    height: 85vh;
-    z-index: 0;
-    width:100%;
-        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.endingBg:hover {
-   transform: scale(1.1)
-   
-}
-
-.albumDescription {
-    top: 76%;
-    width: 25%;
-    font-size: 1.1rem;
-}
+	.albumDescription {
+		top: 76%;
+		width: 25%;
+		font-size: 1.1rem
+	}
 }

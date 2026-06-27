@@ -1,281 +1,293 @@
 .body {
-    width: 100vw;
-
-    font-family: var(--font-display);
-    contain: layout style;
+	width: 100vw;
+	font-family: var(--font-display);
+	contain: layout style
 }
+
 .content {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    overflow: hidden;
-    height: auto;
-    min-height: 100vh;
-    background: linear-gradient(rgba(34, 37, 38, 5), rgba(0, 0, 0, 0.6)),
-        url("/Band/bg.jpg") center/cover fixed;
-    background-color: black;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+	height: auto;
+	min-height: 100vh;
+	background: linear-gradient(rgba(34, 37, 38, 5), rgb(0 0 0 / .6)), url(/Band/bg.jpg) center/cover fixed;
+	background-color: #000
 }
+
 .header {
-    text-align: right;
-}
-.title {
-    position: fixed;
-    z-index: -5;
-    margin-top: 9rem;
-    line-height: 120%;
-    font-size: 3rem;
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.55);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
-        0 0 40px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.8);
+	text-align: right
 }
 
 .title {
-    opacity: 0;
-    transform: translateY(70px);
-    animation: riseUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+	position: fixed;
+	z-index: -5;
+	margin-top: 9rem;
+	line-height: 120%;
+	font-size: 3rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 3px 3px 10px rgb(0 0 0 / .55);
+	text-shadow: 0 0 20px rgb(255 255 255 / .3), 0 0 40px rgb(255 255 255 / .1), 0 4px 10px rgb(0 0 0 / .8)
+}
+
+.title {
+	opacity: 0;
+	transform: translateY(70px);
+	animation: riseUp 1.6s cubic-bezier(.22, 1, .36, 1) 0.3s forwards
 }
 
 @keyframes riseUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
 }
-
 
 .band {
-    background-color: #bfbfbf;
-}
-.bandHayley {
-    width: 47%;
-    position: absolute;
-    z-index: 3;
-    left: 25vw;
-    top: 40vh;
-}
-.bandTaylor {
-    width: 45%;
-    position: absolute;
-    z-index: 2;
-    left: -1vw;
-    top: 37vh;
-}
-.bandZac {
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    left: 52vw;
-    top: 42vh;
-}
-.spacer {
-    margin-top: 100%;
-    visibility: hidden;
+	background-color: #bfbfbf
 }
 
-/* === HOVER / GROW EFFECT === */
+.bandHayley {
+	width: 47%;
+	position: absolute;
+	z-index: 3;
+	left: 25vw;
+	top: 40vh
+}
+
+.bandTaylor {
+	width: 45%;
+	position: absolute;
+	z-index: 2;
+	left: -1vw;
+	top: 37vh
+}
+
+.bandZac {
+	width: 50%;
+	position: absolute;
+	z-index: 1;
+	left: 52vw;
+	top: 42vh
+}
+
+.spacer {
+	margin-top: 100%;
+	visibility: hidden
+}
+
 .taylor,
 .hayley,
 .zac {
-    display: block;
-    transition: transform 0.35s ease, filter 0.35s ease;
-    transform: translateY(0);
+	display: block;
+	transition: transform 0.35s ease, filter 0.35s ease;
+	transform: translateY(0)
 }
 
 .taylor:hover,
 .hayley:hover,
 .zac:hover {
-    transform: translateY(-12px);
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5));
+	transform: translateY(-12px);
+	filter: drop-shadow(0 15px 25px rgb(0 0 0 / .5))
 }
 
 .taylor:hover img,
 .hayley:hover img,
 .zac:hover img {
-    transform: scale(1.12);
+	transform: scale(1.12)
 }
 
 .hayley img,
 .taylor img,
 .zac img {
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.35s ease;
-    .hayley img:nth-child(1),
-    .taylor img:nth-child(1),
-    .zac img:nth-child(1) {
-        opacity: 1;
-    }
+	opacity: 0;
+	transition: opacity 0.2s ease, transform 0.35s ease;
+
+	.hayley img:nth-child(1),
+	.taylor img:nth-child(1),
+	.zac img:nth-child(1) {
+		opacity: 1
+	}
 }
 
 .hayley:hover img:nth-child(2),
 .taylor:hover img:nth-child(2),
 .zac:hover img:nth-child(2) {
-    animation: flip1 1s infinite steps(1);
+	animation: flip1 1s infinite steps(1)
 }
+
 .hayley:hover img:nth-child(3),
 .taylor:hover img:nth-child(3),
 .zac:hover img:nth-child(3) {
-    animation: flip2 1s infinite steps(1);
+	animation: flip2 1s infinite steps(1)
 }
 
 .hayley:hover img:nth-child(4),
 .taylor:hover img:nth-child(4),
 .zac:hover img:nth-child(4) {
-    animation: flip3 1s infinite steps(1);
+	animation: flip3 1s infinite steps(1)
 }
 
 .hayley img,
 .taylor img,
 .zac img {
-    opacity: 0;
-    transition: opacity 0.2s ease;
+	opacity: 0;
+	transition: opacity 0.2s ease
 }
 
 .hayley img:nth-child(1),
 .taylor img:nth-child(1),
 .zac img:nth-child(1) {
-    opacity: 1;
+	opacity: 1
 }
 
 .hayley:hover img:nth-child(2),
 .taylor:hover img:nth-child(2),
 .zac:hover img:nth-child(2) {
-    animation: flip1 1s infinite steps(1);
+	animation: flip1 1s infinite steps(1)
 }
+
 .hayley:hover img:nth-child(3),
 .taylor:hover img:nth-child(3),
 .zac:hover img:nth-child(3) {
-    animation: flip2 1s infinite steps(1);
+	animation: flip2 1s infinite steps(1)
 }
 
 .hayley:hover img:nth-child(4),
 .taylor:hover img:nth-child(4),
 .zac:hover img:nth-child(4) {
-    animation: flip3 1s infinite steps(1);
+	animation: flip3 1s infinite steps(1)
 }
 
 @keyframes flip1 {
-    0% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    31% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 1
+	}
+
+	30% {
+		opacity: 1
+	}
+
+	31% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 0
+	}
 }
+
 @keyframes flip2 {
-    0% {
-        opacity: 0;
-    }
-    29% {
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    63% {
-        opacity: 1;
-    }
-    64% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0
+	}
+
+	29% {
+		opacity: 0
+	}
+
+	30% {
+		opacity: 1
+	}
+
+	63% {
+		opacity: 1
+	}
+
+	64% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 0
+	}
 }
+
 @keyframes flip3 {
-    0% {
-        opacity: 0;
-    }
-    63% {
-        opacity: 0;
-    }
-    64% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0
+	}
+
+	63% {
+		opacity: 0
+	}
+
+	64% {
+		opacity: 1
+	}
+
+	70% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 1
+	}
 }
 
 /* === Tablet Sizing === */
-@media screen and (min-width: 700px){
+@media screen and (min-width:700px) {
+	.title {
+		margin-top: 6.5rem;
+		font-size: 4rem;
+		line-height: 130%
+	}
 
-    .title {
-    margin-top: 6.5rem;
-    font-size: 4rem;
-        line-height:130%;
-    }   
-    
-    .bandHayley {
-        width: 47%;
+	.bandHayley {
+		width: 47%;
+		left: 26vw;
+		top: 17vh
+	}
 
-        left: 26vw;
-        top: 17vh;
-    }
-    .bandTaylor {
-        width: 45%;
+	.bandTaylor {
+		width: 45%;
+		left: -1vw;
+		top: 12vh
+	}
 
-        left: -1vw;
-        top: 12vh;
-    }
-    .bandZac {
-        width: 50%;
-
-        left: 52vw;
-        top: 21vh;
-    }
-
+	.bandZac {
+		width: 50%;
+		left: 52vw;
+		top: 21vh
+	}
 }
 
 /* === Desktop Sizing === */
-@media screen and (min-width:1100px){
-    .body {
-    width: 76vw;
+@media screen and (min-width:1100px) {
+	.body {
+		width: 76vw
+	}
 
-}
+	.header {
+		text-align: right
+	}
 
-.header {
-    text-align: right;
-}
-.title {
-    line-height:100%;
-    margin: 6rem 2.5rem 0;
-    font-size: 6.5vw;
- 
-}
+	.title {
+		line-height: 100%;
+		margin: 6rem 2.5rem 0;
+		font-size: 6.5vw
+	}
 
-.band {
-    background-color: #bfbfbf;
-}
-.bandHayley {
-    width: 44%;
+	.band {
+		background-color: #bfbfbf
+	}
 
-    left: 21vw;
-    top: 10vh;
-}
-.bandTaylor {
-    width: 42%;
+	.bandHayley {
+		width: 44%;
+		left: 21vw;
+		top: 10vh
+	}
 
-    left: -2vw;
-    top: 5vh;
-}
-.bandZac {
-    width: 47%;
+	.bandTaylor {
+		width: 42%;
+		left: -2vw;
+		top: 5vh
+	}
 
-    left: 43vw;
-    top: 15vh;
-}
-
-
-
+	.bandZac {
+		width: 47%;
+		left: 43vw;
+		top: 15vh
+	}
 }

@@ -1,68 +1,70 @@
 .vinylPlayer {
-    position: fixed;
-    top: 11%;
-    left: -500px; 
-    width: 460px;
-    max-width: 90vw;
-    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
-    border-radius: 0 20px 20px 0;
-    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.4);
-    padding: 12px 12px 12px 24px;
-    z-index: 9999;
-    transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	position: fixed;
+	top: 11%;
+	left: -500px;
+	width: 460px;
+	max-width: 90vw;
+	background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
+	border-radius: 0 20px 20px 0;
+	box-shadow: -10px 10px 40px rgb(0 0 0 / .4);
+	padding: 12px 12px 12px 24px;
+	z-index: 9999;
+	transition: left 0.5s cubic-bezier(.22, 1, .36, 1)
 }
 
 .vinylPlayer.open {
-    left: 0;
+	left: 0
 }
 
 .tab {
-    position: fixed;
-    top: 11%;
-    left: 0;
-    background: #ff5400;
-    color: white;
-    padding: 16px 12px 16px 6px;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
-    z-index: 10000;
-    font-weight: bold;
-    writing-mode: vertical-lr;
-    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    user-select: none;
+	position: fixed;
+	top: 11%;
+	left: 0;
+	background: #ff5400;
+	color: #fff;
+	padding: 16px 12px 16px 6px;
+	border-radius: 0 20px 20px 0;
+	cursor: pointer;
+	z-index: 10000;
+	font-weight: 700;
+	writing-mode: vertical-lr;
+	box-shadow: -5px 5px 20px rgb(0 0 0 / .3);
+	transition: all 0.3s ease;
+	user-select: none
 }
 
 .tab:hover {
-    background: #bd3f00;
+	background: #bd3f00
 }
 
 .tabText {
-    font-size: 14px;
-    letter-spacing: 2px;
-    font-family: var(--font-display);
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-family: var(--font-display)
 }
 
 .embed iframe {
-    border-radius: 12px;
+	border-radius: 12px
 }
 
-@media (max-width: 768px) {
-    .vinylPlayer {
-        width: 380px;
-        left: -416px;
-    }
-    .tab {
-        writing-mode: horizontal-tb;
-        padding: 1.2rem 0.3rem 1.2rem 0.1rem;
-        border-radius: 0 1.5rem 1.5rem 0;
-        top: 4.5rem;
-        transform: none;
-        writing-mode: vertical-lr;
-    }
+/* === Mobile Sizing === */
+@media (max-width:768px) {
+	.vinylPlayer {
+		width: 380px;
+		left: -416px
+	}
 
-    .tabText {
-        display: inline;
-        font-size:0.8rem;
-    }
+	.tab {
+		writing-mode: horizontal-tb;
+		padding: 1.2rem .3rem 1.2rem .1rem;
+		border-radius: 0 1.5rem 1.5rem 0;
+		top: 4.5rem;
+		transform: none;
+		writing-mode: vertical-lr
+	}
+
+	.tabText {
+		display: inline;
+		font-size: .8rem
+	}
 }

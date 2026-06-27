@@ -1,118 +1,124 @@
 .container {
-    position: relative;
-    overflow: hidden;
-    background: #191919;
-    padding: 0.7rem 0;
-    font-family: var(--font-display);
+	position: relative;
+	overflow: hidden;
+	background: #191919;
+	padding: .7rem 0;
+	font-family: var(--font-display)
 }
 
-/* === HORIZONTAL === */
 .container.horizontal {
-    width: 100%;
-    padding: 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	width: 100%;
+	padding: 2rem 0;
+	border-top: 1px solid rgb(255 255 255 / .08);
+	border-bottom: 1px solid rgb(255 255 255 / .08)
 }
 
 .track {
-    display: flex;
-    white-space: nowrap;
+	display: flex;
+	white-space: nowrap
 }
+
 .left {
-    animation: scrollLeft var(--speed, 30s) linear infinite;
+	animation: scrollLeft var(--speed, 30s) linear infinite
 }
+
 .right {
-    animation: scrollLeft var(--speed, 30s) linear infinite reverse;
+	animation: scrollLeft var(--speed, 30s) linear infinite reverse
 }
 
 @keyframes scrollLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+	from {
+		transform: translateX(0)
+	}
+
+	to {
+		transform: translateX(-50%)
+	}
 }
 
-/* === VERTICAL === */
 .container.vertical {
-    width: 120px; /* adjust per page */
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    right: 0;
-    transform: rotate(90deg); /* flip for right side */
-    transform-origin: right top;
+	width: 120px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	right: 0;
+	transform: rotate(90deg);
+	transform-origin: right top
 }
 
 .track.up {
-    animation: scrollUp var(--speed, 30s) linear infinite;
+	animation: scrollUp var(--speed, 30s) linear infinite
 }
+
 .track.down {
-    animation: scrollUp var(--speed, 30s) linear infinite reverse;
+	animation: scrollUp var(--speed, 30s) linear infinite reverse
 }
 
 @keyframes scrollUp {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-50%);
-    }
+	from {
+		transform: translateY(0)
+	}
+
+	to {
+		transform: translateY(-50%)
+	}
 }
 
 .track span {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    opacity: 0.9;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	opacity: .9
 }
 
-/* Horizontal fades */
 .fadeLeft,
 .fadeRight,
 .fadeTop,
 .fadeBottom {
-    position: absolute;
-    pointer-events: none;
-    z-index: 10;
-}
-.fadeLeft {
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 150px;
-    background: linear-gradient(to right, #000, transparent);
-}
-.fadeRight {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 150px;
-    background: linear-gradient(to left, #000, transparent);
-}
-.fadeTop {
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, #000, transparent);
-}
-.fadeBottom {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to top, #000, transparent);
+	position: absolute;
+	pointer-events: none;
+	z-index: 10
 }
 
-@media screen and (min-width:700px){
-    .track span {
-    font-size: 1.35rem;
-    
+.fadeLeft {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 150px;
+	background: linear-gradient(to right, #000, transparent)
 }
+
+.fadeRight {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 150px;
+	background: linear-gradient(to left, #000, transparent)
+}
+
+.fadeTop {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	background: linear-gradient(to bottom, #000, transparent)
+}
+
+.fadeBottom {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	background: linear-gradient(to top, #000, transparent)
+}
+
+/* === Tablet/Desktop Font Sizing === */
+@media screen and (min-width:700px) {
+	.track span {
+		font-size: 1.35rem
+	}
 }
