@@ -6,7 +6,7 @@ import ScrollText from "@/app/components/ScrollText/ScrollText";
 
 export default function Page() {
     return (
-        <div>
+        <div className={styles.page}>
             <Next
                 nextLabel='Next Up: Their History'
                 backLabel='Previous: HomePage'

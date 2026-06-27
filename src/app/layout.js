@@ -1,30 +1,29 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {   Sigmar, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { Noto_Sans } from "next/font/google";
 import AlbumMusic from "./components/Music/AlbumBackgroundMusic";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+
+
+const sigmar = Sigmar({
+    variable: "--font-display",   
     subsets: ["latin"],
+    weight: ["400"],
+    display: "swap",
+    adjustFontFallback: true,
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 const notoSans = Noto_Sans({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"], // choose what you actually use
-    display: "swap", // looks good while loading
-    variable: "--font-body", // optional – if you want CSS variables
+    variable: "--font-body",          
+    weight: ["300", "400", "500", "600", "700"],
+    display: "swap",
 });
 
 export const metadata = {
     title: "Paramore Discography",
     title: "This is Paramore",
     icons: {
-        icon: "/favicon.png", // This is the modern way
+        icon: "/favicon.png",
     },
     description: "An E-Magazine created for a school project",
 };
@@ -32,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
-            <body className={`${notoSans.variable} ${notoSans.variable}`}>
+            <body className={`${notoSans.variable} ${sigmar.variable}`}>
                 {children}
                 <MusicPlayer />
                 <AlbumMusic /> {/* ← plays only on album pages */}

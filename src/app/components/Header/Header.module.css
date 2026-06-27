@@ -1,28 +1,36 @@
 .header {
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    z-index: 1000;
-}
-.text {
-    color: white;
-    margin: 1rem 0;
-    font-family: var(--font-display);
-    padding-left: 3rem;
-    font-size: 32px;
+	background-color: #000;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	z-index: 1000
 }
 
+.text {
+	color: #fff;
+	margin: 1.2rem 0 1rem;
+	padding-left: 1rem;
+	font-size: 1.8rem
+}
 
 .header {
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: topbarDrop 1s ease-out 0.2s forwards;
+	opacity: 0;
+	transform: translateY(-100%);
+	animation: topbarDrop 1s ease-out 0.2s forwards
 }
 
 @keyframes topbarDrop {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+/* === Desktop Sizing === */
+@media screen and (min-width:1100px) {
+	.text {
+		margin: 1rem 0;
+		padding-left: 3rem;
+		font-size: 2rem
+	}
 }
