@@ -4,7 +4,7 @@ html {
 
 .coverImg {
 	width: 100vw;
-	margin-top: 4.1rem
+	margin-top: 4rem;
 }
 
 .title {
@@ -43,7 +43,8 @@ html {
 }
 
 .footer {
-	width: 100vw
+	width: 100vw;
+	margin-bottom:3rem;
 }
 
 .title:hover {

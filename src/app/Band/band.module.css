@@ -49,27 +49,27 @@
 }
 
 .bandHayley {
-	width: 47%;
+	width: 50%;
 	position: absolute;
 	z-index: 3;
-	left: 25vw;
-	top: 40vh
+	left: 23vw;
+	top: 48vh
 }
 
 .bandTaylor {
-	width: 45%;
+	width: 48%;
 	position: absolute;
 	z-index: 2;
 	left: -1vw;
-	top: 37vh
+	top: 44.5vh
 }
 
 .bandZac {
-	width: 50%;
+	width: 53%;
 	position: absolute;
 	z-index: 1;
 	left: 52vw;
-	top: 42vh
+	top: 50vh
 }
 
 .spacer {

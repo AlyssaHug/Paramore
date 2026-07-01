@@ -24,9 +24,8 @@
 	align-items: center;
 	bottom: 10vh;
 	left: 10;
-	right: 41%;
-	justify-content: space-around;
-	gap: 32vw
+	justify-content: center;
+	gap: 18vw
 }
 
 .iconRight {

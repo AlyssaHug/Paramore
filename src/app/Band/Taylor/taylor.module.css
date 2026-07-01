@@ -10,11 +10,11 @@
 }
 
 .close {
-	width: 84%;
+	width: 90%;
 	position: absolute;
 	z-index: 3;
-	bottom: 2vh;
-	left: 2rem;
+	bottom: 4vh;
+	left: -1rem;
 	padding: 0;
 	background: #fff0;
 	opacity: 1;
@@ -28,10 +28,10 @@
 }
 
 .guitar {
-	width: 220%;
+	width: 250%;
 	position: absolute;
 	z-index: 0;
-	left: -22rem;
+	left: -24rem;
 	top: -4rem;
 	transform: rotate(-85deg);
 	filter: blur(2.5)
@@ -107,8 +107,8 @@
 	color: #e0e0e0;
 	font-family: var(--font-body);
 	font-size: 14px;
-	margin-right: 90px;
-	margin-left: 90px;
+	margin-right: 60px;
+	margin-left: 60px;
 	text-align: center
 }
 

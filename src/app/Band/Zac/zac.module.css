@@ -13,7 +13,7 @@
 	width: 160%;
 	position: absolute;
 	z-index: 3;
-	bottom: 5vh;
+	bottom: 7.6vh;
 	left: -4rem;
 	padding: 0;
 	background: #fff0;
@@ -28,11 +28,11 @@
 }
 
 .drums {
-	width: 150%;
+	width: 200%;
 	position: absolute;
 	z-index: 0;
-	left: -16rem;
-	top: 8rem;
+	left: -20rem;
+	top: 10rem;
 	transform: rotate(2deg);
 	filter: blur(2.5)
 }
@@ -98,8 +98,8 @@
 	color: #e0e0e0;
 	font-family: var(--font-body);
 	font-size: 14px;
-	margin-right: 90px;
-	margin-left: 90px;
+	margin-right: 60px;
+	margin-left: 60px;
 	text-align: center
 }
 

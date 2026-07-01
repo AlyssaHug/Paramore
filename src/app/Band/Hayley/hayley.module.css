@@ -10,11 +10,11 @@
 }
 
 .close {
-	width: 160%;
+	width: 180%;
 	position: absolute;
 	z-index: 3;
-	bottom: 5vh;
-	left: -4rem;
+	bottom: 6.6vh;
+	left: -6rem;
 	padding: 0;
 	background: #fff0;
 	opacity: 1;
@@ -27,7 +27,7 @@
 	position: absolute;
 	z-index: 1;
 	left: -16rem;
-	top: -8rem;
+	top: -4rem;
 	transform: scaleY(-1) rotate(45deg);
 	filter: blur(2.5)
 }
@@ -119,10 +119,10 @@
 	color: #e0e0e0;
 	font-family: var(--font-body);
 	font-size: 14px;
-	margin-right: 90px;
-	margin-left: 90px;
+	margin-right: 60px;
+	margin-left: 60px;
 	text-align: center;
-	margin-top: 0
+	margin-top: 0;
 }
 
 .text {
